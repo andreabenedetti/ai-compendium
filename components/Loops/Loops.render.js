@@ -12,7 +12,7 @@ const r = 50;
 
 const color = d3
 .scaleOrdinal()
-.range(["orangeRed", "slategray"])
+.range(["#0d6efd", "slategray"])
 .domain(["human", "algorithm"]);
 
 const construct = (element, data) => {
@@ -66,7 +66,7 @@ const construct = (element, data) => {
     .attr("text-anchor", "end")
     .attr("font-weight", "bold")
     .attr("font-size", 14)
-    .attr("fill", "orangered")
+    .attr("fill", "#0d6efd")
     .text("Humans");
     
     svg
