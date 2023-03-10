@@ -433,6 +433,95 @@ const data = [{
 		radius: 1,
 		actor: "algorithm"
 	}]
-}]
+}, {
+	title: "A Physical Testbed for Intelligent Transportation Systems",
+	value: "Researchers and student needing to develop novel traffic and vehicle control algorithms with higher fidelity use Model based control, Data analytics that improve the system performance over time",
+	url: "http://arxiv.org/pdf/1907.12899v1",
+	loop: [
+		{
+			label: "Front view streaming image",
+			index: 2,
+			radius: 1,
+			actor: "algorithm",
+			type: "Vehicle"
+		},
+		{
+			label: "Image processing",
+			index: 1,
+			radius: 1.7,
+			actor: "algorithm",
+			type: "Convolutional neural network"
+		},
+		{
+			label: "Aggregate data",
+			index: 2,
+			radius: 2.4,
+			actor: "algorithm",
+			type: "Traffic management system"
+		},
+		{
+			label: "Output data to intesection controller",
+			index: 1,
+			radius: 2.4,
+			actor: "algorithm",
+			type: "Traffic management system"
+		},
+		{
+			label: "Update model of recurring patterns",
+			index: 0,
+			radius: 2.4,
+			actor: "algorithm",
+			type: "Traffic management system"
+		},
+		{
+			label: "Change parameters of the simulation",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Researcher"
+		}
+	]
+}, {
+	title: "A Scalable Workflow to Build Machine Learning Classifiers with Clinician-in-the-Loop to Identify Patients in Specific Diseases",
+	value: "Clinicians needing to identify patients with specific diseases from Electronic Health Records use Natural Language Processing that identifies patients at scale with given diseases, especially those who might currently be miscoded or missed",
+	url: "http://arxiv.org/pdf/2205.08891v1",
+	loop: [
+		{
+			label: "Preprocess data from unstructured notes and structured data",
+			index: 3, 
+			radius: 1,
+			actor: "algorithm",
+			type: ""
+		},
+		{
+			label: "Aggregate patient data",
+			index: 2,
+			radius: 1,
+			actor: "algorithm",
+			type: ""
+		},
+		{
+			label: "Pre-trained phenotyping",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: ""
+		},
+		{
+			label: "Build or assign a classifier",
+			index: 0,
+			radius: 1,
+			actor: "algorithm"
+		},
+		{
+			label: "Feedback and evaluation",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Clinician"
+		}
+	]
+}
+]
 
 export default data;

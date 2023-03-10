@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let svg;
 let w = 500;
@@ -12,7 +13,7 @@ const r = 50;
 
 const color = d3
 .scaleOrdinal()
-.range(["#0d6efd", "slategray"])
+.range(["var(--bs-primary)", "slategray"])
 .domain(["human", "algorithm"]);
 
 const construct = (element, data) => {
@@ -42,7 +43,7 @@ const construct = (element, data) => {
     
     const g = def.append("linearGradient").attr("id", "hit");
     
-    g.append("stop").attr("stop-color", "tomato").attr("offset", "0");
+    g.append("stop").attr("stop-color", "var(--bs-primary)").attr("offset", "0");
     
     g.append("stop").attr("stop-color", "black").attr("offset", "1");
     
@@ -62,7 +63,7 @@ const construct = (element, data) => {
     svg
     .append("text")
     .attr("x", w / 2 - 20)
-    .attr("y", h / 2 - r * or - 20)
+    .attr("y", 15)
     .attr("text-anchor", "end")
     .attr("font-weight", "bold")
     .attr("font-size", 14)
@@ -72,41 +73,24 @@ const construct = (element, data) => {
     svg
     .append("text")
     .attr("x", w / 2 + 20)
-    .attr("y", h / 2 - r * or - 20)
+    .attr("y", 15)
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
     .attr("font-size", 14)
     .attr("fill", "slateGray")
     .text("Algorithms");
-    
-    // svg
-    // .append("circle")
-    // .attr("cx", w / 2)
-    // .attr("cy", h / 2)
-    // .attr("r", r)
-    // .attr("opacity", 0.1)
-    // .attr("fill", "none")
-    // .attr("stroke-width", 32)
-    // .attr("stroke", "url(#hit)");
-    
-    // svg
-    // .append("circle")
-    // .attr("cx", w / 2)
-    // .attr("cy", h / 2)
-    // .attr("r", r * or)
-    // .attr("opacity", 0.1)
-    // .attr("fill", "none")
-    // .attr("stroke-width", 32)
-    // .attr("stroke", "url(#hit)");
-    
-    // svg
-    // .append("line")
-    // .attr("x1", w / 2)
-    // .attr("y1", 0)
-    // .attr("x2", w / 2)
-    // .attr("y2", h)
-    // .attr("stroke-width", 20)
-    // .attr("stroke", "#FFFFFF");
+
+    for (let i = 1; i < 5; i+=0.7) {
+        svg
+        .append("circle")
+        .attr("cx", w / 2)
+        .attr("cy", h / 2)
+        .attr("r", i * r)
+        .attr("opacity", 1 / (i * 5))
+        .attr("fill", "none")
+        .attr("stroke-width", 1)
+        .attr("stroke", "url(#hit)");
+    }
     
     const tasks = svg
     .append("g")
@@ -167,7 +151,11 @@ const construct = (element, data) => {
     )
     .attr("y", (d) => checkActorCos(d) + 4)
     .attr("font-size", 12)
-    .text((d, i) => `${d.label}`);
+    .text(d => {
+        let labelArray = d.label.split(" ");
+        return labelArray[0]                      
+    });
+   ;
     
     function checkActorSin(data) {
         if (data.actor === "human") {
@@ -192,9 +180,5 @@ const construct = (element, data) => {
         }
     }  
 };
-
-const drawing = (data) => {
-
-} 
 
 export { construct };
