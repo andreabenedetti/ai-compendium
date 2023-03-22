@@ -2,21 +2,22 @@ import * as d3 from "d3";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 let svg;
-let w = 500;
-let h = 300;
-
-let or = 1.7;
-let ir = 1;
 
 const radians = Math.PI / 180;
-const r = 50;
+
 
 const color = d3
 .scaleOrdinal()
 .range(["var(--bs-primary)", "slategray"])
 .domain(["human", "algorithm"]);
 
-const construct = (element, data) => {
+const construct = (element, data, width, height, radius) => {
+    console.log(width);
+    let w = width;
+    let h = height;
+    let r = radius;
+
+    console.log(h);
     const loop = d3
     .line()
     .x((d) => checkActorSin(d))
@@ -53,8 +54,8 @@ const construct = (element, data) => {
     .attr("id", "arrow")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", 2.5)
-    .attr("markerWidth", 5)
-    .attr("markerHeight", 5)
+    .attr("markerWidth", r / 10)
+    .attr("markerHeight", r / 10)
     .attr("orient", "auto")
     .append("path")
     .attr("d", "M0,-5L10,0L0,5")
@@ -106,7 +107,7 @@ const construct = (element, data) => {
     .join("circle")
     .attr("cx", (d) => checkActorSin(d))
     .attr("cy", (d) => checkActorCos(d))
-    .attr("r", 15)
+    .attr("r", r / 3.33)
     .attr("fill", "#Ffffff")
     .attr("stroke-dasharray", (d, i) => {
         if (i > 0) {

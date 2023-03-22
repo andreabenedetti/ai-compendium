@@ -1,4 +1,4 @@
-import { construct } from "./Loops.render";
+import { construct } from "../Loops/Loops.render";
 import { useRef, useEffect } from "react";
 
 import { Card, Button, ListGroup, Accordion } from "react-bootstrap";
@@ -6,8 +6,8 @@ import { Card, Button, ListGroup, Accordion } from "react-bootstrap";
 export default function Loops ({ data }) {
     const svgEl = useRef();
 
-    const height = 300;
-    const radius = 50;
+    const height = 150;
+    const radius = 25;
     
     useEffect(() => {
         console.log("Mounted", data.loop);
@@ -20,12 +20,6 @@ export default function Loops ({ data }) {
         <Card>
             <Card.Header><Button variant="link"><a href={data.url} target="_blank">{data.url}</a></Button></Card.Header>
         <Card.Body>
-        <Card.Title>
-        {data.title}
-        </Card.Title>
-        <Card.Text>
-        {data.value}
-        </Card.Text>
         <svg ref={svgEl} width="100%" height={height}></svg>
         <Accordion>
         <Accordion.Item eventKey="0">

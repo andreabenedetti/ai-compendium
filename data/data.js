@@ -1,4 +1,5 @@
-const data = [{
+const data = [
+{
 	title: "Machine teaching",
 	value: "A technique of machine learning",
 	url: "",
@@ -520,6 +521,202 @@ const data = [{
 			actor: "human",
 			type: "Clinician"
 		}
+	]
+}, {
+	title: "Diversity of symptom phenotypes in SARS-CoV-2 community infections observed in multiple large datasets",
+	loop: [
+		{
+			label: "Collect dataset",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Clinician"
+		},
+		{
+			label: "Age stratify dataset",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: "Hierarchical clustering and LPCA"
+		},
+		{
+			label: "Produce aligned embeddings",
+			index: 0,
+			radius: 1,
+			actor: "algorithm",
+			type: "Aligned UMAP"
+		},
+		{
+			label: "Age stratify dataset",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: "Hierarchical clustering and LPCA"
+		},
+		{
+			label: "Produce aligned embeddings",
+			index: 0,
+			radius: 1,
+			actor: "algorithm",
+			type: "Aligned UMAP"
+		},
+		{
+			label: "Evaluate results",
+			index: 1,
+			radius: 1,
+			actor: "human",
+			type: "Clinician"
+		},
+		{
+			label: "Decision making",
+			index: 0,
+			radius: 1.7,
+			actor: "human",
+			type: "Policy maker"
+		}
+	]
+} , {
+	title: "CrudeOilNews: An Annotated Crude Oil News Corpus for Event Extraction",
+	value: "Crude oil traders needing to make timely trading decisions use Automatic Content Extraction that enables accurate and timely automatic identification of events in news items",
+	url: "http://arxiv.org/pdf/2204.03871v1",
+	loop: [
+		{
+			label: "Label data (prediction)",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: "Automatic Content Extraction"
+		},
+		{
+			label: "Evaluate confidence of prediction",
+			index: 0,
+			radius: 1,
+			actor: "algorithm",
+			type: "Automatic Content Extraction"
+		},
+		{
+			label: "Verify label",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Human expert"
+		}
+	]
+}, {
+	title: "Dancing with the Unexpected and Beyond: The Use of AI Assistance in Design Fiction Creation",
+	value: "Non-experts writers needing to design fictional scenarios of technological uses use Text generation that creates actions related to narrative goals",
+	url: "http://arxiv.org/pdf/2210.00829v1",
+	loop: [
+		{
+			label: "Enter the fictional setting",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Writer"
+		},
+		{
+			label: "Identify the goals of the narrative",
+			index: 1,
+			radius: 1,
+			actor: "human",
+			type: "Writer"
+		},
+		{
+			label: "Provide actions to achieve the goals",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: "Text generation"
+		},
+		{
+			label: "Imagine consequences to actions",
+			index: 2,
+			radius: 1,
+			actor: "human",
+			type: "Writer"
+		}
+	]
+}, {
+	title: "Designing for human-AI complementarity in K-12 education",
+	value: "Teachers needing to help their students in AI-supported classrooms use Smart glasses, Body interpretation that alerts them of situations in need of their attention through mixed reality icons floating above each individual student's head",
+	url: "http://arxiv.org/pdf/2104.01266v2",
+	loop: [
+		{
+			label: "Monitor students' behavior in the class",
+			index: 0,
+			radius: 1,
+			actor: "algorithm",
+			type: "Algorithm"
+		},
+		{
+			label: "Display areas of struggle for students",
+			index: 0,
+			radius: 1.7,
+			actor: "algorithm",
+			type: "Smart glasses"
+		},
+		{
+			label: "Identify students in need",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Teacher"
+		},
+		{
+			label: "Help student in need",
+			index: 1,
+			radius: 1,
+			actor: "human",
+			type: "Teacher"
+		},
+		{
+			label: "Improve classroom attendance",
+			index: 0.5,
+			radius: 1.7,
+			actor: "human",
+			type: "Student"
+		}
+	]
+}, {
+	title: "Towards a New Participatory Approach for Designing Artificial Intelligence and Data-Driven Technologies",
+	value: "Marginalized communities needing to participate in the design of social development use Artificial Intelligence that overcomes issues surrounding current PD and its use in the design of such technologies.",
+	url: "http://arxiv.org/pdf/2104.04072v1",
+	loop: [
+		{
+			label: "Define objectives",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "Designers, users, other stakeholders"
+		},
+		{
+			label: "Data collection",
+			index: 1,
+			radius: 1,
+			actor: "human",
+			type: "Designers, users, other stakeholders"
+		},
+		{
+			label: "Model development",
+			index: 2,
+			radius: 1,
+			actor: "human",
+			type: "Designers, users, other stakeholders"
+		},
+		{
+			label: "Create alliance",
+			index: 1,
+			radius: 1.7,
+			actor: "human",
+			type: "Management"
+		},
+		{
+			label: "Model application",
+			index: 0,
+			radius: 1,
+			actor: "algorithm",
+			type: "Artificial Intelligence"
+		},
 	]
 }
 ]
