@@ -718,6 +718,26 @@ const data = [
 			type: "Artificial Intelligence"
 		},
 	]
+}, {
+	title: "What are you optimizing for? Aligning Recommender Systems with Human Values",
+	value: "Recommender systems needing to present users with a tailored set of items based on factors such as past user behavior, user attributes, and features of the underlying items use Artificial Intelligence that aligns recommendations with the goals of users, system designers, and society as a whole",
+	url: "http://arxiv.org/pdf/2107.10939v1",
+	loop: [
+		{
+			label: "Consume content fed by the system",
+			index: 0,
+			radius: 1,
+			actor: "human",
+			type: "User"
+		}, 
+		{
+			label: "Aggregate data usage",
+			index: 1,
+			radius: 1,
+			actor: "algorithm",
+			type: "Recommendation system"
+		}
+	]
 }
 ]
 
