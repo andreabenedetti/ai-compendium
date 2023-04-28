@@ -401,6 +401,67 @@ const data = [
 		actor: "human"
 	}]
 }, {
+	title: "A Novel Deep Learning Pipeline for Retinal Vessel Detection in Fluorescein Angiography - Automated",
+	value: "Interventional cardiologists needing to detect retinal vessels in FA images use Deep Neural Networks that reduce the effort required for generating labeled ground truth data",
+	loop: [
+		{
+		   actor: "human",
+		   type: "Annotator",
+		   index: 0,
+		   radius: 1,
+		   label: "Correcting estimated binary vessel maps by removing false positive detections and adding in false negative detections"
+		},
+		{
+		   actor: "algorithm",
+		   type: "Deep neural network",
+		   index: 6,
+		   radius: 1,
+		   label: "Refining the deep neural network using the new labeled images obtained from human annotation"
+		},
+		{
+		   actor: "human",
+		   type: "Annotator",
+		   index: 1,
+		   radius: 1,
+		   label: "Manually correcting annotations generated for a batch of images using a trained network from the previous iteration"
+		},
+		{
+		   actor: "algorithm",
+		   type: "Deep neural network",
+		   index: 5,
+		   radius: 1,
+		   label: "Training the neural network with the corrected annotations"
+		},
+		{
+		   actor: "human",
+		   type: "Annotator",
+		   index: 2,
+		   radius: 1,
+		   label: "Correcting estimated binary vessel maps by removing false positive detections and adding in false negative detections"
+		},
+		{
+		   actor: "algorithm",
+		   type: "Generative adversarial network",
+		   index: 1,
+		   radius: 1.7,
+		   label: "Learning a mapping from FA images to vessel maps using a generator and discriminator"
+		},
+		{
+		   actor: "human",
+		   type: "Annotator",
+		   index: 5,
+		   radius: 1,
+		   label: "Manually correcting annotations generated for a batch of images using the generator from the previous iteration"
+		},
+		{
+		   actor: "algorithm",
+		   type: "Generative adversarial network",
+		   index: 0,
+		   radius: 1.7,
+		   label: "Training the generator and discriminator with the corrected annotations"
+		}
+	 ]
+}, {
 	title: "A Novel Deep Learning Pipeline for Retinal Vessel Detection in Fluorescein Angiography",
 	value: "Interventional cardiologists needing to detect retinal vessels in FA images use Deep Neural Networks that reduce the effort required for generating labeled ground truth data",
 	loop: [{

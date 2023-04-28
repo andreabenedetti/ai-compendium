@@ -8,11 +8,12 @@ export default function Loops ({ data }) {
 
     const height = 300;
     const radius = 50;
+    const labels = true;
     
     useEffect(() => {
         console.log("Mounted", data.loop);
         console.log(svgEl.current.clientWidth)
-        construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius);
+        construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
     }, []);
     
     return (

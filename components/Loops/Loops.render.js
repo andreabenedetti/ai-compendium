@@ -5,17 +5,17 @@ let svg;
 
 const radians = Math.PI / 180;
 
-
 const color = d3
 .scaleOrdinal()
-.range(["var(--bs-primary)", "slategray"])
+.range(["#0e6b63", "#DDD"])
 .domain(["human", "algorithm"]);
 
-const construct = (element, data, width, height, radius) => {
+const construct = (element, data, width, height, radius, labels) => {
     console.log(width);
     let w = width;
     let h = height;
     let r = radius;
+    let l = labels;
 
     console.log(h);
     const loop = d3
@@ -44,7 +44,7 @@ const construct = (element, data, width, height, radius) => {
     
     const g = def.append("linearGradient").attr("id", "hit");
     
-    g.append("stop").attr("stop-color", "var(--bs-primary)").attr("offset", "0");
+    g.append("stop").attr("stop-color", "#A8B078").attr("offset", "0");
     
     g.append("stop").attr("stop-color", "black").attr("offset", "1");
     
@@ -54,14 +54,21 @@ const construct = (element, data, width, height, radius) => {
     .attr("id", "arrow")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", 2.5)
-    .attr("markerWidth", r / 10)
-    .attr("markerHeight", r / 10)
+    .attr("markerWidth", () => {
+        if (l) {
+            return r / 10
+        } else {
+            return r / 5
+        }
+    })
+    .attr("markerHeight", r / 5)
     .attr("orient", "auto")
     .append("path")
     .attr("d", "M0,-5L10,0L0,5")
     .attr("fill", "#000");
     
-    svg
+    if (l) {
+        svg
     .append("text")
     .attr("x", w / 2 - 20)
     .attr("y", 15)
@@ -80,6 +87,7 @@ const construct = (element, data, width, height, radius) => {
     .attr("font-size", 14)
     .attr("fill", "slateGray")
     .text("Algorithms");
+    }
 
     for (let i = 1; i < 5; i+=0.7) {
         svg
@@ -108,7 +116,13 @@ const construct = (element, data, width, height, radius) => {
     .attr("cx", (d) => checkActorSin(d))
     .attr("cy", (d) => checkActorCos(d))
     .attr("r", r / 3.33)
-    .attr("fill", "#Ffffff")
+    .attr("fill", (d) => {
+        if (l) {
+            return "#FFFFFF"
+        } else {
+            return color(d.actor)
+        }
+    })
     .attr("stroke-dasharray", (d, i) => {
         if (i > 0) {
             return "2px";
@@ -133,12 +147,19 @@ const construct = (element, data, width, height, radius) => {
     .join("path")
     .attr("fill", "none")
     .attr("stroke", "#110000")
-    .attr("stroke-width", 2)
+    .attr("stroke-width", () => {
+        if (l) {
+            return 2
+        } else {
+            return 1.5
+        }
+    })
     .attr("d", (region) => loop(data))
     .style("marker-mid", "url(#arrow)")
     .style("marker-start", "url(#arrow)");
     
-    tasks
+    if (l) {
+        tasks
     .selectAll("text")
     .data(data)
     .join("text")
@@ -156,7 +177,8 @@ const construct = (element, data, width, height, radius) => {
         let labelArray = d.label.split(" ");
         return labelArray[0]                      
     });
-   ;
+    }
+    
     
     function checkActorSin(data) {
         if (data.actor === "human") {
