@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Container className="mt-5 pt-5 mb-5">
+      <Container fluid className="mt-4 mb-5">
       <PlaceLoops />
       </Container> 
     </>

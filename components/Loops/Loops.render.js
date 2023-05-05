@@ -7,7 +7,7 @@ const radians = Math.PI / 180;
 
 const color = d3
 .scaleOrdinal()
-.range(["#0e6b63", "#DDD"])
+.range(["#B1B9E7", "#CAE278"])
 .domain(["human", "algorithm"]);
 
 const construct = (element, data, width, height, radius, labels) => {
@@ -16,7 +16,7 @@ const construct = (element, data, width, height, radius, labels) => {
     let h = height;
     let r = radius;
     let l = labels;
-
+    
     console.log(h);
     const loop = d3
     .line()
@@ -37,16 +37,16 @@ const construct = (element, data, width, height, radius, labels) => {
     .domain(d3.map(data.filter((d) => d.actor === "algorithm"),(d) => d.index).sort((a, b) => a - b));
     
     svg = d3.select(element).attr("background-color", "#FFFFFF");
-
+    
     svg.selectAll("*").remove();
     
     const def = svg.append("defs");
     
     const g = def.append("linearGradient").attr("id", "hit");
     
-    g.append("stop").attr("stop-color", "#A8B078").attr("offset", "0");
+    g.append("stop").attr("stop-color", "var(--bs-teal)").attr("offset", "0.45");
     
-    g.append("stop").attr("stop-color", "black").attr("offset", "1");
+    g.append("stop").attr("stop-color", "black").attr("offset", "0.55");
     
     svg
     .append("defs")
@@ -65,40 +65,42 @@ const construct = (element, data, width, height, radius, labels) => {
     .attr("orient", "auto")
     .append("path")
     .attr("d", "M0,-5L10,0L0,5")
-    .attr("fill", "#000");
+    .attr("fill", "#000")
+    .attr("stroke", "#FFFFFF")
+    .attr("stroke-width", 2);
     
     if (l) {
         svg
-    .append("text")
-    .attr("x", w / 2 - 20)
-    .attr("y", 15)
-    .attr("text-anchor", "end")
-    .attr("font-weight", "bold")
-    .attr("font-size", 14)
-    .attr("fill", "#0d6efd")
-    .text("Humans");
-    
-    svg
-    .append("text")
-    .attr("x", w / 2 + 20)
-    .attr("y", 15)
-    .attr("text-anchor", "start")
-    .attr("font-weight", "bold")
-    .attr("font-size", 14)
-    .attr("fill", "slateGray")
-    .text("Algorithms");
-    }
-
-    for (let i = 1; i < 5; i+=0.7) {
+        .append("text")
+        .attr("x", w / 2 - 20)
+        .attr("y", 15)
+        .attr("text-anchor", "end")
+        .attr("font-size", 10)
+        .attr("font-family", "Roboto Mono")
+        .attr("fill", "#929DDD")
+        .text("HUMANS");
+        
         svg
-        .append("circle")
-        .attr("cx", w / 2)
-        .attr("cy", h / 2)
-        .attr("r", i * r)
-        .attr("opacity", 1 / (i * 5))
-        .attr("fill", "none")
-        .attr("stroke-width", 1)
-        .attr("stroke", "url(#hit)");
+        .append("text")
+        .attr("x", w / 2 + 20)
+        .attr("y", 15)
+        .attr("text-anchor", "start")
+        .attr("font-size", 10)
+        .attr("font-family", "Roboto Mono")
+        .attr("fill", "#B6D846")
+        .text("ALGORITHMS");
+        
+        // for (let i = 1; i < 5; i+=0.7) {
+        //     svg
+        //     .append("circle")
+        //     .attr("cx", w / 2)
+        //     .attr("cy", h / 2)
+        //     .attr("r", i * r)
+        //     .attr("opacity", 1 / (i * 5))
+        //     .attr("fill", "none")
+        //     .attr("stroke-width", 1)
+        //     .attr("stroke", "url(#hit)");
+        // }
     }
     
     const tasks = svg
@@ -139,7 +141,7 @@ const construct = (element, data, width, height, radius, labels) => {
     })
     .attr("stroke", (d) => color(d.actor))
     .append("title")
-    .text((d, i) => `${i + 1}: ${d.label}`);
+    .text((d, i) => `${i + 1}: ${d.title}`);
     
     drawing
     .selectAll("path")
@@ -151,7 +153,7 @@ const construct = (element, data, width, height, radius, labels) => {
         if (l) {
             return 2
         } else {
-            return 1.5
+            return 1
         }
     })
     .attr("d", (region) => loop(data))
@@ -160,40 +162,38 @@ const construct = (element, data, width, height, radius, labels) => {
     
     if (l) {
         tasks
-    .selectAll("text")
-    .data(data)
-    .join("text")
-    .attr("text-anchor", (d) => {
-        if (checkActorText(d)) {
-            return "end";
-        }
-    })
-    .attr("x", (d) =>
-    checkActorText(d) ? checkActorSin(d) - 20 : checkActorSin(d) + 20
-    )
-    .attr("y", (d) => checkActorCos(d) + 4)
-    .attr("font-size", 12)
-    .text(d => {
-        let labelArray = d.label.split(" ");
-        return labelArray[0]                      
-    });
+        .selectAll("text")
+        .data(data)
+        .join("text")
+        .attr("text-anchor", (d) => {
+            if (checkActorText(d)) {
+                return "end";
+            }
+        })
+        .attr("x", (d) =>
+        checkActorText(d) ? checkActorSin(d) - 20 : checkActorSin(d) + 20
+        )
+        .attr("y", (d) => checkActorCos(d) + 4)
+        .attr("font-size", 9)
+        .attr("font-family", "Roboto Mono")
+        .text(d => d.title);
     }
     
     
     function checkActorSin(data) {
         if (data.actor === "human") {
             console.log(humanScale(data.index));
-            return data.radius * r * Math.sin(humanScale(data.index) * radians);
+            return 1 * r * Math.sin(humanScale(data.index) * radians);
         } else {
-            return data.radius * r * Math.sin(algoScale(data.index) * radians);
+            return 1 * r * Math.sin(algoScale(data.index) * radians);
         }
     }
     
     function checkActorCos(data) {
         if (data.actor === "human") {
-            return data.radius * r * Math.cos(humanScale(data.index) * radians);
+            return 1 * r * Math.cos(humanScale(data.index) * radians);
         } else {
-            return data.radius * r * Math.cos(algoScale(data.index) * radians);
+            return 1 * r * Math.cos(algoScale(data.index) * radians);
         }
     }
     

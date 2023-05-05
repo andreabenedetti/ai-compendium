@@ -1,805 +1,877 @@
 const data = [
-{
-	title: "Machine teaching",
-	value: "A technique of machine learning",
-	url: "",
-	loop: [{
-		label: "Collect the sample dataset",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Plan/update the curriculum",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Explain knowledge to learner",
-		index: 2,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Update the model",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Review model predictions and reasonings",
-		index: 3,
-		radius: 1,
-		actor: "human"
-	}]
-}, {
-	title: "Active learning (image classification algorithm)",
-	value: "An example of active learning loop as described by ...",
-	loop: [{
-		label: "request classification",
-		radius: 1,
-		index: 0,
-		actor: "human"
-	}, {
-		label: "segment image",
-		radius: 1,
-		index: 2,
-		actor: "algorithm"
-	}, {
-		label: "annotate the image",
-		radius: 1,
-		index: 1,
-		actor: "algorithm"
-	}, {
-		label: "validate the results",
-		radius: 1,
-		index: 1,
-		actor: "human"
-	}, {
-		label: "annotate the image",
-		radius: 1,
-		index: 2,
-		actor: "human"
-	}, {
-		label: "update the model",
-		radius: 1,
-		index: 0,
-		actor: "algorithm"
-	}]
-}, {
-	title: "Challenge AI Mind: A Crowd System for Proactive AI Testing",
-	value: "AI Developers needing to discover unknown errors made by the AI models, and engage in the process of proactive testing use LIME, Adversarial learning for generating testing data and evaluate the performace of AI systems",
-	url: "http://arxiv.org/pdf/1810.09030v1",
-	loop: [{
-		label: "generate data",
-		radius: 1.7,
-		index: 0,
-		actor: "human"
-	}, {
-		label: "assign a score",
-		radius: 1,
-		index: 1,
-		actor: "algorithm"
-	}, {
-		label: "calculate relationship between word and prediction",
-		radius: 1.7,
-		index: 1,
-		actor: "algorithm"
-	}, {
-		label: "communicate the result",
-		radius: 1.7,
-		index: 0,
-		actor: "algorithm"
-	}, {
-		label: "visualize the score",
-		radius: 1,
-		index: 0,
-		actor: "algorithm"
-	}, {
-		label: "validate the data",
-		radius: 1.7,
-		index: 1,
-		actor: "human"
-	}, {
-		label: "categorize the data",
-		radius: 1.7,
-		index: 2,
-		actor: "human"
-	}, {
-		label: "analyse the data",
-		radius: 1,
-		index: 0,
-		actor: "human"
-	}]
-}, {
-	title: "An Interactive Explanatory AI System for Industrial Quality Control",
-	value: "Domain experts needing to classify defects in an industrial quality control setting use Image classification algorithms, LIME for reducing workload for humans while both respecting their expertise and without removing their agency or accountability.",
-	url: "http://arxiv.org/pdf/2203.09181v1",
-	loop: [{
-		label: "Request classification",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Predict defects",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Annotate the image",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Verbalise results",
-		index: 1,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Communicate results",
-		index: 0,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Validate the results",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}]
-}, {
-	title: "A tool for user friendly, cloud based, whole slide image segmentation",
-	value: "Clinicians and biological researchers needing to perform human in THE LOOP segmentation analysis remotely with an easy to use graphical user interface use Convolutional Neural Networks, Image classification algorithms to facilitate widespread use by computational non-experts.",
-	url: "http://arxiv.org/pdf/2101.07222v1",
-	loop: [{
-		label: "Request for prediction",
-		index: 0,
-		actor: "human",
-		radius: 1
-	}, {
-		label: "Segment image",
-		index: 2,
-		actor: "algorithm",
-		radius: 1
-	}, {
-		label: "Annotate prediction",
-		index: 1,
-		actor: "algorithm",
-		radius: 1
-	}, {
-		label: "Evaluate prediction",
-		index: 1,
-		actor: "human",
-		radius: 1
-	}, {
-		label: "Correct prediction",
-		index: 0,
-		actor: "human",
-		radius: 1.7
-	}, {
-		label: "Annotate corrected prediction",
-		index: 1,
-		actor: "human",
-		radius: 1.7
-	}, {
-		label: "Update training set",
-		index: 0,
-		actor: "algorithm",
-		radius: 1
-	}]
-}, {
-	title: "CAIPI in Practice: Towards Explainable Interactive Medical Image Classification",
-	value: "Physicians needing to explain their decisions use Quick Shift, Random forests, Sparse-Linear Approximation for simplifying human-in-the-loop approaches for image classification",
-	url: "http://arxiv.org/pdf/2204.02661v2",
-	loop: [{
-		label: "Request classification",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Segment image",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Annotate image",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Communicate results",
-		index: 1,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Provide counterexamples",
-		index: 0,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Validate results",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Annotate image",
-		index: 2,
-		radius: 1,
-		actor: "human"
-	}]
-}, {
-	title: "A Deep Learning and Gamification Approach to Energy Conservation at Nanyang Technological University",
-	value: "Planners needing to improve the energy efficiency of a building through the utilization of cutting-edge Internet of Things (IoT) sensors and cyber-physical systems sensing/actuation platforms use Deep Bi-Directional Neural Networks for employing robust estimations for classical discrete choice models provided for the derived high dimensional imbalanced data.",
-	url: "http://arxiv.org/pdf/1809.05142v2",
-	loop: [{
-		label: "View their energy usage",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Affect their energy score",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Receive feedback of their behavior",
-		index: 2,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Collect usage data",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Collect weather data",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Aggregate and expand data with high dimensional features",
-		index: 2,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Segment data into classes of agents",
-		index: 1,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Provide adjustments to smart utilities based on identified classes",
-		index: 0,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Answer survey on the optimization adjustments by the algorithm",
-		index: 0,
-		radius: 1.7,
-		actor: "human"
-	}]
-}, {
-	title: "A Free Lunch in Generating Datasets: Building a VQG and VQA System with Attention and Humans in the Loop",
-	value: "AI Researchers needing to resolve the issue of labeling massive amounts of data are costly, inconsistent, and prone to failure, being static in nature use Visual Question Answering, Visual Question Generator for focusing parsing clean answers from noisy human response",
-	url: "http://arxiv.org/pdf/1912.00124v2",
-	loop: [{
-		label: "Extract features from an image",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Generate question from features",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Respond to visual question",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Collect answer",
-		index: 1,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Clean up response",
-		index: 0,
-		radius: 1.7,
-		actor: "algorithm"
-	}]
-}, {
-	title: "A glass-box interactive machine learning approach for solving NP-hard problems with the human-in-the-loop",
-	value: "Health informatics needing to study protein folding use Interactive Machine Learning for opening the black-box to a glass-box and thus enabling a human directly to interact with an learning algorithm",
-	loop: [{
-		label: "Selection of the HIF",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Start and initialization of the Ant-Algorithm",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "CreateHeuristicSolution(ProblemSize)",
-		index: 2,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "LocalUpdateAndDecayPheromone(Pheromone, Si, Sicost, ρ)",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Modification of the HIM",
-		index: 2,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "UpdateHumanInteractionMatrix(HIM)",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}]
-}, {
-	title: "A Learning-Based Tune-Free Control Framework for Large Scale Autonomous Driving System Deployment",
-	value: "Citizens needing to reach locations autonomously with self-driving cars use Bayesian-optimization-based feedback control auto-tuner, Learning-based dynamic model, Learning-based open-loop mapping for accelerating large scale autonomous driving system deployed on various vehicles and driving environments",
-	loop: [{
-		label: "Request route for location",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Bayesian-based auto-tuner",
-		index: 2,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Learning-based open-loop mapping",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Learning dynamic model (vehicle)",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Bayesian-based auto-tuner",
-		index: 2,
-		radius: 1,
-		actor: "algorithm"
-	}]
-}, {
-	title: "A machine learning pipeline for autonomous numerical analytic continuation of Dyson-Schwinger equations",
-	value: "Scholars needing to solve Dyson-Schwinger equations in quantum field theory use Computer vision, Deep learning, Machine learning for detecting poles and branch cuts in the numerical integrand after every iteration step and by suggesting suitable integration contour deformations that avoid these obstructions",
-	loop: [{
-		label: "Provide image of function",
-		index: 0,
-		radius: 1,
-		actor: "human"
-	}, {
-		label: "Segment the image using U-Net",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Provide masked image",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}, {
-		label: "Generate an agent in the environment",
-		index: 1,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Analyse the mask",
-		index: 0,
-		radius: 1.7,
-		actor: "algorithm"
-	}, {
-		label: "Validate results",
-		index: 1,
-		radius: 1,
-		actor: "human"
-	}]
-}, {
-	title: "A Novel Deep Learning Pipeline for Retinal Vessel Detection in Fluorescein Angiography - Automated",
-	value: "Interventional cardiologists needing to detect retinal vessels in FA images use Deep Neural Networks that reduce the effort required for generating labeled ground truth data",
-	loop: [
-		{
-		   actor: "human",
-		   type: "Annotator",
-		   index: 0,
-		   radius: 1,
-		   label: "Correcting estimated binary vessel maps by removing false positive detections and adding in false negative detections"
+	{
+		"title": "Design, Benchmarking and Explainability Analysis of a Game-Theoretic Framework towards Energy Efficiency in Smart Infrastructure",
+		value: {
+			humans: ["End-user"],
+			problems: ["Inefficiencies"],
+			technologies: ["Deep recurring newtorks", "Neural networks"],
+			promises: ["Optimization"],
+			data: ["Logs"],
 		},
-		{
-		   actor: "algorithm",
-		   type: "Deep neural network",
-		   index: 6,
-		   radius: 1,
-		   label: "Refining the deep neural network using the new labeled images obtained from human annotation"
+		"loop": [
+			{
+				"actor":"human",
+				"type":"building manager",
+				"index": 1,
+				"radius": 1,
+				"title":"Interface Creation",
+				"label":"Building managers interact with occupants to incentivize energy-efficient behavior"
+			},
+			{
+				"actor":"human",
+				"type": null,
+				"index": 2,
+				"radius": 1,
+				"title":"Social Game Experiment",
+				"label":"Conduct a social game experiment on the Nanyang Technological University campus to study human decision-making towards energy usage in competitive settings"
+			},
+			{
+				"actor":"human",
+				"type":null,
+				"index": 3,
+				"radius": 1,
+				"title":"Human Decision-Making Model",
+				"label":"Develop a human decision-making model based on data obtained from the social game experiment"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Utility Estimation",
+				"index": 5,
+				"radius": 1,
+				"title":"Utility Estimation",
+				"label":"Introduce utility estimation along with several proposed machine learning & deep learning algorithms for sequential decision games"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Machine Learning Algorithms",
+				"index": 4,
+				"radius": 1,
+				"title":"Machine Learning Algorithms",
+				"label":"Propose machine learning algorithms for benchmarking occupant actions towards energy efficiency, including Random Forest, Gradient Boosting, and Support Vector Regression"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Deep Learning Algorithms",
+				"index": 3,
+				"radius": 1,
+				"title":"Deep Learning Algorithms",
+				"label":"Propose deep learning algorithms for benchmarking occupant actions towards energy efficiency, including Long Short-Term Memory (LSTM) and Convolutional Neural Networks (CNN)"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Graphical Lasso Algorithm",
+				"index": 2,
+				"radius": 1,
+				"title":"Graphical Lasso Algorithm",
+				"label":"Use the graphical lasso algorithm to understand latent conditional dependence between variables"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Explainability Analysis Methodology",
+				"index": 1,
+				"radius": 1,
+				"title":"Explainability Analysis Methodology",
+				"label":"Describe the methodology for explainability analysis of proposed machine learning & deep learning algorithms"
+			}
+		]
+	},{
+		"title": "A Novel Deep Learning Pipeline for Retinal Vessel Detection in Fluorescein Angiography",
+		value: {
+			humans: ["Students"],
+			problems: ["Inefficiencies"],
+			technologies: ["Machine learning"],
+			promises: ["Personalization"],
+			data: ["Bodily traces"],
 		},
-		{
-		   actor: "human",
-		   type: "Annotator",
-		   index: 1,
-		   radius: 1,
-		   label: "Manually correcting annotations generated for a batch of images using a trained network from the previous iteration"
-		},
-		{
-		   actor: "algorithm",
-		   type: "Deep neural network",
-		   index: 5,
-		   radius: 1,
-		   label: "Training the neural network with the corrected annotations"
-		},
-		{
-		   actor: "human",
-		   type: "Annotator",
-		   index: 2,
-		   radius: 1,
-		   label: "Correcting estimated binary vessel maps by removing false positive detections and adding in false negative detections"
-		},
-		{
-		   actor: "algorithm",
-		   type: "Generative adversarial network",
-		   index: 1,
-		   radius: 1.7,
-		   label: "Learning a mapping from FA images to vessel maps using a generator and discriminator"
-		},
-		{
-		   actor: "human",
-		   type: "Annotator",
-		   index: 5,
-		   radius: 1,
-		   label: "Manually correcting annotations generated for a batch of images using the generator from the previous iteration"
-		},
-		{
-		   actor: "algorithm",
-		   type: "Generative adversarial network",
-		   index: 0,
-		   radius: 1.7,
-		   label: "Training the generator and discriminator with the corrected annotations"
-		}
-	 ]
-}, {
-	title: "A Novel Deep Learning Pipeline for Retinal Vessel Detection in Fluorescein Angiography",
-	value: "Interventional cardiologists needing to detect retinal vessels in FA images use Deep Neural Networks that reduce the effort required for generating labeled ground truth data",
-	loop: [{
-		label: "Compare coloured and fluorescein angiographies",
-		index: 4,
-		radius: 1,
-		actor: "algorithm"
+		"loop": [
+			{
+				"actor": "human",
+				"type": "Ophthalmologists",
+				"index": 1,
+				"radius": 1,
+				"title": "CF Annotation",
+				"label": "Manually annotate retinal vessels in color fundus (CF) images"
+			},
+			{
+				"actor": "algorithm",
+				"type": "Deep Neural Networks (DNNs)",
+				"index": 2,
+				"radius": 1,
+				"title": "CF Detection",
+				"label": "Detect retinal vessels in CF images using supervised learning"
+			},
+			{
+				"actor":"human",
+				"type":"Ophthalmologists",
+				"index": 2,
+				"radius": 1,
+				"title":"FA Annotation",
+				"label":"Manually annotate retinal vessels in FA images"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Deep Neural Networks (DNNs)",
+				"index": 1,
+				"radius": 1,
+				"title":"FA Detection",
+				"label":"Detect retinal vessels in fluorescein angiography (FA) images using transfer learning from CF images"
+			},
+		]
 	}, {
-		label: "Align and transform images",
-		index: 3,
-		radius: 1,
-		actor: "algorithm"
+		"title": "CAIPI in Practice: Towards Explainable Interactive Medical Image Classification",
+		value: {
+			humans: ["Students"],
+			problems: ["Inefficiencies"],
+			technologies: ["Machine learning"],
+			promises: ["Personalization"],
+			data: ["Bodily traces"],
+		},
+		"loop": [
+			{
+				"actor": "human",
+				"type": "clinician",
+				"radius": 1,
+				"index": 1,
+				"title": "data preparation",
+				"label": "collect and preprocess medical data"
+			},
+			{
+				"actor": "algorithm",
+				"type":"machine learning model",
+				"radius": 1,
+				"index": 3,
+				"title":"data preprocessing algorithm",
+				"label":"clean and preprocess medical data for use in machine learning model training"
+			},
+			{
+				"actor": "algorithm",
+				"type":"machine learning model",
+				"radius": 1,
+				"index": 2,
+				"title":"train on preprocessed data",
+				"label":"train a machine learning model on preprocessed medical data to make predictions about new cases"
+			},
+			{
+				"actor": "algorithm",	
+				"type": "explainable machine learning (XAI) model",
+				"radius": 1,
+				"index": 1,	
+				"title": "explainability algorithm",	
+				"label": "provide explanations for the decisions made by the machine learning model in a transparent way"
+			},
+			{
+				"actor": "human",	
+				"type":"clinician",
+				"radius": 1,
+				"index": 2,	
+				"title":"model evaluation and correction",	
+				"label":"evaluate performance of machine learning model and correct its decisions based on expert knowledge"
+			},
+			{
+				"actor": "human",
+				"type": "expert in domain knowledge",
+				"radius": 1,
+				"index": 3,
+				"title": "model optimization",
+				"label": "optimize machine learning model with input from domain experts to improve its performance"
+			}
+		]
 	}, {
-		label: "Compile training dataset",
-		index: 2,
-		radius: 1,
-		actor: "algorithm"
+		"title": "Iterative Human and Automated Identification of Wildlife Images",
+		value: {
+			humans: ["Annotators"],
+			problems: ["Data analysis"],
+			technologies: ["Deep learning", "Machine learning"],
+			promises: ["Human support"],
+			data: ["Environmental data", "Annotations"],
+		},
+		"loop": [
+			{
+				"actor":"algorithm",
+				"type":"deep learning model",
+				"radius": 1,
+				"order": 3,
+				"title":"Image prediction",
+				"label":"Predict categories of images using deep learning models trained from previous periods"
+			},
+			{
+				"actor":"algorithm",
+				"type":"deep learning model",
+				"radius": 1,
+				"index": 2,
+				"title":"Confidence level calculation",
+				"label":"Calculate confidence levels for predicted image categories"
+			},
+			{
+				"actor":"human",
+				"type":"annotator",
+				"radius": 1,
+				"index": 1,
+				"title":"Verify low-confidence",
+				"label":"Verify low-confidence predictions through human annotation"
+			},
+			{
+				"actor":"human",
+				"type":"annotator",
+				"radius": 1,
+				"index": 2,
+				"title":"Provide annotations",
+				"label":"Provide annotations for low-confidence predictions"
+			},
+			{
+				"actor":"algorithm",
+				"type":"deep learning model",
+				"radius": 1,
+				"index": 1,
+				"title":"Model updates",
+				"label":"Include pseudo-labels in final data set for further model updates or ecological analyses"
+			}
+		]
 	}, {
-		label: "Provide unlabeled image to human",
-		index: 1,
-		radius: 1,
-		actor: "algorithm"
+		title: "Human and Smart Machine Co-Learning with Brain Computer Interface",
+		value: {
+			humans: ["Teachers", "Students", "Players"],
+			problems: ["Learning"],
+			technologies: ["Machine learning", "Neural network"],
+			promises: ["Human support"],
+			data: ["Bodily traces"],
+		},
+		loop: [
+			{
+				"actor": "human",
+				"type": "Professional Go players",
+				"index": 1,
+				"radius": 1,
+				"title": "Playing Go games",
+				"label": "Inviting professional Go players to play Go games on site with a smart machine using the Robotic DDF Go system gazing at the coded visual stimulus on the screen"
+			},
+			{
+				"actor": "human",
+				"type": "Students",
+				"index": 2,
+				"radius": 1,
+				"title": "Playing Go games",
+				"label": "Inviting students to play Go games on site with a smart machine using the Robotic DDF Go system gazing at the coded visual stimulus on the screen"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Robotic DDF Go system",
+				"index": 2,
+				"radius": 1,
+				"title":"Decode brainwaves",
+				"label":"Continuously decoded the on-going EEG to send the move command to the game server."
+			},
+			{
+				"actor": "human",
+				"type": "Technician",
+				"index": 3,
+				"radius": 1,
+				"title": "Check impedance",
+				"label": "The technician must check the impedance between the scalp and the EEG electrodes first for collecting the good quality of EEG signals"
+			},
+			{
+				"actor":"algorithm",
+				"type":"Robotic DDF Go system",
+				"index": 1,
+				"radius": 1,
+				"title":"Respond to moves",
+				"label":"Respond to moves by the player."
+			},
+		] 
 	}, {
-		label: "Label image",
-		index: 0,
-		radius: 1,
-		actor: "human"
+		title: "Improving Ethical Outcomes with Machine-in-the-Loop: Broadening Human Understanding of Data Annotations",
+		value: {
+			humans: ["Students", "Teachers", "Administrators"],
+			problems: ["Inequalities"],
+			technologies: ["Machine learning"],
+			promises: ["Automation"],
+			data: ["Written text"],
+		},
+		loop: [
+			{
+				"actor":"human",
+				"type":"student",
+				"index": 1,
+				"radius": 1,
+				"title":"Data generation",
+				"label":"Translate minoritized students' lived experiences into 21st century skills, issues micro-credentials, and creates personal skills portfolio."
+			},
+			{
+				"actor":"human",
+				"type":"annotator",
+				"index": 2,
+				"radius": 1,
+				"title":"Data annotation",
+				"label":"Annotate data with labels for supervised machine learning"
+			},
+			{
+				"actor":"algorithm",
+				"type":"model",
+				"index": 2,
+				"radius": 1,
+				"title":"Fairness metric evaluation",
+				"label":"Evaluate model performance using fairness metrics to identify and address potential biases."
+			},
+			{
+				"actor": "algorithm",
+				"type": "model",
+				"index": 1,
+				"radius": 1,
+				"title": "Refine model",
+				"label": "Refine machine learning models based on human feedback"
+			},
+		]
 	}, {
-		label: "Update model",
-		index: 0,
-		radius: 1,
-		actor: "algorithm"
-	}]
-}, {
-	title: "A Physical Testbed for Intelligent Transportation Systems",
-	value: "Researchers and student needing to develop novel traffic and vehicle control algorithms with higher fidelity use Model based control, Data analytics that improve the system performance over time",
-	url: "http://arxiv.org/pdf/1907.12899v1",
-	loop: [
-		{
-			label: "Front view streaming image",
-			index: 2,
-			radius: 1,
-			actor: "algorithm",
-			type: "Vehicle"
+		title: "Threat determination for radiation detection from the Remote Sensing Laboratory",
+		value: {
+			humans: ["Annotators"],
+			problems: ["Data analysis"],
+			technologies: ["Machine learning"],
+			promises: ["Human support"],
+			data: ["Environmental data", "Annotations"],
 		},
-		{
-			label: "Image processing",
-			index: 1,
-			radius: 1.7,
-			actor: "algorithm",
-			type: "Convolutional neural network"
+		loop: [
+			{
+				"actor":"human",
+				"type":"operator",
+				"index": 1,
+				"radius": 1,
+				"title":"Radiation Detection",
+				"label":"Searching for radiation sources using detection systems."
+			},
+			{
+				"actor":"algorithm",
+				"type":"detection system",
+				"index": 2,
+				"radius": 1,
+				"title":"Soft-sensing Algorithms",
+				"label":"Utilizing soft-sensing algorithms to discriminate potential threat and non-threat objects."
+			},
+			{
+				"actor":"algorithm",
+				"type":"Tensorflow",
+				"index": 1,
+				"radius": 1,
+				"title":"Training",
+				"label":"Processing data using machine learning models to identify potential threats."
+			}
+		]
+	}, {
+		title: "Accelerating COVID-19 Differential Diagnosis with Explainable Ultrasound Image Analysis",
+		value: {
+			humans: ["Medical experts"],
+			problems: ["Disease prevention"],
+			technologies: ["Deep learning", "Neural networks"],
+			promises: ["Accuracy"],
+			data: ["Videos"],
 		},
-		{
-			label: "Aggregate data",
-			index: 2,
-			radius: 2.4,
-			actor: "algorithm",
-			type: "Traffic management system"
+		loop: [
+			{
+				"actor":"algorithm",
+				"type":"ultrasound machine",
+				"index": 3,
+				"radius": 1,
+				"title":"Ultrasound image acquisition and processing",
+				"label":"Acquire lung ultrasound images using standardized protocol, process images for analysis"
+			},
+			{
+				"actor": "algorithm",
+				"type": "machine learning model",
+				"index": 2,
+				"radius": 1,
+				"title": "CAM generation",
+				"label": "Generate class activation maps (CAMs) to highlight pulmonary biomarkers"
+			},
+			{
+				"actor":"human",
+				"type":"medical expert",
+				"index": 1,
+				"radius": 1,
+				"title":"Expert interpretation of CAMs and ultrasound images",
+				"label":"Interpret CAMs and ultrasound images to identify COVID-19 biomarkers and differentiate from other lung diseases"
+			},
+			{
+				"actor":"algorithm",
+				"type":"machine learning model",
+				"index": 1,
+				"radius": 1,
+				"title":"Model training and validation",
+				"label":"Train and validate machine learning models using the dataset and CAMs to improve diagnostic accuracy"
+			},
+		]
+	}, {
+		title: "Data Augmentation with Paraphrase Generation and Entity Extraction for Multimodal Dialogue System",
+		value: {
+			humans: ["End-user"],
+			problems: ["Impairments"],
+			technologies: ["Natural language processing", "Speech recognition"],
+			promises: ["Optimization"],
+			data: ["Voice"],
 		},
-		{
-			label: "Output data to intesection controller",
-			index: 1,
-			radius: 2.4,
-			actor: "algorithm",
-			type: "Traffic management system"
+		loop: [
+			{
+				"actor": "human",
+				"type": "Domain experts",
+				"index": 1,
+				"radius": 1,
+				"title": "Intent and Entity Definition",
+				"label": "Defining intents and entities relevant to the task-oriented SDS pipeline."
+			},
+			{
+				"actor": "human",
+				"type": "Children",
+				"index": 2,
+				"radius": 1,
+				"title": "Data Collection",
+				"label": "Creating domain-specific and task-relevant datasets by collecting children's utterances related to basic math concepts."
+			},
+			{
+				"actor": "human",
+				"type":"Annotator", 
+				"index": 3,
+				"radius": 1,
+				"title":"Data Annotation", 
+				"label":"Annotating the data with intents and entities."
+			},
+			{
+				"actor":"algorithm", 
+				"type":"NLU Model", 
+				"index": 4,
+				"radius": 1,
+				"title":"Model Training", 
+				"label":"Training and evaluating NLU models using iterative training processes."
+			},
+			{
+				"actor":"algorithm", 
+				"type":"Data Augmentation Techniques", 
+				"index": 3,
+				"radius": 1,
+				"title":"Paraphrase Generation and Entity Extraction", 
+				"label":"Using data augmentation techniques such as paraphrase generation and entity extraction to improve NLU model performance on small-size task-specific datasets."
+			},
+			{
+				"actor":"algorithm", 
+				"type":"Contextually Aware Intelligent Agents",
+				"index": 2,
+				"radius": 1, 
+				"title":"Intelligent Agent Development", 
+				"label":"Incorporating contextually aware intelligent agents to understand users and their surroundings in real-time."
+			},
+			{
+				"actor":"algorithm", 
+				"type":"Spoken Dialogue Systems (SDS)", 
+				"index": 1,
+				"radius": 1,
+				"title":"SDS Implementation", 
+				"label":"Using Spoken Dialogue Systems (SDS) as crucial building blocks to handle efficient task-oriented communication with children in game-based learning settings."
+			}
+		]
+	}, {
+		title: "AutoMOS: Learning a non-intrusive assessor of naturalness-of-speech",
+		value: {
+			humans: ["Annotators"],
+			problems: ["Data analysis"],
+			technologies: ["Deep recurring networks"],
+			promises: ["Accuracy"],
+			data: ["Voice"],
 		},
-		{
-			label: "Update model of recurring patterns",
-			index: 0,
-			radius: 2.4,
-			actor: "algorithm",
-			type: "Traffic management system"
+		loop: [
+			{
+				"actor": "algorithm",
+				"type": "Speech synthesizer",
+				"index": 2,
+				"radius": 1,
+				"title": "Data collection",
+				"label": "All utterances from a given synthesizer and are allocated to a single training or evaluation fold, or to a single aggregate metric,"
+			},
+			{
+				"actor": "human",
+				"type": "raters",
+				"index": 1,
+				"radius": 1,
+				"title": "Speech Quality Assessment",
+				"label": "Human raters are employed to assess synthesized speech quality."
+			},
+			{
+				"actor": "algorithm",
+				"type": "Neural network",
+				"index": 1,
+				"radius": 1,
+				"title": "AutoMOS Model Development",
+				"label": "A deep recurrent neural network is developed to model human raters' mean opinion scores of synthesized speech using only a raw waveform."
+			}
+		]
+	}, {
+		title: "Deep Visual Perception for Dynamic Walking on Discrete Terrain",
+		value: {
+			humans: ["Not mentioned"],
+			problems: ["Situating"],
+			technologies: ["Neural networks"],
+			promises: ["Automation"],
+			data: ["Videos"],
 		},
-		{
-			label: "Change parameters of the simulation",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Researcher"
-		}
-	]
-}, {
-	title: "A Scalable Workflow to Build Machine Learning Classifiers with Clinician-in-the-Loop to Identify Patients in Specific Diseases",
-	value: "Clinicians needing to identify patients with specific diseases from Electronic Health Records use Natural Language Processing that identifies patients at scale with given diseases, especially those who might currently be miscoded or missed",
-	url: "http://arxiv.org/pdf/2205.08891v1",
-	loop: [
-		{
-			label: "Preprocess data from unstructured notes and structured data",
-			index: 3, 
-			radius: 1,
-			actor: "algorithm",
-			type: ""
+		loop: [
+			{
+				"actor": "human",
+				"type":"researcher", 
+				"index": 2,
+				"radius": 1,
+				"title":"Dataset Creation", 
+				"label":"Creating a synthetic dataset using a systematic methodology to train the CNN-based deep perception model for accurate step length estimation."
+			},
+			{
+				"actor": "algorithm",
+				"type": "deep neural network",
+				"index": 2,
+				"radius": 1,
+				"title": "Step Length Estimation",
+				"label": "Designing and training a custom convolutional neural network architecture to predict step length to the next foothold using a sampled image preview of the upcoming terrain at foot impact."
+			},
+			{
+				"actor": "algorithm",
+				"type":"safety-critical controller",
+				"index": 1,
+				"radius": 1, 
+				"title":"Limit Cycle Walking", 
+				"label":"Incorporating an inner-loop safety-critical controller into the physics simulator that can generate stable and safe limit cycle walking of a desired step length." 
+			},
+			{
+				"actor": "human",
+				"type": "researcher",
+				"index": 1,
+				"radius": 1,
+				"title": "Evaluate Visual Perception System",
+				"label": "Building and systematically evaluating a Deep Visual Perception system to be used by a planar dynamic walking robot in order to autonomously walk on discrete terrain."
+			}
+		]
+	}, {
+		title: "From Hand-Perspective Visual Information to Grasp Type Probabilities: Deep Learning via Ranking Labels",
+		value: {
+			humans: ["Patients"],
+			problems: ["Impairments"],
+			technologies: ["Neural network"],
+			promises: ["Human support"],
+			data: ["Bodily traces"],
 		},
-		{
-			label: "Aggregate patient data",
-			index: 2,
-			radius: 1,
-			actor: "algorithm",
-			type: ""
+		loop: [
+			{
+				"actor": "human",
+				"type": "Participant",
+				"index": 1,
+				"radius": 1,
+				"title": "Data collection",
+				"label": "An experimenter wore a headband which held a camera for the human eye-view, while another camera was attached on experimenter’s right hand to collect visual information from the hand aspect."
+			},
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 2,
+				"radius": 1,
+				"title": "Data annotation",
+				"label": "To estimate the probabilistic distribution and ranking of the gestures, each image was annotated by a ranking label – an ordered permutation of 5 grasp types rather than a single grasp type."
+			},
+			{
+				"actor": "algorithm",
+				"type": "Convolutional Neural Network",
+				"index": 1,
+				"radius": 1,
+				"title": "Estimation for Ranking Label",
+				"label":  "Extract features from images, and builds a model to solve the distribution estimation problem by exploiting the ranking label and visual information."
+			},
+			{
+				"actor": "human",
+				"type": "Patient",
+				"index": 3,
+				"radius": 1,
+				"title": "Input",
+				"label": "Providing input to the AI system through a user interface in a real-case scenario."
+			}
+		]
+	}, {
+		title: "Future of Smart Classroom in the Era of Wearable Neurotechnology",
+		value: {
+			humans: ["Students"],
+			problems: ["Inefficiencies"],
+			technologies: ["Machine learning"],
+			promises: ["Human support", "Human collaboration"],
+			data: ["Bodily traces"],
 		},
-		{
-			label: "Pre-trained phenotyping",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: ""
+		loop: [
+			{
+				"actor": "human",
+				"type": "Students",
+				"index": 1,
+				"radius": 1,
+				"title": "Class",
+				"label": "Attendance of in-person and remote classes"
+			},
+			{
+				"actor": "algorithm",
+				"type": "Wearable technology",
+				"index": 3,
+				"radius": 1,
+				"title": "Data processing and inference",
+				"label": "Infer cognitive response of students, detect stress, focus, sleep quality and assimilation."
+			},
+			{
+				"actor": "algorithm",
+				"type": "Recommendation engines and adaptation algorithms",
+				"index": 1,
+				"radius": 1,
+				"title": "Recommendations",
+				"label": "Provide adaptive materials"
+			},
+			{
+				"actor": "human",
+				"type": "Students",
+				"index": 1,
+				"radius": 1,
+				"title": "Class",
+				"label": "Attendance of in-person and remote classes"
+			},
+			{
+				"actor": "algorithm",
+				"type": "Wearable technology",
+				"index": 3,
+				"radius": 1,
+				"title": "Data processing and inference",
+				"label": "Infer cognitive response of students, detect stress, focus, sleep quality and assimilation."
+			},
+			{
+				"actor": "algorithm",
+				"type": "Recommendation engines and adaptation algorithms",
+				"index": 2,
+				"radius": 1,
+				"title": "Recommendations",
+				"label": "Recommend group members, detect group coherence, aggregate statistics for students."
+			},
+			
+			{
+				"actor": "human",
+				"type": "Teacher",
+				"index": 2,
+				"radius": 1,
+				"title": "Adjust class",
+				"label": "Instructed material (quizzes, task assignments, breaks)"
+			},
+		]
+	}, {
+		title: "Interactive Segmentation and Visualization for Tiny Objects in Multi-megapixel Images",
+		value: {
+			humans: ["Students"],
+			problems: ["Inefficiencies"],
+			technologies: ["Deep learning", "Machine learning"],
+			promises: ["Human support"],
+			data: ["Environmental data", "Annotations"],
 		},
-		{
-			label: "Build or assign a classifier",
-			index: 0,
-			radius: 1,
-			actor: "algorithm"
+		loop: [
+			{
+				"actor": "algorithm",
+				"type": "image processing",
+				"index": 3,
+				"radius": 1,
+				"title": "Segmentation",
+				"label": "Algorithm segments images into regions of interest"
+			},
+			{
+				"actor": "human",
+				"type": "user interface",
+				"index": 1,
+				"radius": 1,
+				"title": "Interactive Segmentation",
+				"label": "Humans interactively refine image segmentation to improve accuracy"
+			},
+			{
+				"actor": "human",
+				"type": "user interface",
+				"index": 2,
+				"radius": 1,
+				"title": "Visualization",
+				"label": "Humans visualize image segmentation results to provide feedback for model improvement"
+			},
+			{
+				"actor": "algorithm",
+				"type": "machine learning model",
+				"index": 2,
+				"radius": 1,
+				"title": "Active Learning",
+				"label": "Algorithm selects data samples for human annotation to improve model accuracy"
+			},
+			{
+				"actor": "human",
+				"type": "user interface",
+				"index": 3,
+				"radius": 1,
+				"title": "Editing",
+				"label": "Humans edit image segmentation results to improve accuracy of machine learning models"
+			},
+			{
+				"actor": "algorithm",
+				"type": "machine learning model",
+				"index": 1,
+				"radius": 1,
+				"title": "Active Learning",
+				"label": "Algorithm selects data samples for human annotation to improve model accuracy"
+			},
+		]
+	}, {
+		title: "Interpreting and improving natural-language processing (in machines) with natural language-processing (in the brain)",
+		value: {
+			humans: ["Annotators"],
+			problems: ["Data analysis"],
+			technologies: ["Deep learning", "Machine learning"],
+			promises: ["Human support"],
+			data: ["Environmental data", "Annotations"],
 		},
-		{
-			label: "Feedback and evaluation",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Clinician"
-		}
-	]
-}, {
-	title: "Diversity of symptom phenotypes in SARS-CoV-2 community infections observed in multiple large datasets",
-	loop: [
-		{
-			label: "Collect dataset",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Clinician"
+		loop: [
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 1,
+				"radius": 1,
+				"title": "Dataset construction",
+				"label": "The sentences were chosen to be complex and naturalistic, in order to better capture the kinds of language processing that occur in real-world situations."
+			},
+			{
+				"actor": "human",
+				"type": "Subject",
+				"index": 2,
+				"radius": 1,
+				"title": "Data recording",
+				"label": "Reading complex natural text"
+			},
+			{
+				"actor": "algorithm",
+				"type": "NLP model",
+				"index": 2,
+				"radius": 1,
+				"title": "Extraction",
+				"label": "Extracting word and sequence embeddings from each of the four NLP models (ELMo, USE, BERT, and Transformer-XL)."
+			},
+			{
+				"actor":"algorithm",
+				"type":"Support Vector Regression (SVR)",
+				"index": 1,
+				"radius": 1,
+				"title":"Brain activity prediction",
+				"label":"Predicting brain activity patterns based on word and sequence embeddings from NLP models"
+			},
+			{
+				"actor":"human",
+				"type":"Researchers",
+				"index": 3,
+				"radius": 1,
+				"title":"Validation",
+				"label":"Comparing predicted brain activity patterns to actual brain activity patterns recorded during sentence reading"
+			},
+		]
+	}, {
+		title: "Keyword Spotter Model for Crop Pest and Disease Monitoring from Community Radio Data",
+		value: {
+			humans: ["Annotators"],
+			problems: ["Data analysis"],
+			technologies: ["Deep learning", "Machine learning"],
+			promises: ["Human support"],
+			data: ["Environmental data", "Annotations"],
 		},
-		{
-			label: "Age stratify dataset",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: "Hierarchical clustering and LPCA"
+		loop: [
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 1,
+				"title": "Data collection",
+				"label": "The researchers collected data from online radio stations and recorded 5-minute audio clips, which were stored in a shared Dropbox folder."
+			},
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 2,
+				"title": "Radio station identification",
+				"label": "The researchers identified two radio stations that made their content available online as 1-hour recordings."
+			},
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 3,
+				"title": "Content sorting",
+				"label": "The 1-hour recordings were sorted into talk shows and non-talk shows."
+			},
+			{
+				"actor": "human",
+				"type": "Researchers",
+				"index": 4,
+				"title": "Talk show trimming",
+				"label": "The talk shows were trimmed into 5-minute audio clips."
+			},
+			{
+				"actor": "human",
+				"type": "Volunteers",
+				"index": 5,
+				"title": "Keyword identification",
+				"label": "A team of three volunteers listened to the 5-minute audio clips and identified commonly used agricultural terms."
+			},
+			{
+				"actor": "algorithm",
+				"type": "CNN",
+				"index":2,
+				"title":"Keyword spotting model development",
+				"label":"The identified terms were fed into a keyword spotting model, which was developed using machine learning-based speech keyword spotting techniques."
+			},
+			{
+				"actor": "algorithm",
+				"type": "CNN",
+				"index":1,
+				"title":"Audio stream analysis",
+				"label":"The keyword spotting model was used to automatically identify the identified terms from audio streams."
+			}
+		]
+	}, {
+		title: "KnowledgeShovel: An AI-in-the-Loop Document Annotation System for Scientific Knowledge Base Construction",
+		value: {
+			humans: ["Researchers"],
+			problems: ["Data generation"],
+			technologies: ["Annotation system"],
+			promises: ["Human support"],
+			data: ["Written text", "Images", "Annotations"],
 		},
-		{
-			label: "Produce aligned embeddings",
-			index: 0,
-			radius: 1,
-			actor: "algorithm",
-			type: "Aligned UMAP"
-		},
-		{
-			label: "Age stratify dataset",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: "Hierarchical clustering and LPCA"
-		},
-		{
-			label: "Produce aligned embeddings",
-			index: 0,
-			radius: 1,
-			actor: "algorithm",
-			type: "Aligned UMAP"
-		},
-		{
-			label: "Evaluate results",
-			index: 1,
-			radius: 1,
-			actor: "human",
-			type: "Clinician"
-		},
-		{
-			label: "Decision making",
-			index: 0,
-			radius: 1.7,
-			actor: "human",
-			type: "Policy maker"
-		}
-	]
-} , {
-	title: "CrudeOilNews: An Annotated Crude Oil News Corpus for Event Extraction",
-	value: "Crude oil traders needing to make timely trading decisions use Automatic Content Extraction that enables accurate and timely automatic identification of events in news items",
-	url: "http://arxiv.org/pdf/2204.03871v1",
-	loop: [
-		{
-			label: "Label data (prediction)",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: "Automatic Content Extraction"
-		},
-		{
-			label: "Evaluate confidence of prediction",
-			index: 0,
-			radius: 1,
-			actor: "algorithm",
-			type: "Automatic Content Extraction"
-		},
-		{
-			label: "Verify label",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Human expert"
-		}
-	]
-}, {
-	title: "Dancing with the Unexpected and Beyond: The Use of AI Assistance in Design Fiction Creation",
-	value: "Non-experts writers needing to design fictional scenarios of technological uses use Text generation that creates actions related to narrative goals",
-	url: "http://arxiv.org/pdf/2210.00829v1",
-	loop: [
-		{
-			label: "Enter the fictional setting",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Writer"
-		},
-		{
-			label: "Identify the goals of the narrative",
-			index: 1,
-			radius: 1,
-			actor: "human",
-			type: "Writer"
-		},
-		{
-			label: "Provide actions to achieve the goals",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: "Text generation"
-		},
-		{
-			label: "Imagine consequences to actions",
-			index: 2,
-			radius: 1,
-			actor: "human",
-			type: "Writer"
-		}
-	]
-}, {
-	title: "Designing for human-AI complementarity in K-12 education",
-	value: "Teachers needing to help their students in AI-supported classrooms use Smart glasses, Body interpretation that alerts them of situations in need of their attention through mixed reality icons floating above each individual student's head",
-	url: "http://arxiv.org/pdf/2104.01266v2",
-	loop: [
-		{
-			label: "Monitor students' behavior in the class",
-			index: 0,
-			radius: 1,
-			actor: "algorithm",
-			type: "Algorithm"
-		},
-		{
-			label: "Display areas of struggle for students",
-			index: 0,
-			radius: 1.7,
-			actor: "algorithm",
-			type: "Smart glasses"
-		},
-		{
-			label: "Identify students in need",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Teacher"
-		},
-		{
-			label: "Help student in need",
-			index: 1,
-			radius: 1,
-			actor: "human",
-			type: "Teacher"
-		},
-		{
-			label: "Improve classroom attendance",
-			index: 0.5,
-			radius: 1.7,
-			actor: "human",
-			type: "Student"
-		}
-	]
-}, {
-	title: "Towards a New Participatory Approach for Designing Artificial Intelligence and Data-Driven Technologies",
-	value: "Marginalized communities needing to participate in the design of social development use Artificial Intelligence that overcomes issues surrounding current PD and its use in the design of such technologies.",
-	url: "http://arxiv.org/pdf/2104.04072v1",
-	loop: [
-		{
-			label: "Define objectives",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "Designers, users, other stakeholders"
-		},
-		{
-			label: "Data collection",
-			index: 1,
-			radius: 1,
-			actor: "human",
-			type: "Designers, users, other stakeholders"
-		},
-		{
-			label: "Model development",
-			index: 2,
-			radius: 1,
-			actor: "human",
-			type: "Designers, users, other stakeholders"
-		},
-		{
-			label: "Create alliance",
-			index: 1,
-			radius: 1.7,
-			actor: "human",
-			type: "Management"
-		},
-		{
-			label: "Model application",
-			index: 0,
-			radius: 1,
-			actor: "algorithm",
-			type: "Artificial Intelligence"
-		},
-	]
-}, {
-	title: "What are you optimizing for? Aligning Recommender Systems with Human Values",
-	value: "Recommender systems needing to present users with a tailored set of items based on factors such as past user behavior, user attributes, and features of the underlying items use Artificial Intelligence that aligns recommendations with the goals of users, system designers, and society as a whole",
-	url: "http://arxiv.org/pdf/2107.10939v1",
-	loop: [
-		{
-			label: "Consume content fed by the system",
-			index: 0,
-			radius: 1,
-			actor: "human",
-			type: "User"
-		}, 
-		{
-			label: "Aggregate data usage",
-			index: 1,
-			radius: 1,
-			actor: "algorithm",
-			type: "Recommendation system"
-		}
-	]
-}
+		loop: [
+			{
+				"actor": "human",
+				"type": "User",
+				"index": 1,
+				"title": "Preprocessing",
+				"label": "The PDF document is preprocessed to extract text and images.",
+			},
+			{
+				"title": "Table Extraction",
+				"label": "Three AI modules are used for table extraction feature demonstration. These modules include a table detection module, a table structure recognition module, and a cell recognition module.",
+				"actor": "algorithm",
+				"type": "Table Detection, Table Structure Recognition, Cell Recognition",
+				"index": 3,
+			},
+			{
+				"title": "Entity Recognition",
+				"label":"An entity recognition module is used to identify entities in the text, such as people, organizations, and locations.",
+				"actor": "algorithm",
+				"index": 2,
+				"type":"Named Entity Recognition (NER)"
+			},
+			{
+				"title":"Relation Extraction",
+				"label":"A relation extraction module is used to identify relationships between entities in the text.",
+				"actor": "algorithm",
+				"index": 1,
+				"type":"Open Information Extraction (OpenIE)"
+			},
+			{
+				"title":"Human Verification and Correction",
+				"label":"Humans can verify and correct the AI's intermediate output at each step of the pipeline. This helps prevent the accumulation of errors in the multi-stage multi-modality pipeline.",
+				"index": 2,
+				"actor": "human",
+				"type": "Annotators"
+			}
+		]
+	}
 ]
 
 export default data;
