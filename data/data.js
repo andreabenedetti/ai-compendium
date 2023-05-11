@@ -658,11 +658,11 @@ const data = [
 	}, {
 		title: "Interactive Segmentation and Visualization for Tiny Objects in Multi-megapixel Images",
 		value: {
-			humans: ["Students"],
-			problems: ["Inefficiencies"],
-			technologies: ["Deep learning", "Machine learning"],
-			promises: ["Human support"],
-			data: ["Environmental data", "Annotations"],
+			humans: ["End-user", "Implicit annotators"],
+			problems: ["Analysis"],
+			technologies: ["Image content recognition"],
+			promises: ["Ease of use"],
+			data: ["Images, Annotations"],
 		},
 		loop: [
 			{
@@ -871,7 +871,346 @@ const data = [
 				"type": "Annotators"
 			}
 		]
-	}
+	}, {
+		title: "A Scalable Workflow to Build Machine Learning Classifiers with Clinician-in-the-Loop to Identify Patients in Specific Diseases",
+		value: {
+			humans: ["Medical experts"],
+			problems: ["Inaccuracies"],
+			technologies: ["Natural language processing"],
+			promises: ["Accuracy"],
+			data: ["Written text"],
+		},
+		loop: [
+			{
+				"actor": "human",
+				"type": "Researcher",
+				"index": 1,
+				"title": "Data Preparation",
+				"label": "Gather raw data from the database for each disease and prepare unstructured textual data and structured data from the raw data."
+			},
+			{
+				"actor": "algorithm",
+				"type": "machine learning",
+				"index": 2,
+				"title": "Phenotyping Algorithm",
+				"label": "Run a pre-trained state-of-the-art phenotyping algorithm to extract phenotypic features of patients from unstructured textual data."
+			},
+			{
+				"actor": "human",
+				"type": "clinician-in-the-loop",
+				"index": 2,
+				"title": "Clinician Feedback",
+				"label": "Leverage Clinician-in-the-Loop mechanism to iteratively work with the models and provide feedback for enhancement."
+			},
+			{
+				"actor": "algorithm",
+				"type": "machine learning",
+				"index": 1,
+				"title": "Disease Classifier",
+				"label": "Combine phenotypic features with structured data to build a disease classifier using machine learning algorithms."
+			}
+		]
+	}, {
+		title: "Sharkzor: Interactive Deep Learning for Image Triage, Sort and Summary",
+		value: {
+			humans: ["End-user"],
+			problems: ["Data analysis"],
+			technologies: ["Deep learning"],
+			promises: ["Speed"],
+			data: ["Logs"],
+		},
+		loop: [
+			{
+				"actor": "human",
+				"type": "End-user",
+				"index": 1,
+				"title": "Upload images",
+				"label": "User uploads images to Sharkzor"
+			},
+			{
+				"actor": "algorithm",
+				"type": "size-agnostic classification, pre-clustering, few-shot learning",
+				"index": 2,
+				"title": "Extract features",
+				"label": "Sharkzor extracts features from ResNet for all images using transfer learning"
+			},
+			{
+				"actor": "human",
+				"type": "End-user",
+				"index": 2,
+				"title": "Interact with images",
+				"label": "User interacts with the images."
+			},
+			{
+				"actor": "algorithm",
+				"type": "Sharkzor",
+				"index": 1,
+				"title": "Impute mental model",
+				"label": "Feedback helps Sharkzor to infer the user's mental model of how the images should be grouped and sorted."
+			}
+		]
+	}, {
+		title: "Slipping to the Extreme: A Mixed Method to Explain How Extreme Opinions Infiltrate Online Discussions",
+		value: {
+			humans: ["Researchers"],
+			problems: ["Data analysis"],
+			technologies: ["Machine learning"],
+			promises: ["Speed"],
+			data: ["Digital traces"],
+		},
+		loop: [{
+			"actor": "human",
+			"type": "Researchers",
+			"index": 1,
+			"title": "Construct ontology",
+			"label": "Deep qualitative observation to construct an ontology of problematic speech"
+		},
+		{
+			"actor": "algorithm",
+			"type": "Multi-label opinion classifier",
+			"index": 2,
+			"title": "Opinion classification",
+			"label": "Machine learning algorithms automatically label data based on underlying opinions"
+		},
+		{
+			"actor": "human",
+			"type": "Researchers",
+			"index": 2,
+			"title": "Manual inspection",
+			"label": "Manually inspect labeled data to ensure accuracy and identify misclassifications"
+		},
+		{
+			"actor": "algorithm",
+			"type": "Multi-label opinion classifier",
+			"index": 1,
+			"title": "Retraining",
+			"label": "Retrain automatic opinion classifiers based on feedback from manual inspection"
+		}
+	]
+}, {
+	title: "Self-supervised Semi-supervised Learning for Data Labeling and Quality Evaluation",
+	value: {
+		humans: ["Annotators"],
+		problems: ["Data analysis"],
+		technologies: ["Machine learning"],
+		promises: ["Costs, Accuracy"],
+		data: ["Images, Annotations"],
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "Synthetic annotator",
+			"index": 3,
+			"title": "Active learning-based human-in-the-loop annotation",
+			"label": "Select most informative data samples for labeling"
+		},
+		{
+			"actor": "algorithm",
+			"type": "machine learning",
+			"index": 2,
+			"title": "Self-supervised Semi-supervised Learning",
+			"label": "Train a neural network to predict whether two augmented versions of the same image are similar or dissimilar using contrastive learning methods"
+		},
+		{
+			"actor": "algorithm",
+			"type": "machine learning",
+			"index": 1,
+			"title": "Nearest neighbor graph construction",
+			"label": "Construct a nearest neighbor graph over data samples based on learned representations by computing pairwise distances between all samples in the dataset and connecting each sample to its k-nearest neighbors in the feature space"
+		}
+	]
+}, {
+	title: "HW-Aware Initialization of DNN Auto-Tuning to Improve Exploration Time and Robustness",
+	value: {
+		humans: ["Researchers"],
+		problems: ["Industrial development"],
+		technologies: ["Machine learning"],
+		promises: ["Optimization"],
+		data: ["Logs"],
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"title": "Sampling",
+			"index": 3,
+			"type": "HW-Aware Initialization of DNN Auto-Tuning",
+			"label": "Sampling the search space for valid and invalid configurations, without considering performance."
+		},
+		{
+			"actor": "algorithm",
+			"title": "Clustering",
+			"index": 2,
+			"type": "HW-Aware Initialization of DNN Auto-Tuning",
+			"label": "Identifying clusters of valid configurations in the search space."
+		},
+		{
+			"actor": "human",
+			"title": "Presampling",
+			"index": 1,
+			"type": "Researcher",
+			"label": "Exploiting these local pockets of possible solutions using a presampling algorithm."
+		},
+		{
+			"actor":"algorithm",
+			"title":"Training set creation",
+			"index": 1,
+			"type":"HW-Aware Initialization of DNN Auto-Tuning",
+			"label":"Creating a curated training set from the information of valid and invalid subsets."
+		},
+		{
+			"actor":"human",
+			"title":"Initialization",
+			"index": 2,
+			"type":"Researcher",
+			"label":"Using this curated training set to initialize the auto-tuner."
+		}
+	]
+}, {
+	title: "BISTRO: Berkeley Integrated System for Transportation Optimization",
+	value: {
+		humans: ["Urban planners"],
+		problems: ["Planning"],
+		technologies: ["Agent simulation"],
+		promises: ["Optimization"],
+		data: ["Stakeholder engagement practices"],
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "Urban planner",
+			"index": 1,
+			"title": "Raw inputs",
+			"label": "The user-defined inputs (UDIs) represent the investment, incentive, and policy levers applicable to and available for the study at hand."
+		},
+		{
+			"actor": "algorithm",
+			"type": "pre-processing",
+			"index": 3,
+			"title": "Encoding solutions as numeric values",
+			"label": "Algorithm developers encode solutions as numeric values that represent vector-valued variables controlling aspects of the initialization and evolution of the simulation."
+		},
+		{
+			"actor":"algorithm",
+			"type":"boundary",
+			"index": 2,
+			"title":"Boundary separation",
+			"label":"A boundary separates external, exogenously defined inputs from the BISTRO simulation optimization pipeline."
+		},
+		{
+			"actor":"algorithm",
+			"type":"simulation optimization pipeline",
+			"index": 1,
+			"title":"Agent-based simulation and optimization approach",
+			"label":"This is where BISTRO's agent-based simulation and optimization approach comes into play to anticipate and develop adaptive plans for possible technological disruptions and growth scenarios."
+		}
+	]
+}, {
+	title: "Polish Natural Language Inference and Factivity -- an Expert-based Dataset and Benchmarks",
+	value: {
+		humans: ["Domain experts"],
+		problems: ["Data analysis"],
+		technologies: ["Natural language processing"],
+		promises: ["Accuracy"],
+		data: ["Voice"],
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "Researcher",
+			"index": 1,
+			"title": "Linguistic issue selection",
+			"label": "Choosing the linguistic issue to focus on"
+		},
+		{
+			"actor": "human",
+			"type": "Researcher",
+			"index": 2,
+			"title": "Dataset collection",
+			"label": "Collecting a dataset based on the National Corpus of Polish (NKJP)"
+		},
+		{
+			"actor": "algorithm",
+			"type": "DeepL",
+			"index": 2,
+			"title": "Translation",
+			"label": "Translating the dataset into English using deepL translator"
+		},
+		{
+			"actor": "human",
+			"type": "Professional",
+			"index": 3,
+			"title": "Correction",
+			"label": "(Professional) correcting the automatic translation"
+		},
+		{
+			"actor": "algorithm",
+			"type": "BERT-based model",
+			"index": 1,
+			"title": "(BERT-based) modeling",
+			"label": "Transformer BERT-based models to perform Natural Language Inference (NLI) on the dataset collected"
+		}
+	]
+}, {
+	title: "Reframing Human-AI Collaboration for Generating Free-Text Explanations",
+	value: {
+		humans: ["Annotators"],
+		problems: ["Data generation"],
+		technologies: ["Misc"],
+		promises: ["Accuracy"],
+		data: ["Annotations"],
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "GPT-3",
+			"index": 2,
+			"title": "Generate Explanations",
+			"label": "Query GPT-3 to generate multiple candidate explanations for each input instance"
+		},
+		{
+			"actor": "human",
+			"type": "Crowdworker",
+			"index": 1,
+			"title": "Rate Acceptability",
+			"label": "Ask crowdworkers to rate the acceptability of each candidate generation using a binary scale (acceptable or not acceptable)"
+		},
+		{
+			"actor": "algorithm",
+			"index": 1,
+			"type": "Supervised Filter",
+			"title":"Filter Explanations",
+			"label":"Use these binary acceptability judgments to supervise an acceptability filtering model that selects high-quality candidates among GPT-3's outputs"
+		},
+		{
+			"actor":"human",
+			"type":"Evaluator",
+			"index": 2,
+			"title":"Evaluate Explanations",
+			"label":"Evaluate the resulting explanations along various axes, such as factual accuracy, grammaticality, sufficiency, novelty, and support for the label"
+		},
+		{
+			"actor":"human",
+			"type":"Designer/Researcher",
+			"index": 3,
+			"title":"Optimize Agreement Rates",
+			"label":"Iterate over versions of the questions and UI design until agreement rates are optimized as much as possible"
+		},
+		{
+			"actor":"human",
+			"type":"Evaluator/User Tester", 
+			"index": 4,
+			"title":"Assess Explanation Quality", 
+			"label":"Assess the explanation in isolation by presenting questions to users without revealing the question/context that the explanation is attempting to address"
+		},
+		{
+			"actor":"human", 
+			"type":"Crowdworker", 
+			"index": 5,
+			"title":"Improve Explanations", 
+			"label":"Reframe the role of crowd annotators from writing explanations to evaluating and improving upon GPT-3 generated explanations"
+		}
+	]
+}
 ]
 
 export default data;

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container } from 'react-bootstrap';
 import LoopsMap from '../../components/LoopsMap/LoopsMap';
-import Nav from '../../components/Nav';
+import Nav from '../../components/Sub';
 import Loops from '../../components/Loops';
 
 export default function Gallery() {

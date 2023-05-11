@@ -1,7 +1,11 @@
-// change the theme
-$theme-colors: (
-  "primary": #84DCC6,
-);
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+// change the theme
+$theme-colors: (
+  "primary": #B1B9E7,
+  "secondary": #CAE278,
+);

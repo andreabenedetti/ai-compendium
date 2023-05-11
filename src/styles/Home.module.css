@@ -1,3 +1,9 @@
+.homeContainer {
+  background: #FFFFFF;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.3);
+}
+
 .main {
   display: flex;
   flex-direction: column;

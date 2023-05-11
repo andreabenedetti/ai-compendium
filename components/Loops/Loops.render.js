@@ -11,13 +11,11 @@ const color = d3
 .domain(["human", "algorithm"]);
 
 const construct = (element, data, width, height, radius, labels) => {
-    console.log(width);
     let w = width;
     let h = height;
     let r = radius;
     let l = labels;
     
-    console.log(h);
     const loop = d3
     .line()
     .x((d) => checkActorSin(d))
@@ -182,7 +180,6 @@ const construct = (element, data, width, height, radius, labels) => {
     
     function checkActorSin(data) {
         if (data.actor === "human") {
-            console.log(humanScale(data.index));
             return 1 * r * Math.sin(humanScale(data.index) * radians);
         } else {
             return 1 * r * Math.sin(algoScale(data.index) * radians);
