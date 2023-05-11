@@ -1,4 +1,5 @@
 import Loops from "../Loops";
+
 import { Col, Row } from "react-bootstrap";
 // import data from "../../data/data";
 import * as d3 from "d3";

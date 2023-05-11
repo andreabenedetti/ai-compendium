@@ -4,7 +4,6 @@ import styles from "./Loops.module.scss";
 import classNames from 'classnames';
 
 import { Card, Button, ListGroup, Accordion, Badge } from "react-bootstrap";
-import { style } from "d3";
 
 export default function Loops ({ data }) {
     const svgEl = useRef();
@@ -41,14 +40,14 @@ export default function Loops ({ data }) {
         <ListGroup variant="flush" as="ol" numbered>
         {data.loop.map((task) => {
             if (task.actor === "human") {
-                return <ListGroup.Item key={task[0]} as="li" className="d-flex justify-content-between align-items-start">
+                return <ListGroup.Item key={task.title} as="li" className="d-flex justify-content-between align-items-start">
                 <div className="ms-2 me-auto">
                 <div className="fw-bold" style={{ textTransform: "capitalize" }}><Badge pill text="dark" className={classNames(styles.pill, styles.pillHuman)}>{task.actor}</Badge> {task.type}</div>
                 {task.label}
                 </div>
                 </ListGroup.Item>
             } else {
-                return <ListGroup.Item key={task[0]} as="li" className="d-flex justify-content-between align-items-start"><div className="ms-2 me-auto">
+                return <ListGroup.Item key={task.title} as="li" className="d-flex justify-content-between align-items-start"><div className="ms-2 me-auto">
                 <div className="fw-bold" style={{ textTransform: "capitalize" }}><Badge pill text="dark" className={classNames(styles.pill, styles.pillTechnology)}>{task.actor}</Badge> {task.type}</div>
                 {task.label}
                 </div></ListGroup.Item>

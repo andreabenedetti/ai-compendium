@@ -9,6 +9,8 @@ import styles from '@/styles/Home.module.css';
 import classNames from 'classnames';
 
 import { construct } from '../../components/Loops/Loops.render';
+import ArxivTable from '../../components/arXivTable';
+import * as d3 from "d3";
 
 const data = {
   loop: [
@@ -64,9 +66,9 @@ export default function Home() {
   const radius = 50;
   const labels = true;
   
-  useEffect(() => {
-    construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
-  }, []);
+  // useEffect(() => {
+  //   construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
+  // }, []);
   
   return (
     <>
@@ -87,7 +89,7 @@ export default function Home() {
 
     <Container className={classNames("pt-5 mt-4 pb-5 mb-5", styles.homeContainer)} >
       <Row>
-        <Col><blockquote className={styles.intro}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
+        <Col><blockquote className={classNames("mb-5", styles.intro)}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
       </Row>
     <Row>
     <Col md={{ span: 4 }}>
@@ -101,17 +103,10 @@ export default function Home() {
     Nulla vitae elit libero, a pharetra augue mollis interdum.
     </Figure.Caption></Figure>
     </Col>
-    <Col md={{ span: 8 }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <Card>
-    <Card.Body>
-    <svg ref={svgEl} width="100%" height={height}></svg>
-    </Card.Body>
-    <Card.Footer>This is an example</Card.Footer>
-    </Card>
+    <Col md={{ span: 8}}>
+    <ArxivTable className={"mt-2"}/>
     </Col>
     </Row>
-    
     </Container> 
     </>
     )

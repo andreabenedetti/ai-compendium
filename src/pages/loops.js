@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import PlaceLoops from '../../components/PlaceLoops';
 import Nav from '../../components/Sub';
+import Legend from '../../components/Legend';
 
 const count = data.length;
 
@@ -22,7 +23,8 @@ export default function Home() {
       </Head>
       {console.log(count)}
       <Nav count = { count }/>
-      <Container fluid className="mt-4 pb-5 mb-5">
+      <Container fluid className="mt-3 pb-5 mb-5">
+      <Legend />
       <PlaceLoops cards={ data }/>
       </Container> 
     </>
