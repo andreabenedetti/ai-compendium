@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card, Figure } from 'react-bootstrap';
 import Nav from '../../components/Sub';
 import styles from '@/styles/Home.module.css';
 import classNames from 'classnames';
@@ -60,7 +60,7 @@ const data = {
 export default function Home() {
   const svgEl = useRef();
   
-  const height = 170;
+  const height = 180;
   const radius = 50;
   const labels = true;
   
@@ -77,11 +77,40 @@ export default function Home() {
     <link rel="icon" href="/favicon.ico" />
     </Head>
     <Nav/>
-    <Container className={classNames("pt-5 mt-4 pb-5 mb-5", styles.homeContainer)} >
+    <Container fluid className={styles.heroContainer}>
     <Row>
-        <Col md={{ span: 8, offset: 4 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <svg ref={svgEl} width="100%" height={height}></svg></Col>
+    <Col md={{ span: 12 }}>
+    <h1 className={"text-center"}>shAI Compendium</h1>
+    </Col>
+    </Row>
+    </Container>
+
+    <Container className={classNames("pt-5 mt-4 pb-5 mb-5", styles.homeContainer)} >
+      <Row>
+        <Col><blockquote className={styles.intro}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
       </Row>
+    <Row>
+    <Col md={{ span: 4 }}>
+    <Figure><Figure.Image
+    width={170}
+    height={200}
+    alt="600x400"
+    src="https://placehold.co/170x200"
+    />
+    <Figure.Caption className={styles.caption}>
+    Nulla vitae elit libero, a pharetra augue mollis interdum.
+    </Figure.Caption></Figure>
+    </Col>
+    <Col md={{ span: 8 }}>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <Card>
+    <Card.Body>
+    <svg ref={svgEl} width="100%" height={height}></svg>
+    </Card.Body>
+    <Card.Footer>This is an example</Card.Footer>
+    </Card>
+    </Col>
+    </Row>
     
     </Container> 
     </>

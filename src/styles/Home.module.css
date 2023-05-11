@@ -1,8 +1,26 @@
-.homeContainer {
-  background: #FFFFFF;
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(var(--card-border-rgb), 0.3);
+.homeContainer p {
+  font-size: 16px;
+  line-height: 1.5;
 }
+
+.intro {
+  font-size: 24px;
+}
+
+.heroContainer {
+  height: 50vh;
+  background: linear-gradient(180deg, rgba(233,235,248,1) 0%, rgba(202,226,120,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caption {
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: -0.5px;
+}
+
+/* Regular CSS */
 
 .main {
   display: flex;

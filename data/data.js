@@ -1210,6 +1210,112 @@ const data = [
 			"label":"Reframe the role of crowd annotators from writing explanations to evaluating and improving upon GPT-3 generated explanations"
 		}
 	]
+}, {
+	title: "3D ShapeNets: A Deep Representation for Volumetric Shapes",
+	value: {
+		humans: ["Domain experts"],
+		problems: ["Data analysis"],
+		technologies: ["Convolutional deep network"],
+		promises: ["Accuracy"],
+		data: ["3d Models"],
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "3D voxel grid",
+			"index": 5,
+			"title": "Representation",
+			"label": "Representing a geometric 3D shape as a probability distribution of binary variables on a 3D voxel grid."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Convolutional Deep Belief Network",
+			"index": 4,
+			"title": "Model architecture",
+			"label": "Using a Convolutional Deep Belief Network (CDBN) to learn the complex joint distribution of all 3D voxels."
+		},
+		{
+			"actor": "human",
+			"type": "Researcher",
+			"index": 1,
+			"title": "Training data",
+			"label": "Constructing ModelNet – a large-scale 3D CAD model dataset containing over 12,000 CAD models from 55 object categories."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Wake-sleep algorithm",
+			"index": 3,
+			"title": "Fine-tuning",
+			"label": "Fine-tuning the model and learning the distribution of complex 3D shapes across different object categories and arbitrary poses from raw CAD data using the wake-sleep algorithm."
+		},
+		{
+			"actor":"algorithm",
+			"type":"technology",
+			"index": 2,
+			"title":"Hierarchical compositional part representations",
+			"label":"Discovering hierarchical compositional part representations automatically, which enables recognizing objects in single-view 2.5D depth images and hallucinating missing parts of depth maps."
+		},
+		{
+			"actor":"algorithm",
+			"type":"Convolutional Deep Belief Network",
+			"index": 1,
+			"title":"Active object recognition through view planning.",
+			"label":"Enabling active object recognition through view planning, which means that it can choose where to look next in order to recognize an object more accurately."
+		}
+	]
+}, {
+	title: "A CNN-LSTM Hybrid Framework for Wrist Kinematics Estimation Using Surface Electromyography",
+	value: {
+		humans: ["Patients"],
+		problems: ["Data analysis"],
+		technologies: ["Convolutional deep network"],
+		promises: ["Accuracy"],
+		data: ["Bodily traces"],
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "participant",
+			"index": 1,
+			"title": "Data Collection",
+			"label": "Recruit participants to perform wrist movement protocols while sEMG signals are recorded."
+		},
+		{
+			"actor": "algorithm",
+			"type": "preprocessing",
+			"index": 4,
+			"title": "Signal Processing",
+			"label": "Process sEMG signals to remove noise and artifacts, and segment into smaller time windows."
+		},
+		{
+			"actor": "algorithm",
+			"type": "feature_extraction",
+			"index": 3,
+			"title": "Feature Extraction",
+			"label": 	"Utilize a CNN to extract deep features from the sEMG spectrum."
+		},
+		{
+			"actor":"algorithm",
+			"type":"sequence_regression",
+			"index": 2,
+			"title":"Sequence Regression",
+			"label":"Process extracted features via LSTM-based sequence regression to estimate wrist kinematics."
+		},
+		{
+			"actor":"algorithm", 
+			"type":"evaluation", 
+			"index": 1,
+			"title":"Performance Evaluation", 
+			"label":"Evaluate estimated wrist kinematics in both intra-session and inter-session evaluations to assess performance of CNN-LSTM hybrid framework compared to conventional machine learning approaches."
+		},
+		{
+			"actor":"human", 
+			"type":"evaluation", 
+			"index": 2,
+			"title":"Performance Evaluation", 
+			"label":"Evaluate estimated wrist kinematics in both intra-session and inter-session evaluations to assess performance of CNN-LSTM hybrid framework compared to conventional machine learning approaches."
+		}
+	]
 }
 ]
 
