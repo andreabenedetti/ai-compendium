@@ -15,7 +15,7 @@ import loopStyles from "../Loops/Loops.module.scss";
 const popover = (
     <Popover id="popover-basic" className={legendStyles.legendPopup}>
     <Popover.Body>
-        <p>Each loop represent the process described in a scientific article mentioning "machine learning" or "human-in-the-loop". Each circle is a task performed in the process, separated between <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillHuman)}>humans</Badge> and <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillTechnology)}>algorithms</Badge>, and they are connected according to their order.</p>
+        <p>Each loop represent the process described in a scientific article mentioning machine learning or human-in-the-loop. Each circle is a task performed in the process, separated between <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillHuman)}>humans</Badge> and <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillTechnology)}>algorithms</Badge>, and they are connected according to their order.</p>
     <Image 
     src={legendSvg}
     width={250}
