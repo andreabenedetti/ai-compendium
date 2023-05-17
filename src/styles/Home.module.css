@@ -19,6 +19,33 @@
   font-family: "Roboto Mono", monospace;
 }
 
+.indexBox {
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.index {
+  background: transparent !important;
+  font-family: "Roboto Mono", monospace;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.1;
+  padding: 0.25rem !important;
+}
+
+.homeSvg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  pointer-events: none;
+  animation: animateDash 4s cubic-bezier(.22,0,.43,1.05) infinite alternate;
+}
+
+@keyframes animateDash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* Regular CSS */
 
 .main {

@@ -1316,6 +1316,183 @@ const data = [
 			"label":"Evaluate estimated wrist kinematics in both intra-session and inter-session evaluations to assess performance of CNN-LSTM hybrid framework compared to conventional machine learning approaches."
 		}
 	]
+}, {
+	title: "A Free Lunch in Generating Datasets: Building a VQG and VQA System with Attention and Humans in the Loop",
+	value: {
+		humans: ["Annotators"],
+		problems: ["Lack of data"],
+		technologies: ["Visual Question Answering (VQA)", "Visual Question Generation (VQG)"],
+		promises: ["Costs", "Optimization"],
+		data: ["Written text"],
+	},
+	loop: [
+		{
+			"actor": "algorithm", 
+			"type": "Visual Question Generation (VQG)", 
+			"index": 4,
+			"title": "Question Generation", 
+			"label": "The first step is to use VQG to generate questions based on image content. This involves training a model to generate questions that are relevant to the image and can be answered using visual information."
+		},
+		{
+			"actor": "human", 
+			"type": "Social Media Users", 
+			"index": 1,
+			"title": "Question Answering", 
+			"label": "The generated questions are then asked to social media users, who are incentivized to answer them. These users can be sourced from platforms like Twitter or Reddit."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Social Media Users", 
+			"index": 3,
+			"title": "Data Collection", 
+			"label": "The responses collected from social media users are used to expand the dataset and improve the model's knowledge of visual concepts. This data can be used for training and testing artificial intelligence systems."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Clustering-based Answer Parsing", 
+			"index": 2,
+			"title": "Clustering", 
+			"label": "To make sense of the responses, clustering-based answer parsing is used. This involves grouping similar responses together into clusters based on their semantic content."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Natural language processing", 
+			"index": 1,
+			"title": "Answer Templates", 
+			"label": "Once clusters have been identified, answer templates can be created based on the most commonly occurring POS bigrams and trigrams in the responses. These templates can then be used to automatically generate answers for new questions."
+		},
+	]
+}, {
+	title: "Towards a data-driven characterization of behavioral changes induced by the seasonal flu",
+	value: {
+		humans: ["Online communities"],
+		problems: ["Disease prevention"],
+		technologies: ["Machine learning"],
+		promises: ["Prediction"],
+		data: ["Written text"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Researchers", 
+			"index": 1,
+			"title": "Data collection", 
+			"label": "The data used in this study was collected from Influweb, a digital surveillance platform that collects data about the progression of the seasonal flu in Italy. The data included socio-demographic indicators, medical history of individuals, information regarding feelings and concerns towards the flu, and survey responses about changes in behaviors induced by the disease."
+		},
+		{
+			"actor": "human", 
+			"type": "Researchers", 
+			"index": 2,
+			"title": "Pre-processing", 
+			"label": "The collected data was pre-processed to remove any missing or incomplete responses and to standardize the format of the data."
+		},
+		{
+			"actor": "human", 
+			"type": "Researchers", 
+			"index": 3,
+			"title": "Feature engineering", 
+			"label": "Features were extracted from the pre-processed data to represent different aspects of participants' behaviors related to the flu. These features included whether participants avoided crowded places, wore a mask in public, or changed their daily routine due to the flu."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Machine learning", 
+			"index": 2,
+			"title": "Classification task", 
+			"label": "The next step involved training machine learning models to classify individuals into three classes of behavioral change based on their survey responses."
+		},
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 4,
+			"title": "Performance evaluation", 
+			"label": "Four different metrics (precision, balanced accuracy, recall, and f1 score) were used to obtain a complete overview of model performance for each class of behavioral change."
+		}
+	]
+}, {
+	title: "Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference",
+	value: {
+		humans: ["Teachers"],
+		problems: [null],
+		technologies: ["Deep learning"],
+		promises: ["Human support", "Speed", "Human collaboration"],
+		data: ["Code"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Experts", 
+			"index": 1,
+			"title": "Elicit samples", 
+			"label": "In this step, we ask experts to describe a student’s thought process, enumerating strategies to get to a right or wrong answer. Given a detailed enough description, we can use it to label indefinitely. These labels will be noisy but the quantity should make up for any uncertainty."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning", 
+			"index": 2,
+			"title": "Inference", 
+			"label": "Once we have elicited samples from the expert prior, we can use deep learning techniques to infer the correct label for a given input x. This involves training a deep model on the labeled data and using it to predict labels for new inputs."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Rubric sampling", 
+			"index": 1,
+			"title": "Provide feedback", 
+			"label": "Once we have inferred the correct label for a given input x, we can provide feedback to the student based on their performance. This feedback can be associated with specific parts of a student's solution and can articulate their misconceptions in the language of the instructor."
+		},
+	]
+}, {
+	title: "WSSS4LUAD: Grand Challenge on Weakly-supervised Tissue Semantic Segmentation for Lung Adenocarcinoma",
+	value: {
+		humans: ["Pathologists"],
+		problems: ["Diagnosis"],
+		technologies: ["Deep learning"],
+		promises: ["Optimization", "Accuracy"],
+		data: ["Bodily traces", "Annotations"],
+	},
+	loop: [
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning", 
+			"index": 4,
+			"title": "Preliminary Labels", 
+			"label": ""
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning", 
+			"index": 3,
+			"title": "Training", 
+			"label": ""
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning", 
+			"index": 2,
+			"title": "Generated Labels", 
+			"label": ""
+		},
+		{
+			"actor": "human", 
+			"type": "Pathologist", 
+			"index": 1,
+			"title": "Label Correction", 
+			"label": ""
+		},
+		{
+			"actor": "human", 
+			"type": "Pathologist", 
+			"index": 2,
+			"title": "Label Double Check", 
+			"label": ""
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning", 
+			"index": 1,
+			"title": "Model Fine-Tuning", 
+			"label": ""
+		}
+	]
 }
 ]
 

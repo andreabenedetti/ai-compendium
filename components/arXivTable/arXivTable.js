@@ -1,6 +1,5 @@
 import * as d3 from "d3";
 import { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 

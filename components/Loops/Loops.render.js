@@ -156,7 +156,8 @@ const construct = (element, data, width, height, radius, labels) => {
     })
     .attr("d", (region) => loop(data))
     .style("marker-mid", "url(#arrow)")
-    .style("marker-start", "url(#arrow)");
+    .style("marker-start", "url(#arrow)")
+    .classed("main-path", true);
     
     if (l) {
         tasks

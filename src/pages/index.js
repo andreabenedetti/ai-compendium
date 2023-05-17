@@ -13,62 +13,34 @@ import ArxivTable from '../../components/arXivTable';
 import * as d3 from "d3";
 
 const data = {
-  loop: [
-    {
-      "actor":"human",
-      "type":"Who performs the task",
-      "index": 1,
-      "title":"Each task is performed by an actor",
-      "label":"Description of the task"
-    },
-    {
-      "actor":"algorithm",
-      "type":"Who performs the task",
-      "index": 3,
-      "title":"An actor can be a human or algorithm",
-      "label":"Description of the task"
-    },
-    {
-      "actor":"algorithm",
-      "type":"Who performs the task",
-      "index": 2,
-      "title":"Each task is connected to the following",
-      "label":"Description of the task"
-    },
-    {
-      "actor":"algorithm",
-      "type":"Who performs the task",
-      "index": 1,
-      "title":"The arrow indicates the direction",
-      "label":"Description of the task"
-    },
-    {
-      "actor":"human",
-      "type":"Who performs the task",
-      "index": 3,
-      "title":"Different types of actors can appear",
-      "label":"Description of the task"
-    },
-    {
-      "actor":"human",
-      "type":"Who performs the task",
-      "index": 2,
-      "title":"This is a system called 'Human in the loop'",
-      "label":"Description of the task"
-    },
-  ]
+  loop: []
+}
+
+for(let i = 0; i < 6; i++) {
+  let choice = Math.random();
+  if (choice > 0.5) {
+    data.loop.push({
+      actor: "human",
+      index: i,
+    })
+  } else {
+    data.loop.push({
+      actor: "algorithm",
+      index: 6 - i,
+    })
+  }
 }
 
 export default function Home() {
   const svgEl = useRef();
   
-  const height = 180;
+  const height = 200;
   const radius = 50;
   const labels = true;
   
-  // useEffect(() => {
-  //   construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
-  // }, []);
+  useEffect(() => {
+    construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
+  }, []);
   
   return (
     <>
@@ -83,6 +55,7 @@ export default function Home() {
     <Row>
     <Col md={{ span: 12 }}>
     <h1 className={"text-center"}>shAI Compendium</h1>
+    <svg ref={svgEl} width="100%" height={height} className={styles.homeSvg}></svg>
     </Col>
     </Row>
     </Container>
@@ -103,7 +76,7 @@ export default function Home() {
     Nulla vitae elit libero, a pharetra augue mollis interdum.
     </Figure.Caption></Figure>
     </Col>
-    <Col md={{ span: 8}}>
+    <Col md={{ span: 8 }}>
     <ArxivTable className={"mt-2"}/>
     </Col>
     </Row>

@@ -1,9 +1,11 @@
 import { construct } from "./Loops.render";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import * as d3 from "d3";
+import _ from 'lodash';
 import styles from "./Loops.module.scss";
 import classNames from 'classnames';
 
-import { Card, Button, ListGroup, Accordion, Badge } from "react-bootstrap";
+import { Card, ListGroup, Accordion, Badge } from "react-bootstrap";
 
 export default function Loops ({ data }) {
     const svgEl = useRef();
@@ -13,14 +15,13 @@ export default function Loops ({ data }) {
     const labels = true;
     
     useEffect(() => {
-        // console.log("Mounted", data.loop);
-        // console.log(svgEl.current.clientWidth)
         construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
     }, []);
     
     return (
         <>
-        <Card>
+        <Card id={data.title.split("")[0]}>
+            <Card.Header className={styles.cardHeader}><Badge pill className={classNames(styles.pill, styles.letter)} text="light" bg="secondary">{data.title.split("")[0]}</Badge></Card.Header>
         <Card.Body>
         <Card.Text>
         <b>{data.title}</b>
