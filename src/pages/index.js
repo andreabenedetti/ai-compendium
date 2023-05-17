@@ -60,7 +60,7 @@ export default function Home() {
     </Row>
     </Container>
 
-    <Container className={classNames("pt-5 mt-4 pb-5 mb-5", styles.homeContainer)} >
+    <Container className={classNames("mt-4 pb-5 mb-5", styles.homeContainer)} >
       <Row>
         <Col><blockquote className={classNames("mb-5", styles.intro)}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
       </Row>
