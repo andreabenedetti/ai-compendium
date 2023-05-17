@@ -47,15 +47,15 @@
 }
 
 .homeSvg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 560;
   pointer-events: none;
-  animation: animateDash 4s cubic-bezier(.22,0,.43,1.05) infinite alternate;
+  animation: animateDash 2.5s linear infinite forwards;
 }
 
 @keyframes animateDash {
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 150;
   }
 }
 

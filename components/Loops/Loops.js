@@ -7,6 +7,21 @@ import classNames from 'classnames';
 
 import { Card, ListGroup, Accordion, Badge } from "react-bootstrap";
 
+const css = `
+.main-path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 560;
+    pointer-events: none;
+    animation: animateDash 5s linear infinite forwards;
+}
+
+@keyframes animateDash {
+    to {
+        stroke-dashoffset: 150;
+    }
+}
+`
+
 export default function Loops ({ data }) {
     const svgEl = useRef();
 
@@ -59,7 +74,8 @@ export default function Loops ({ data }) {
         </Accordion.Item>
         </Accordion>
         </Card.Body>
-        </Card>      
+        </Card>
+        <style>{css}</style>     
         </>
         );
     }

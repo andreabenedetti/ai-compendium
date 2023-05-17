@@ -1493,6 +1493,59 @@ const data = [
 			"label": ""
 		}
 	]
+}, {
+	title: "WikiCSSH: Extracting and Evaluating Computer Science Subject Headings from Wikipedia",
+	value: {
+		humans: [null],
+		problems: ["Statistical issues"],
+		technologies: [null],
+		promises: ["Accuracy"],
+		data: ["Written text"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 1,
+			"title": "Extract", 
+			"label": "Extract an initial category tree from crowd-sourced Wikipedia data using breadth first search in the Wikipedia Category Tree"
+		},
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 2,
+			"title": "Filtering", 
+			"label": "Manually filter the initial tree to remove irrelevant or redundant categories."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 2,
+			"title": "Community detection", 
+			"label": "Use community detection algorithms to identify clusters of related categories within the tree. "
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 1,
+			"title": "Measure semantic similarity", 
+			"label": "Apply embedding-based techniques to learn vector representations of category labels and use them to measure semantic similarity between categories."
+		},
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 3,
+			"title": "Pruning", 
+			"label": "Use hand-crafted heuristics or rules to prune the initial tree based on semantic similarity, community structure, and other criteria."
+		},
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 4,
+			"title": "Evaluation", 
+			"label": "Evaluate the resulting vocabulary using various metrics, including vocabulary size and performance of lexicon-based key-phrase extraction from scholarly data."
+		}
+	]
 }
 ]
 
