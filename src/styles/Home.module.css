@@ -47,13 +47,6 @@
   padding: 0.25rem !important;
 }
 
-.homeSvg path {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 560;
-  pointer-events: none;
-  animation: animateDash 2.5s linear infinite forwards;
-}
-
 @keyframes animateDash {
   to {
     stroke-dashoffset: 150;

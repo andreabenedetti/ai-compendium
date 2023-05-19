@@ -16,7 +16,22 @@ import data from "../../data/data.js";
 
 const logo = {
   loop: []
+};
+
+const css = `
+.main-path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 560;
+    pointer-events: none;
+    animation: animateDash 5s linear infinite forwards;
 }
+
+@keyframes animateDash {
+    to {
+        stroke-dashoffset: 150;
+    }
+}
+`
 
 let steps = [3, 4, 5, 6, 7];
 let length = steps[Math.floor(Math.random() * steps.length)];
@@ -93,6 +108,7 @@ export default function Home() {
     </Col>
     </Row>
     </Container> 
+    <style>{css}</style>
     </>
     )
   }
