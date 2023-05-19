@@ -105,6 +105,10 @@ const construct = (element, data, width, height, radius, labels) => {
     const tasks = svg
     .append("g")
     .attr("transform", `translate(${[w / 2, h / 2]})`);
+
+    const trace = svg
+    .append("g")
+    .attr("transform", `translate(${[w / 2, h / 2]})`);
     
     const drawing = svg
     .append("g")
@@ -124,13 +128,6 @@ const construct = (element, data, width, height, radius, labels) => {
             return color(d.actor)
         }
     })
-    .attr("stroke-dasharray", (d, i) => {
-        if (i > 0) {
-            return "2px";
-        } else {
-            return "0px";
-        }
-    })
     .attr("stroke-width", (d, i) => {
         if (i > 0) {
             return "1px";
@@ -141,6 +138,16 @@ const construct = (element, data, width, height, radius, labels) => {
     .attr("stroke", (d) => color(d.actor))
     .append("title")
     .text((d, i) => `${i + 1}: ${d.title}`);
+
+    trace
+    .selectAll("path")
+    .data(["S", "N"])
+    .join("path")
+    .attr("fill", "none")
+    .attr("stroke", "#110000")
+    .attr("stroke-dasharray", "2px")
+    .attr("stroke-width", 1)
+    .attr("d", (region) => loop(data));
     
     drawing
     .selectAll("path")

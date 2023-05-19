@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col, Card, Figure } from 'react-bootstrap';
+import { Container, Row, Col, Figure } from 'react-bootstrap';
 import Nav from '../../components/Sub';
 import styles from '@/styles/Home.module.css';
 import classNames from 'classnames';
@@ -12,19 +12,24 @@ import { construct } from '../../components/Loops/Loops.render';
 import ArxivTable from '../../components/arXivTable';
 import * as d3 from "d3";
 
-const data = {
+import data from "../../data/data.js";
+
+const logo = {
   loop: []
 }
 
-for(let i = 0; i < 6; i++) {
+let steps = [3, 4, 5, 6, 7];
+let length = steps[Math.floor(Math.random() * steps.length)];
+
+for(let i = 0; i < length; i++) {
   let choice = Math.random();
   if (choice > 0.5) {
-    data.loop.push({
+    logo.loop.push({
       actor: "human",
       index: i,
     })
   } else {
-    data.loop.push({
+    logo.loop.push({
       actor: "algorithm",
       index: 6 - i,
     })
@@ -39,7 +44,7 @@ export default function Home() {
   const labels = true;
   
   useEffect(() => {
-    construct(svgEl.current, data.loop, svgEl.current.clientWidth, height, radius, labels);
+    construct(svgEl.current, logo.loop, svgEl.current.clientWidth, height, radius, labels);
   }, []);
   
   return (
@@ -59,24 +64,31 @@ export default function Home() {
     </Col>
     </Row>
     </Container>
-
+    
     <Container className={classNames("mt-4 pb-5 mb-5", styles.homeContainer)} >
-      <Row>
-        <Col><blockquote className={classNames("mb-5", styles.intro)}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
-      </Row>
     <Row>
-    <Col md={{ span: 4 }}>
-    <Figure><Figure.Image
-    width={170}
-    height={200}
-    alt="600x400"
-    src="https://placehold.co/170x200"
-    />
-    <Figure.Caption className={styles.caption}>
-    Nulla vitae elit libero, a pharetra augue mollis interdum.
-    </Figure.Caption></Figure>
-    </Col>
-    <Col md={{ span: 8 }}>
+    <Col><blockquote className={classNames("mb-5", styles.intro)}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote></Col>
+    </Row>
+    <Row>
+      <Col>
+      <Figure>
+        <Figure.Image 
+        src={"/alluvial.png"} />
+        <Figure.Caption className={styles.caption}>
+          Artificial intelligence, Machine learning and Humans-in-the-loop are positioned as varied value propositions composed of problems, promises and complex engineered systems that use data to achieve them.
+        </Figure.Caption>
+      </Figure>
+      </Col>
+    </Row>
+    <Row>
+      <Col md={{ span: 8, offset: 4 }}>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </Col>
+    </Row>
+    <Row>
+    <Col md={{ span: 8, offset: 4 }}>
     <ArxivTable className={"mt-2"}/>
     </Col>
     </Row>

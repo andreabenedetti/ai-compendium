@@ -41,15 +41,3 @@
     padding: 0.3rem;
 }
 
-.main-path {
-    stroke-dasharray: 200;
-    stroke-dashoffset: 560;
-    pointer-events: none;
-    animation: animateDash 2.5s linear infinite forwards;
-}
-
-@keyframes animateDash {
-    to {
-      stroke-dashoffset: 150;
-    }
-  }

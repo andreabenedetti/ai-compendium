@@ -27,6 +27,8 @@ export default function ArxivTable() {
     ]
     
     return (
+        <>
+        <h2 className={"mt-5"}>Corpus of articles</h2>
         <BootstrapTable 
         classes={ styles.tablePapers }
         keyField="title"
@@ -35,5 +37,6 @@ export default function ArxivTable() {
         pagination={ paginationFactory() }
         bordered={ false }
         />
+        </>
         );
     }

@@ -1546,6 +1546,105 @@ const data = [
 			"label": "Evaluate the resulting vocabulary using various metrics, including vocabulary size and performance of lexicon-based key-phrase extraction from scholarly data."
 		}
 	]
+}, {
+	title: "Widening the Pipeline in Human-Guided Reinforcement Learning with Explanation and Context-Aware Data Augmentation",
+	value: {
+		humans: ["Trainers"],
+		problems: [null],
+		technologies: ["XAI"],
+		promises: ["Accuracy"],
+		data: ["Annotations"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 1,
+			"title": "Rewards and penalties", 
+			"label": "Trainers provide feedback to reinforcement learning agents in the form of rewards or penalties."
+		},
+		{
+			"actor": "human", 
+			"type": "", 
+			"index": 2,
+			"title": "Explanation", 
+			"label": "Trainers also provide explanations of their feedback by drawing bounding boxes on a video-player like interface, which can be adjusted based on their needs."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 4,
+			"title": "Application of feedback", 
+			"label": "The system applies each received feedback and explanation to frames that are displayed between 2 and 0.2 seconds before the feedback occurred, assuming that within this 1.8-second window, the salient regions/objects should be the same"
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 3,
+			"title": "Explanation", 
+			"label": "The system uses these explanations as domain knowledge to improve the performance of machine learning models, viewing them as a novel way of data augmentation."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 2,
+			"title": "Data augmentation", 
+			"label": "Context-aware data augmentation is applied to generate new training examples by modifying existing ones in ways that preserve their underlying structure but introduce new variations."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "", 
+			"index": 1,
+			"title": "Incorporating contextual information", 
+			"label": "By incorporating contextual information about the environment and task into these modifications, more realistic and informative training data is created that better reflects the challenges faced by real-world agents."
+		}
+	]
+}, {
+	title: "Why-So-Deep: Towards Boosting Previously Trained Models for Visual Place Recognition",
+	value: {
+		humans: [null],
+		problems: ["Inaccuracies"],
+		technologies: ["Deep learning"],
+		promises: ["Accuracy"],
+		data: ["Spatial data"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Researcher", 
+			"index": 1,
+			"title": "Pre-training", 
+			"label": "A pre-trained deep learning model for image retrieval is used as a starting point."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning-based image retrieval", 
+			"index": 4,
+			"title": "Splitting", 
+			"label": "The full spatial information is split into multiple regions."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning-based image retrieval", 
+			"index": 3,
+			"title": "Descriptors", 
+			"label": "For each region, the descriptor distance co-relations are estimated."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning-based image retrieval", 
+			"index": 2,
+			"title": "Probabilistic prediction", 
+			"label": "These co-relations are used to probabilistically verify image correspondence efficiently."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Deep learning-based image retrieval", 
+			"index": 1,
+			"title": "Accuracy improvement", 
+			"label": "Essential regions at spatial layers are elevated to improve the accuracy of image retrieval results without retraining a new deep learning model."
+		},
+	]
 }
 ]
 
