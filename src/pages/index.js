@@ -61,7 +61,7 @@ export default function Home() {
   
   const height = 180;
   const radius = 50;
-  const labels = true;
+  const labels = false;
   
   useEffect(() => {
     construct(svgEl.current, logo.loop, svgEl.current.clientWidth, height, radius, labels);

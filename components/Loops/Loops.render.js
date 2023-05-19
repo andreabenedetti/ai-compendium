@@ -16,6 +16,10 @@ const construct = (element, data, width, height, radius, labels) => {
     let h = height;
     let r = radius;
     let l = labels;
+
+    if (l) {
+        w = window.innerWidth;
+    }
     
     const loop = d3
     .line()
@@ -53,13 +57,7 @@ const construct = (element, data, width, height, radius, labels) => {
     .attr("id", "arrow")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", 2.5)
-    .attr("markerWidth", () => {
-        if (l) {
-            return r / 10
-        } else {
-            return r / 5
-        }
-    })
+    .attr("markerWidth", r / 10)
     .attr("markerHeight", r / 5)
     .attr("orient", "auto")
     .append("path")
@@ -121,13 +119,7 @@ const construct = (element, data, width, height, radius, labels) => {
     .attr("cx", (d) => checkActorSin(d))
     .attr("cy", (d) => checkActorCos(d))
     .attr("r", r / 3.33)
-    .attr("fill", (d) => {
-        if (l) {
-            return "#FFFFFF"
-        } else {
-            return color(d.actor)
-        }
-    })
+    .attr("fill", "#FFFFFF")
     .attr("stroke-width", (d, i) => {
         if (i > 0) {
             return "1px";
@@ -155,13 +147,7 @@ const construct = (element, data, width, height, radius, labels) => {
     .join("path")
     .attr("fill", "none")
     .attr("stroke", "#110000")
-    .attr("stroke-width", () => {
-        if (l) {
-            return 2
-        } else {
-            return 1
-        }
-    })
+    .attr("stroke-width", 2)
     .attr("d", (region) => loop(data))
     .style("marker-mid", "url(#arrow)")
     .style("marker-start", "url(#arrow)")
