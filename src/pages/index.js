@@ -14,6 +14,8 @@ import * as d3 from "d3";
 
 import data from "../../data/data.js";
 
+const count = data.length;
+
 const logo = {
   loop: []
 };
@@ -38,7 +40,10 @@ let length = steps[Math.floor(Math.random() * steps.length)];
 
 for(let i = 0; i < length; i++) {
   let choice = Math.random();
-  if (choice > 0.5) {
+  let humans = logo.loop.filter(d => d.actor === "human");
+  console.log(humans);
+
+  if (choice > 0.5 && humans < 5) {
     logo.loop.push({
       actor: "human",
       index: i,
@@ -54,7 +59,7 @@ for(let i = 0; i < length; i++) {
 export default function Home() {
   const svgEl = useRef();
   
-  const height = 200;
+  const height = 180;
   const radius = 50;
   const labels = true;
   
@@ -70,12 +75,13 @@ export default function Home() {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Nav/>
+    <Nav count={ count }/>
     <Container fluid className={styles.heroContainer}>
     <Row>
     <Col md={{ span: 12 }}>
-    <h1 className={"text-center"}>shAI Compendium</h1>
     <svg ref={svgEl} width="100%" height={height} className={styles.homeSvg}></svg>
+    <h1 className={"text-center"}>shAI Compendium</h1>
+    <h3 className={"text-center"}>Mapping the transformation from data to value</h3>
     </Col>
     </Row>
     </Container>
