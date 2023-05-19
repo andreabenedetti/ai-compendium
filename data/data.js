@@ -1645,6 +1645,52 @@ const data = [
 			"label": "Essential regions at spatial layers are elevated to improve the accuracy of image retrieval results without retraining a new deep learning model."
 		},
 	]
+}, {
+	title: "Why Should I Trust Interactive Learners? Explaining Interactive Queries of Classifiers to Users",
+	value: {
+		humans: ["End-user"],
+		problems: ["Opaqueness"],
+		technologies: ["XAI"],
+		promises: ["Optimization"],
+		data: ["Written text", "Images", "Annotations"],
+	},
+	loop: [
+		{
+			"actor": "algorithm", 
+			"type": "Learner", 
+			"index": 4,
+			"title": "Data point", 
+			"label": "The learner considers a data point (labeled or unlabeled)."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Learner", 
+			"index": 3,
+			"title": "Predict a label", 
+			"label": "The learner predicts a label for the data point."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Learner", 
+			"index": 2,
+			"title": "Explanation", 
+			"label": "The learner provides explanations of its prediction to the user."
+		},
+		{
+			"actor": "human", 
+			"type": "User", 
+			"index": 1,
+			"title": "Response and feedback", 
+			"label": "The user responds by correcting the prediction and explanations, if necessary, to provide feedback."
+		},
+		{
+			"actor": "algorithm", 
+			"type": "Learner", 
+			"index": 1,
+			"title": "Update the model", 
+			"label": "The learner updates its model based on the feedback received from the user."
+		}
+	]
 }
 ]
 

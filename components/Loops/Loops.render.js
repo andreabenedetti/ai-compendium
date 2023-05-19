@@ -17,7 +17,7 @@ const construct = (element, data, width, height, radius, labels) => {
     let r = radius;
     let l = labels;
 
-    if (l) {
+    if (!l) {
         w = window.innerWidth;
     }
     
