@@ -16,10 +16,6 @@ const construct = (element, data, width, height, radius, labels) => {
     let h = height;
     let r = radius;
     let l = labels;
-
-    if (!l) {
-        w = window.innerWidth;
-    }
     
     const loop = d3
     .line()
