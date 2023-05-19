@@ -43,7 +43,7 @@ for(let i = 0; i < length; i++) {
   let humans = logo.loop.filter(d => d.actor === "human");
   console.log(humans);
 
-  if (choice > 0.5 && humans < 5) {
+  if (choice > 0.5 && humans.length < 5) {
     logo.loop.push({
       actor: "human",
       index: i,
