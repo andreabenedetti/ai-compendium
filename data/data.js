@@ -1691,6 +1691,59 @@ const data = [
 			"label": "The learner updates its model based on the feedback received from the user."
 		}
 	]
+}, {
+	title: "What is More Likely to Happen Next? Video-and-Language Future Event Prediction",
+	value: {
+		humans: ["General humans"],
+		problems: ["Predictions"],
+		technologies: ["Machine learning"],
+		promises: [null],
+		data: ["Videos"],
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "Human workers",
+			"index": 1,
+			"title": "Data collection",
+			"label": "The VLEP dataset is collected using an adversarial human-and-model-in-the-loop data collection procedure. This involves showing workers a video clip and asking them to predict what event is most likely to happen next. The workers can either write the actual future event as the more likely event, or they can hypothesize one when the actual future event in the given video is surprising/rare."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Transformer-based neural network",
+			"index": 3,
+			"title": "Dataset preprocessing",
+			"label": "The collected data is preprocessed to extract relevant information from each video clip, including visual features, audio features, and dialogue transcripts."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Transformer-based neural network",
+			"index": 2,
+			"title": "Model architecture",
+			"label": "A transformer-based neural network architecture is used to incorporate information from multiple modalities (video, audio, and dialogue) and make predictions about what events are likely to happen next."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Transformer-based neural network",
+			"index": 1,
+			"title": "Training",
+			"label": "The model is trained on the VLEP dataset using a combination of supervised learning and self-supervised learning techniques."
+		},
+		{
+			"actor": "human",
+			"type": "Researchers",
+			"index": 2,
+			"title": "Evaluation",
+			"label": "The performance of the trained model is evaluated on a held-out test set using standard evaluation metrics such as accuracy and F1 score."
+		},
+		{
+			"actor": "human",
+			"type": "Researcher",
+			"index": 3,
+			"title": "Fine-tuning",
+			"label": "The model can be fine-tuned on specific domains or tasks by training it on additional data or adjusting its hyperparameters."
+		}
+	]
 }
 ]
 
