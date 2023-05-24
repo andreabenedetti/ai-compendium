@@ -1744,6 +1744,59 @@ const data = [
 			"label": "The model can be fine-tuned on specific domains or tasks by training it on additional data or adjusting its hyperparameters."
 		}
 	]
+}, {
+	title: "What game are we playing? End-to-end learning in normal and extensive form games",
+	value: {
+		humans: ["Players"],
+		problems: [null],
+		technologies: [null],
+		promises: ["Human imitation"],
+		data: ["Behavior"],
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "",
+			"index": 1,
+			"title": "Regularized version of the game",
+			"label": "The authors propose a regularized version of the game that is equivalent to a particular form of quantal response equilibrium. This regularized version involves adding a penalty term to the objective function that encourages players to choose strategies that are closer to their previous choices."
+		},
+		{
+			"actor": "human",
+			"type": "",
+			"index": 2,
+			"title": "Initialization",
+			"label": "Start with an initial approximation of the game."
+		},
+		{
+			"actor": "algorithm",
+			"type": "",
+			"index": 4,
+			"title": "Primal update",
+			"label": ""
+		},
+		{
+			"actor": "algorithm",
+			"type": "",
+			"index": 3,
+			"title": "Dual update",
+			"label": ""
+		},
+		{
+			"actor": "algorithm",
+			"type": "",
+			"index": 2,
+			"title": "Update approximation",
+			"label": ""
+		},
+		{
+			"actor": "algorithm",
+			"type": "",
+			"index": 1,
+			"title": "End-to-end learning framework",
+			"label": ""
+		}
+	]
 }
 ]
 
