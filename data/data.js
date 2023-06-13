@@ -1797,6 +1797,66 @@ const data = [
 			"label": ""
 		}
 	]
+}, {
+	title: "Uncertainty-Driven Semantic Segmentation through Human-Machine Collaborative Learning",
+	value: {
+		humans: ["Expert"],
+		problems: [null],
+		technologies: [null],
+		promises: ["Accuracy"],
+		data: ["Unlabeled data"],
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 5,
+			"title": "Produce accurate label maps",
+			"label": "The generatorG is trained to produce accurate label maps corresponding to the conditioned image."
+		}, 
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 4,
+			"title": "Recognize accordance",
+			"label": "The discriminatorD attempts to recognize whether a given segmentation is in accordance with the input image."
+		}, 
+		{
+			"actor": "human",
+			"type": "Expert",
+			"index": 1,
+			"title": "Annotation",
+			"label": "The top k n samples from the ranked pool are selected and queried for expert annotation, where k is the total annotation budget, yielding labeled set S expert."
+		}, 
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 3,
+			"title": "Segment other samples",
+			"label": "All other samples from P are segmented using generator G, resulting in the labeled set S pseudo."
+		}, 
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 2,
+			"title": "Scoring",
+			"label": "The scores produced by the adversarial discriminator can be interpreted as inherent uncertainty estimates for active learning."
+		}, 
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 1,
+			"title": "Uncertanty",
+			"label": "The ability to directly use the adversarial discriminator score as a measure of uncertainty results in a convenient end-to-end approach to active learning."
+		},
+		{
+			"actor": "algorithm",
+			"type": "cGAN",
+			"index": 0,
+			"title": "Update model",
+			"label": "Last step in each active learning cycle is an update of the model G, D."
+		}
+	]
 }
 ]
 
