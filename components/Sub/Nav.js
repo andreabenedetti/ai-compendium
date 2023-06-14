@@ -9,6 +9,7 @@ export default function Sub( count ) {
             <Nav className="me-auto">
                 <Nav.Link className={styles.navBrand} href="/">shAI Compendium</Nav.Link>
                 <Nav.Link href="/loops">Loops</Nav.Link>
+                <Nav.Link href="/tasks">Tasks</Nav.Link>
                 </Nav>
                 <Navbar.Text>{count.count} papers analyzed</Navbar.Text>
             </Container>

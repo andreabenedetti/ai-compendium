@@ -16,7 +16,7 @@ const construct = (element, data, width, height, radius, labels) => {
     let h = height;
     let r = radius;
     let l = labels;
-    
+        
     const loop = d3
     .line()
     .x((d) => checkActorSin(d))

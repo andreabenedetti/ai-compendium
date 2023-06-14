@@ -279,49 +279,6 @@ const data = [
 			},
 		] 
 	}, {
-		title: "Improving Ethical Outcomes with Machine-in-the-Loop: Broadening Human Understanding of Data Annotations",
-		value: {
-			humans: ["Students", "Teachers", "Administrators"],
-			problems: ["Inequalities"],
-			technologies: ["Machine learning"],
-			promises: ["Automation"],
-			data: ["Written text"],
-		},
-		loop: [
-			{
-				"actor":"human",
-				"type":"student",
-				"index": 1,
-				"radius": 1,
-				"title":"Data generation",
-				"label":"Translate minoritized students' lived experiences into 21st century skills, issues micro-credentials, and creates personal skills portfolio."
-			},
-			{
-				"actor":"human",
-				"type":"annotator",
-				"index": 2,
-				"radius": 1,
-				"title":"Data annotation",
-				"label":"Annotate data with labels for supervised machine learning"
-			},
-			{
-				"actor":"algorithm",
-				"type":"model",
-				"index": 2,
-				"radius": 1,
-				"title":"Fairness metric evaluation",
-				"label":"Evaluate model performance using fairness metrics to identify and address potential biases."
-			},
-			{
-				"actor": "algorithm",
-				"type": "model",
-				"index": 1,
-				"radius": 1,
-				"title": "Refine model",
-				"label": "Refine machine learning models based on human feedback"
-			},
-		]
-	}, {
 		title: "Threat determination for radiation detection from the Remote Sensing Laboratory",
 		value: {
 			humans: ["Annotators"],
@@ -399,152 +356,88 @@ const data = [
 				"label":"Train and validate machine learning models using the dataset and CAMs to improve diagnostic accuracy"
 			},
 		]
-	}, {
-		title: "Data Augmentation with Paraphrase Generation and Entity Extraction for Multimodal Dialogue System",
-		value: {
-			humans: ["End-user"],
-			problems: ["Impairments"],
-			technologies: ["Natural language processing", "Speech recognition"],
-			promises: ["Optimization"],
-			data: ["Voice"],
-		},
-		loop: [
-			{
-				"actor": "human",
-				"type": "Domain experts",
-				"index": 1,
-				"radius": 1,
-				"title": "Intent and Entity Definition",
-				"label": "Defining intents and entities relevant to the task-oriented SDS pipeline."
-			},
-			{
-				"actor": "human",
-				"type": "Children",
-				"index": 2,
-				"radius": 1,
-				"title": "Data Collection",
-				"label": "Creating domain-specific and task-relevant datasets by collecting children's utterances related to basic math concepts."
-			},
-			{
-				"actor": "human",
-				"type":"Annotator", 
-				"index": 3,
-				"radius": 1,
-				"title":"Data Annotation", 
-				"label":"Annotating the data with intents and entities."
-			},
-			{
-				"actor":"algorithm", 
-				"type":"NLU Model", 
-				"index": 4,
-				"radius": 1,
-				"title":"Model Training", 
-				"label":"Training and evaluating NLU models using iterative training processes."
-			},
-			{
-				"actor":"algorithm", 
-				"type":"Data Augmentation Techniques", 
-				"index": 3,
-				"radius": 1,
-				"title":"Paraphrase Generation and Entity Extraction", 
-				"label":"Using data augmentation techniques such as paraphrase generation and entity extraction to improve NLU model performance on small-size task-specific datasets."
-			},
-			{
-				"actor":"algorithm", 
-				"type":"Contextually Aware Intelligent Agents",
-				"index": 2,
-				"radius": 1, 
-				"title":"Intelligent Agent Development", 
-				"label":"Incorporating contextually aware intelligent agents to understand users and their surroundings in real-time."
-			},
-			{
-				"actor":"algorithm", 
-				"type":"Spoken Dialogue Systems (SDS)", 
-				"index": 1,
-				"radius": 1,
-				"title":"SDS Implementation", 
-				"label":"Using Spoken Dialogue Systems (SDS) as crucial building blocks to handle efficient task-oriented communication with children in game-based learning settings."
-			}
-		]
-	}, {
-		title: "AutoMOS: Learning a non-intrusive assessor of naturalness-of-speech",
-		value: {
-			humans: ["Annotators"],
-			problems: ["Data analysis"],
-			technologies: ["Deep recurring networks"],
-			promises: ["Accuracy"],
-			data: ["Voice"],
-		},
-		loop: [
-			{
-				"actor": "algorithm",
-				"type": "Speech synthesizer",
-				"index": 2,
-				"radius": 1,
-				"title": "Data collection",
-				"label": "All utterances from a given synthesizer and are allocated to a single training or evaluation fold, or to a single aggregate metric,"
-			},
-			{
-				"actor": "human",
-				"type": "raters",
-				"index": 1,
-				"radius": 1,
-				"title": "Speech Quality Assessment",
-				"label": "Human raters are employed to assess synthesized speech quality."
-			},
-			{
-				"actor": "algorithm",
-				"type": "Neural network",
-				"index": 1,
-				"radius": 1,
-				"title": "AutoMOS Model Development",
-				"label": "A deep recurrent neural network is developed to model human raters' mean opinion scores of synthesized speech using only a raw waveform."
-			}
-		]
-	}, {
-		title: "Deep Visual Perception for Dynamic Walking on Discrete Terrain",
-		value: {
-			humans: ["Not mentioned"],
-			problems: ["Situating"],
-			technologies: ["Neural networks"],
-			promises: ["Automation"],
-			data: ["Videos"],
-		},
-		loop: [
-			{
-				"actor": "human",
-				"type":"researcher", 
-				"index": 2,
-				"radius": 1,
-				"title":"Dataset Creation", 
-				"label":"Creating a synthetic dataset using a systematic methodology to train the CNN-based deep perception model for accurate step length estimation."
-			},
-			{
-				"actor": "algorithm",
-				"type": "deep neural network",
-				"index": 2,
-				"radius": 1,
-				"title": "Step Length Estimation",
-				"label": "Designing and training a custom convolutional neural network architecture to predict step length to the next foothold using a sampled image preview of the upcoming terrain at foot impact."
-			},
-			{
-				"actor": "algorithm",
-				"type":"safety-critical controller",
-				"index": 1,
-				"radius": 1, 
-				"title":"Limit Cycle Walking", 
-				"label":"Incorporating an inner-loop safety-critical controller into the physics simulator that can generate stable and safe limit cycle walking of a desired step length." 
-			},
-			{
-				"actor": "human",
-				"type": "researcher",
-				"index": 1,
-				"radius": 1,
-				"title": "Evaluate Visual Perception System",
-				"label": "Building and systematically evaluating a Deep Visual Perception system to be used by a planar dynamic walking robot in order to autonomously walk on discrete terrain."
-			}
-		]
-	}, {
+	}, 
+	// {
+	// 	title: "AutoMOS: Learning a non-intrusive assessor of naturalness-of-speech",
+	// 	value: {
+	// 		humans: ["Annotators"],
+	// 		problems: ["Data analysis"],
+	// 		technologies: ["Deep recurring networks"],
+	// 		promises: ["Accuracy"],
+	// 		data: ["Voice"],
+	// 	},
+	// 	loop: [
+	// 		{
+	// 			"actor": "algorithm",
+	// 			"type": "Speech synthesizer",
+	// 			"index": 2,
+	// 			"radius": 1,
+	// 			"title": "Data collection",
+	// 			"label": "All utterances from a given synthesizer and are allocated to a single training or evaluation fold, or to a single aggregate metric,"
+	// 		},
+	// 		{
+	// 			"actor": "human",
+	// 			"type": "raters",
+	// 			"index": 1,
+	// 			"radius": 1,
+	// 			"title": "Speech Quality Assessment",
+	// 			"label": "Human raters are employed to assess synthesized speech quality."
+	// 		},
+	// 		{
+	// 			"actor": "algorithm",
+	// 			"type": "Neural network",
+	// 			"index": 1,
+	// 			"radius": 1,
+	// 			"title": "AutoMOS Model Development",
+	// 			"label": "A deep recurrent neural network is developed to model human raters' mean opinion scores of synthesized speech using only a raw waveform."
+	// 		}
+	// 	]
+	// }, 
+	// {
+	// 	title: "Deep Visual Perception for Dynamic Walking on Discrete Terrain",
+	// 	value: {
+	// 		humans: ["Not mentioned"],
+	// 		problems: ["Situating"],
+	// 		technologies: ["Neural networks"],
+	// 		promises: ["Automation"],
+	// 		data: ["Videos"],
+	// 	},
+	// 	loop: [
+	// 		{
+	// 			"actor": "human",
+	// 			"type":"researcher", 
+	// 			"index": 2,
+	// 			"radius": 1,
+	// 			"title":"Dataset Creation", 
+	// 			"label":"Creating a synthetic dataset using a systematic methodology to train the CNN-based deep perception model for accurate step length estimation."
+	// 		},
+	// 		{
+	// 			"actor": "algorithm",
+	// 			"type": "deep neural network",
+	// 			"index": 2,
+	// 			"radius": 1,
+	// 			"title": "Step Length Estimation",
+	// 			"label": "Designing and training a custom convolutional neural network architecture to predict step length to the next foothold using a sampled image preview of the upcoming terrain at foot impact."
+	// 		},
+	// 		{
+	// 			"actor": "algorithm",
+	// 			"type":"safety-critical controller",
+	// 			"index": 1,
+	// 			"radius": 1, 
+	// 			"title":"Limit Cycle Walking", 
+	// 			"label":"Incorporating an inner-loop safety-critical controller into the physics simulator that can generate stable and safe limit cycle walking of a desired step length." 
+	// 		},
+	// 		{
+	// 			"actor": "human",
+	// 			"type": "researcher",
+	// 			"index": 1,
+	// 			"radius": 1,
+	// 			"title": "Evaluate Visual Perception System",
+	// 			"label": "Building and systematically evaluating a Deep Visual Perception system to be used by a planar dynamic walking robot in order to autonomously walk on discrete terrain."
+	// 		}
+	// 	]
+	// }, 
+	{
 		title: "From Hand-Perspective Visual Information to Grasp Type Probabilities: Deep Learning via Ranking Labels",
 		value: {
 			humans: ["Patients"],
@@ -714,58 +607,60 @@ const data = [
 				"label": "Algorithm selects data samples for human annotation to improve model accuracy"
 			},
 		]
-	}, {
-		title: "Interpreting and improving natural-language processing (in machines) with natural language-processing (in the brain)",
-		value: {
-			humans: ["Annotators"],
-			problems: ["Data analysis"],
-			technologies: ["Deep learning", "Machine learning"],
-			promises: ["Human support"],
-			data: ["Environmental data", "Annotations"],
-		},
-		loop: [
-			{
-				"actor": "human",
-				"type": "Researchers",
-				"index": 1,
-				"radius": 1,
-				"title": "Dataset construction",
-				"label": "The sentences were chosen to be complex and naturalistic, in order to better capture the kinds of language processing that occur in real-world situations."
-			},
-			{
-				"actor": "human",
-				"type": "Subject",
-				"index": 2,
-				"radius": 1,
-				"title": "Data recording",
-				"label": "Reading complex natural text"
-			},
-			{
-				"actor": "algorithm",
-				"type": "NLP model",
-				"index": 2,
-				"radius": 1,
-				"title": "Extraction",
-				"label": "Extracting word and sequence embeddings from each of the four NLP models (ELMo, USE, BERT, and Transformer-XL)."
-			},
-			{
-				"actor":"algorithm",
-				"type":"Support Vector Regression (SVR)",
-				"index": 1,
-				"radius": 1,
-				"title":"Brain activity prediction",
-				"label":"Predicting brain activity patterns based on word and sequence embeddings from NLP models"
-			},
-			{
-				"actor":"human",
-				"type":"Researchers",
-				"index": 3,
-				"radius": 1,
-				"title":"Validation",
-				"label":"Comparing predicted brain activity patterns to actual brain activity patterns recorded during sentence reading"
-			},
-		]
-	}, {
+	}, 
+	// {
+	// 	title: "Interpreting and improving natural-language processing (in machines) with natural language-processing (in the brain)",
+	// 	value: {
+	// 		humans: ["Annotators"],
+	// 		problems: ["Data analysis"],
+	// 		technologies: ["Deep learning", "Machine learning"],
+	// 		promises: ["Human support"],
+	// 		data: ["Environmental data", "Annotations"],
+	// 	},
+	// 	loop: [
+	// 		{
+	// 			"actor": "human",
+	// 			"type": "Researchers",
+	// 			"index": 1,
+	// 			"radius": 1,
+	// 			"title": "Dataset construction",
+	// 			"label": "The sentences were chosen to be complex and naturalistic, in order to better capture the kinds of language processing that occur in real-world situations."
+	// 		},
+	// 		{
+	// 			"actor": "human",
+	// 			"type": "Subject",
+	// 			"index": 2,
+	// 			"radius": 1,
+	// 			"title": "Data recording",
+	// 			"label": "Reading complex natural text"
+	// 		},
+	// 		{
+	// 			"actor": "algorithm",
+	// 			"type": "NLP model",
+	// 			"index": 2,
+	// 			"radius": 1,
+	// 			"title": "Extraction",
+	// 			"label": "Extracting word and sequence embeddings from each of the four NLP models (ELMo, USE, BERT, and Transformer-XL)."
+	// 		},
+	// 		{
+	// 			"actor":"algorithm",
+	// 			"type":"Support Vector Regression (SVR)",
+	// 			"index": 1,
+	// 			"radius": 1,
+	// 			"title":"Brain activity prediction",
+	// 			"label":"Predicting brain activity patterns based on word and sequence embeddings from NLP models"
+	// 		},
+	// 		{
+	// 			"actor":"human",
+	// 			"type":"Researchers",
+	// 			"index": 3,
+	// 			"radius": 1,
+	// 			"title":"Validation",
+	// 			"label":"Comparing predicted brain activity patterns to actual brain activity patterns recorded during sentence reading"
+	// 		},
+	// 	]
+	// }, 
+	{
 		title: "Keyword Spotter Model for Crop Pest and Disease Monitoring from Community Radio Data",
 		value: {
 			humans: ["Annotators"],
@@ -987,85 +882,88 @@ const data = [
 			"label": "Retrain automatic opinion classifiers based on feedback from manual inspection"
 		}
 	]
-}, {
-	title: "Self-supervised Semi-supervised Learning for Data Labeling and Quality Evaluation",
-	value: {
-		humans: ["Annotators"],
-		problems: ["Data analysis"],
-		technologies: ["Machine learning"],
-		promises: ["Costs, Accuracy"],
-		data: ["Images, Annotations"],
-	},
-	loop: [
-		{
-			"actor": "algorithm",
-			"type": "Synthetic annotator",
-			"index": 3,
-			"title": "Active learning-based human-in-the-loop annotation",
-			"label": "Select most informative data samples for labeling"
-		},
-		{
-			"actor": "algorithm",
-			"type": "machine learning",
-			"index": 2,
-			"title": "Self-supervised Semi-supervised Learning",
-			"label": "Train a neural network to predict whether two augmented versions of the same image are similar or dissimilar using contrastive learning methods"
-		},
-		{
-			"actor": "algorithm",
-			"type": "machine learning",
-			"index": 1,
-			"title": "Nearest neighbor graph construction",
-			"label": "Construct a nearest neighbor graph over data samples based on learned representations by computing pairwise distances between all samples in the dataset and connecting each sample to its k-nearest neighbors in the feature space"
-		}
-	]
-}, {
-	title: "HW-Aware Initialization of DNN Auto-Tuning to Improve Exploration Time and Robustness",
-	value: {
-		humans: ["Researchers"],
-		problems: ["Industrial development"],
-		technologies: ["Machine learning"],
-		promises: ["Optimization"],
-		data: ["Logs"],
-	},
-	loop: [
-		{
-			"actor": "algorithm",
-			"title": "Sampling",
-			"index": 3,
-			"type": "HW-Aware Initialization of DNN Auto-Tuning",
-			"label": "Sampling the search space for valid and invalid configurations, without considering performance."
-		},
-		{
-			"actor": "algorithm",
-			"title": "Clustering",
-			"index": 2,
-			"type": "HW-Aware Initialization of DNN Auto-Tuning",
-			"label": "Identifying clusters of valid configurations in the search space."
-		},
-		{
-			"actor": "human",
-			"title": "Presampling",
-			"index": 1,
-			"type": "Researcher",
-			"label": "Exploiting these local pockets of possible solutions using a presampling algorithm."
-		},
-		{
-			"actor":"algorithm",
-			"title":"Training set creation",
-			"index": 1,
-			"type":"HW-Aware Initialization of DNN Auto-Tuning",
-			"label":"Creating a curated training set from the information of valid and invalid subsets."
-		},
-		{
-			"actor":"human",
-			"title":"Initialization",
-			"index": 2,
-			"type":"Researcher",
-			"label":"Using this curated training set to initialize the auto-tuner."
-		}
-	]
-}, {
+}, 
+// {
+// 	title: "Self-supervised Semi-supervised Learning for Data Labeling and Quality Evaluation",
+// 	value: {
+// 		humans: ["Annotators"],
+// 		problems: ["Data analysis"],
+// 		technologies: ["Machine learning"],
+// 		promises: ["Costs, Accuracy"],
+// 		data: ["Images, Annotations"],
+// 	},
+// 	loop: [
+// 		{
+// 			"actor": "algorithm",
+// 			"type": "Synthetic annotator",
+// 			"index": 3,
+// 			"title": "Active learning-based human-in-the-loop annotation",
+// 			"label": "Select most informative data samples for labeling"
+// 		},
+// 		{
+// 			"actor": "algorithm",
+// 			"type": "machine learning",
+// 			"index": 2,
+// 			"title": "Self-supervised Semi-supervised Learning",
+// 			"label": "Train a neural network to predict whether two augmented versions of the same image are similar or dissimilar using contrastive learning methods"
+// 		},
+// 		{
+// 			"actor": "algorithm",
+// 			"type": "machine learning",
+// 			"index": 1,
+// 			"title": "Nearest neighbor graph construction",
+// 			"label": "Construct a nearest neighbor graph over data samples based on learned representations by computing pairwise distances between all samples in the dataset and connecting each sample to its k-nearest neighbors in the feature space"
+// 		}
+// 	]
+// }, 
+// {
+// 	title: "HW-Aware Initialization of DNN Auto-Tuning to Improve Exploration Time and Robustness",
+// 	value: {
+// 		humans: ["Researchers"],
+// 		problems: ["Industrial development"],
+// 		technologies: ["Machine learning"],
+// 		promises: ["Optimization"],
+// 		data: ["Logs"],
+// 	},
+// 	loop: [
+// 		{
+// 			"actor": "algorithm",
+// 			"title": "Sampling",
+// 			"index": 3,
+// 			"type": "HW-Aware Initialization of DNN Auto-Tuning",
+// 			"label": "Sampling the search space for valid and invalid configurations, without considering performance."
+// 		},
+// 		{
+// 			"actor": "algorithm",
+// 			"title": "Clustering",
+// 			"index": 2,
+// 			"type": "HW-Aware Initialization of DNN Auto-Tuning",
+// 			"label": "Identifying clusters of valid configurations in the search space."
+// 		},
+// 		{
+// 			"actor": "human",
+// 			"title": "Presampling",
+// 			"index": 1,
+// 			"type": "Researcher",
+// 			"label": "Exploiting these local pockets of possible solutions using a presampling algorithm."
+// 		},
+// 		{
+// 			"actor":"algorithm",
+// 			"title":"Training set creation",
+// 			"index": 1,
+// 			"type":"HW-Aware Initialization of DNN Auto-Tuning",
+// 			"label":"Creating a curated training set from the information of valid and invalid subsets."
+// 		},
+// 		{
+// 			"actor":"human",
+// 			"title":"Initialization",
+// 			"index": 2,
+// 			"type":"Researcher",
+// 			"label":"Using this curated training set to initialize the auto-tuner."
+// 		}
+// 	]
+// }, 
+{
 	title: "BISTRO: Berkeley Integrated System for Transportation Optimization",
 	value: {
 		humans: ["Urban planners"],
@@ -1362,53 +1260,55 @@ const data = [
 			"label": "Once clusters have been identified, answer templates can be created based on the most commonly occurring POS bigrams and trigrams in the responses. These templates can then be used to automatically generate answers for new questions."
 		},
 	]
-}, {
-	title: "Towards a data-driven characterization of behavioral changes induced by the seasonal flu",
-	value: {
-		humans: ["Online communities"],
-		problems: ["Disease prevention"],
-		technologies: ["Machine learning"],
-		promises: ["Prediction"],
-		data: ["Written text"],
-	},
-	loop: [
-		{
-			"actor": "human", 
-			"type": "Researchers", 
-			"index": 1,
-			"title": "Data collection", 
-			"label": "The data used in this study was collected from Influweb, a digital surveillance platform that collects data about the progression of the seasonal flu in Italy. The data included socio-demographic indicators, medical history of individuals, information regarding feelings and concerns towards the flu, and survey responses about changes in behaviors induced by the disease."
-		},
-		{
-			"actor": "human", 
-			"type": "Researchers", 
-			"index": 2,
-			"title": "Pre-processing", 
-			"label": "The collected data was pre-processed to remove any missing or incomplete responses and to standardize the format of the data."
-		},
-		{
-			"actor": "human", 
-			"type": "Researchers", 
-			"index": 3,
-			"title": "Feature engineering", 
-			"label": "Features were extracted from the pre-processed data to represent different aspects of participants' behaviors related to the flu. These features included whether participants avoided crowded places, wore a mask in public, or changed their daily routine due to the flu."
-		},
-		{
-			"actor": "algorithm", 
-			"type": "Machine learning", 
-			"index": 2,
-			"title": "Classification task", 
-			"label": "The next step involved training machine learning models to classify individuals into three classes of behavioral change based on their survey responses."
-		},
-		{
-			"actor": "human", 
-			"type": "", 
-			"index": 4,
-			"title": "Performance evaluation", 
-			"label": "Four different metrics (precision, balanced accuracy, recall, and f1 score) were used to obtain a complete overview of model performance for each class of behavioral change."
-		}
-	]
-}, {
+}, 
+// {
+// 	title: "Towards a data-driven characterization of behavioral changes induced by the seasonal flu",
+// 	value: {
+// 		humans: ["Online communities"],
+// 		problems: ["Disease prevention"],
+// 		technologies: ["Machine learning"],
+// 		promises: ["Prediction"],
+// 		data: ["Written text"],
+// 	},
+// 	loop: [
+// 		{
+// 			"actor": "human", 
+// 			"type": "Researchers", 
+// 			"index": 1,
+// 			"title": "Data collection", 
+// 			"label": "The data used in this study was collected from Influweb, a digital surveillance platform that collects data about the progression of the seasonal flu in Italy. The data included socio-demographic indicators, medical history of individuals, information regarding feelings and concerns towards the flu, and survey responses about changes in behaviors induced by the disease."
+// 		},
+// 		{
+// 			"actor": "human", 
+// 			"type": "Researchers", 
+// 			"index": 2,
+// 			"title": "Pre-processing", 
+// 			"label": "The collected data was pre-processed to remove any missing or incomplete responses and to standardize the format of the data."
+// 		},
+// 		{
+// 			"actor": "human", 
+// 			"type": "Researchers", 
+// 			"index": 3,
+// 			"title": "Feature engineering", 
+// 			"label": "Features were extracted from the pre-processed data to represent different aspects of participants' behaviors related to the flu. These features included whether participants avoided crowded places, wore a mask in public, or changed their daily routine due to the flu."
+// 		},
+// 		{
+// 			"actor": "algorithm", 
+// 			"type": "Machine learning", 
+// 			"index": 2,
+// 			"title": "Classification task", 
+// 			"label": "The next step involved training machine learning models to classify individuals into three classes of behavioral change based on their survey responses."
+// 		},
+// 		{
+// 			"actor": "human", 
+// 			"type": "", 
+// 			"index": 4,
+// 			"title": "Performance evaluation", 
+// 			"label": "Four different metrics (precision, balanced accuracy, recall, and f1 score) were used to obtain a complete overview of model performance for each class of behavioral change."
+// 		}
+// 	]
+// }, 
+{
 	title: "Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference",
 	value: {
 		humans: ["Teachers"],
@@ -1599,53 +1499,55 @@ const data = [
 			"label": "By incorporating contextual information about the environment and task into these modifications, more realistic and informative training data is created that better reflects the challenges faced by real-world agents."
 		}
 	]
-}, {
-	title: "Why-So-Deep: Towards Boosting Previously Trained Models for Visual Place Recognition",
-	value: {
-		humans: [null],
-		problems: ["Inaccuracies"],
-		technologies: ["Deep learning"],
-		promises: ["Accuracy"],
-		data: ["Spatial data"],
-	},
-	loop: [
-		{
-			"actor": "human", 
-			"type": "Researcher", 
-			"index": 1,
-			"title": "Pre-training", 
-			"label": "A pre-trained deep learning model for image retrieval is used as a starting point."
-		},
-		{
-			"actor": "algorithm", 
-			"type": "Deep learning-based image retrieval", 
-			"index": 4,
-			"title": "Splitting", 
-			"label": "The full spatial information is split into multiple regions."
-		},
-		{
-			"actor": "algorithm", 
-			"type": "Deep learning-based image retrieval", 
-			"index": 3,
-			"title": "Descriptors", 
-			"label": "For each region, the descriptor distance co-relations are estimated."
-		},
-		{
-			"actor": "algorithm", 
-			"type": "Deep learning-based image retrieval", 
-			"index": 2,
-			"title": "Probabilistic prediction", 
-			"label": "These co-relations are used to probabilistically verify image correspondence efficiently."
-		},
-		{
-			"actor": "algorithm", 
-			"type": "Deep learning-based image retrieval", 
-			"index": 1,
-			"title": "Accuracy improvement", 
-			"label": "Essential regions at spatial layers are elevated to improve the accuracy of image retrieval results without retraining a new deep learning model."
-		},
-	]
-}, {
+}, 
+// {
+// 	title: "Why-So-Deep: Towards Boosting Previously Trained Models for Visual Place Recognition",
+// 	value: {
+// 		humans: [null],
+// 		problems: ["Inaccuracies"],
+// 		technologies: ["Deep learning"],
+// 		promises: ["Accuracy"],
+// 		data: ["Spatial data"],
+// 	},
+// 	loop: [
+// 		{
+// 			"actor": "human", 
+// 			"type": "Researcher", 
+// 			"index": 1,
+// 			"title": "Pre-training", 
+// 			"label": "A pre-trained deep learning model for image retrieval is used as a starting point."
+// 		},
+// 		{
+// 			"actor": "algorithm", 
+// 			"type": "Deep learning-based image retrieval", 
+// 			"index": 4,
+// 			"title": "Splitting", 
+// 			"label": "The full spatial information is split into multiple regions."
+// 		},
+// 		{
+// 			"actor": "algorithm", 
+// 			"type": "Deep learning-based image retrieval", 
+// 			"index": 3,
+// 			"title": "Descriptors", 
+// 			"label": "For each region, the descriptor distance co-relations are estimated."
+// 		},
+// 		{
+// 			"actor": "algorithm", 
+// 			"type": "Deep learning-based image retrieval", 
+// 			"index": 2,
+// 			"title": "Probabilistic prediction", 
+// 			"label": "These co-relations are used to probabilistically verify image correspondence efficiently."
+// 		},
+// 		{
+// 			"actor": "algorithm", 
+// 			"type": "Deep learning-based image retrieval", 
+// 			"index": 1,
+// 			"title": "Accuracy improvement", 
+// 			"label": "Essential regions at spatial layers are elevated to improve the accuracy of image retrieval results without retraining a new deep learning model."
+// 		},
+// 	]
+// }, 
+{
 	title: "Why Should I Trust Interactive Learners? Explaining Interactive Queries of Classifiers to Users",
 	value: {
 		humans: ["End-user"],
