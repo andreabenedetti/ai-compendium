@@ -555,7 +555,7 @@ const data = [
 			problems: ["Analysis"],
 			technologies: ["Image content recognition"],
 			promises: ["Ease of use"],
-			data: ["Images, Annotations"],
+			data: ["Images", "Annotations"],
 		},
 		loop: [
 			{
@@ -1757,6 +1757,151 @@ const data = [
 			"index": 0,
 			"title": "Update model",
 			"label": "Last step in each active learning cycle is an update of the model G, D."
+		}
+	]
+}, {
+	title: "Towards Integrating Fairness Transparently in Industrial Applications",
+	value: {
+		humans: ["AI experts", "Domain experts"],
+		problems: ["AI bias"],
+		technologies: [null],
+		promises: ["Debiasing", "Participation"],
+		data: [null],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Company, AI experts", 
+			"index": 1,
+			"title": "Information gathering", 
+			"label": "The corresponding SIFT DATA object is populated with the target variable, demographic data, and consumer segmentation data."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "SIFT", 
+			"index": 1,
+			"title": "Indentify patterns of bias", 
+			"label": "After data preparation, a sparse group detection algorithm checks each subgroup defined by each sensitive feature."
+		},
+		{
+			"actor": "human", 
+			"type": "Company, AI experts", 
+			"index": 2,
+			"title": "Bias Risk Assessment", 
+			"label": "The team proceeds to split the data evenly into a training and test set, and trains a logistic regression model."
+		},
+	]
+}, {
+	title: "Generating Clues for Gender based Occupation De-biasing in Text",
+	value: {
+		humans: ["User"],
+		problems: ["AI bias"],
+		technologies: [null],
+		promises: ["Human support", "Creativity", "Debiasing"],
+		data: ["Written text"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Storyteller", 
+			"index": 1,
+			"title": "User input", 
+			"label": "User inputs a text snippet and selects the timespan and demographic information."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Named Entity Recognition", 
+			"index": 4,
+			"title": "Entities extraction", 
+			"label": "System highlights the named entities and their occupations which have a possibility of being biased."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Named Entity Recognition", 
+			"index": 3,
+			"title": "Occupations identification", 
+			"label": "System tags 996 occupations gathered from different sources."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Gender Identification algorithms and Occupation Association algorithms", 
+			"index": 2,
+			"title": "Gender identification", 
+			"label": "System determines the gender of the named entities and suggests examples of real people with alternate gender who also had the corresponding occupation."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Occupation Association algorithms", 
+			"index": 1,
+			"title": "Explanation by evidence", 
+			"label": "System outputs pieces of evidence in the form of examples of real people with that occupation from the selected time frame and region but having the opposite gender."
+		}, 
+	]
+}, {
+	title: "A Labeling Task Design for Supporting Algorithmic Needs: Facilitating Worker Diversity and Reducing AI Bias",
+	value: {
+		humans: ["Annotators", ""],
+		problems: ["AI bias"],
+		technologies: [null],
+		promises: ["Debiasing"],
+		data: ["Logs"],
+	},
+	loop: [
+		{
+			"actor": "human", 
+			"type": "Developers and administrators", 
+			"index": 1,
+			"title": "Task Design", 
+			"label": "The process begins with the design of the labeling task. This involves defining the task requirements, guidelines, and criteria for labeling. Developers and administrators play a role in ensuring the stability and quality of the project."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Workers, Developers and administrators", 
+			"index": 2,
+			"title": "Worker Recruitment", 
+			"label": "Labeling workers from diverse backgrounds are recruited to participate in the task. These workers can come from various communities and have different levels of expertise."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Workers", 
+			"index": 3,
+			"title": "Task Execution", 
+			"label": "The individual labelers perform the labeling task based on the provided guidelines and criteria. They use an annotation tool designed specifically for the task. During this step, the labelers may encounter challenges and difficulties in categorizing labels."
+		}, 
+		{
+			"actor": "algorithm", 
+			"type": "Machine", 
+			"index": 1,
+			"title": "Machine Feedback", 
+			"label": "After completing the labeling task, the machine provides feedback to the individual labelers. This feedback can be in the form of suggestions, corrections, or highlighting areas of improvement. The machine's feedback helps the labelers to refine their labeling skills and improve their performance."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Workers, Community", 
+			"index": 4,
+			"title": "Community Engagement", 
+			"label": "The labelers have the opportunity to engage with the community, including community leaders and educating managers. They can raise questions, seek clarifications, and receive quick answers through a group chat app. The community leaders also play a role in confirming task outputs and providing feedback to the labeling workers."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Workers", 
+			"index": 5,
+			"title": "Iterative improvements", 
+			"label": "Based on the feedback from the machine and the community, the individual labelers can iterate and improve their labeling performance. They can apply the feedback received to enhance the accuracy and consistency of their labeling."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Developers and administrators", 
+			"index": 6,
+			"title": "Continuous Monitoring", 
+			"label": "Throughout the process, developers and administrators monitor the progress of the labeling task and ensure the stability of the project. They may also provide additional guidance and support to the labelers when needed."
+		}, 
+		{
+			"actor": "human", 
+			"type": "Experts", 
+			"index": 7,
+			"title": "Evaluation and Refinement", 
+			"label": "The labeled data is evaluated for quality and accuracy. If necessary, the task design, guidelines, or criteria may be refined based on the insights gained from the labeling process."
 		}
 	]
 }

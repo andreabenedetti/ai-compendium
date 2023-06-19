@@ -8,22 +8,13 @@ import * as d3 from "d3";
 import styles from '@/styles/Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col, Table, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Table, ListGroup, Accordion } from 'react-bootstrap';
 import Nav from '../../components/Sub';
+import ValuesList from '../../components/ListOfValues/Values';
 
 const count = data.length;
 let humanTasks = [];
 let algoTasks = [];
-
-let promisesList = [];
-
-data.forEach(d => {
-  d.value.promises.forEach(p => {
-    promisesList.push(p);
-  })
-});
-
-let promises = promisesList.filter((value, index, array) => array.indexOf(value) === index)
 
 data.forEach(d => {
   if (d) {
@@ -48,16 +39,11 @@ export default function Home() {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
     </Head>
-    {console.log(count)}
     <Nav count = { count }/>
     <Container fluid className="mt-3 pb-5 mb-5">
     <Row>
     <Col md={{ span: 2 }}>
-      <ListGroup>
-        {
-          promises.map(p => (<ListGroup.Item href={`#${p}`} key={p}>{p}</ListGroup.Item>))
-        }
-      </ListGroup>
+    <ValuesList data={data} />
     </Col>
     <Col md={{ span: 5 }}>
     <h4>Tasks performed by humans</h4>
