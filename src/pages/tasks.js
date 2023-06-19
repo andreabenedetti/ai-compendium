@@ -26,7 +26,7 @@ data.forEach(d => {
 let promises = promisesList.filter((value, index, array) => array.indexOf(value) === index)
 
 data.forEach(d => {
-  if (d.value.promises.includes("Speed")) {
+  if (d) {
     let hList = d.loop.filter(e => e.actor === "human" && e.type);
     hList.forEach(t => humanTasks.push(t));
 
@@ -71,7 +71,7 @@ export default function Home() {
       </thead>
       <tbody>
         {
-          humanTasks.map(task => (<tr><td>{task.type}</td><td>{task.title}</td><td>{task.label}</td></tr>))
+          humanTasks.map(task => (<tr key={task}><td>{task.type}</td><td>{task.title}</td><td>{task.label}</td></tr>))
         }
       </tbody>
     </Table>  
@@ -87,7 +87,7 @@ export default function Home() {
       </thead>
       <tbody>
         {
-          algoTasks.map(task => (<tr><td>{task.title}</td><td>{task.label}</td></tr>))
+          algoTasks.map(task => (<tr key={task}><td>{task.title}</td><td>{task.label}</td></tr>))
         }
       </tbody>
     </Table>
