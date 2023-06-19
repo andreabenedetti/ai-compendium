@@ -8,26 +8,37 @@ import * as d3 from "d3";
 import styles from '@/styles/Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col, Table } from 'react-bootstrap';
+import { Container, Row, Col, Table, ListGroup } from 'react-bootstrap';
 import Nav from '../../components/Sub';
 
 const count = data.length;
-const humanTasks = [];
-const algoTasks = [];
+let humanTasks = [];
+let algoTasks = [];
+
+let promisesList = [];
+
+data.forEach(d => {
+  d.value.promises.forEach(p => {
+    promisesList.push(p);
+  })
+});
+
+let promises = promisesList.filter((value, index, array) => array.indexOf(value) === index)
+
+data.forEach(d => {
+  if (d.value.promises.includes("Speed")) {
+    let hList = d.loop.filter(e => e.actor === "human" && e.type);
+    hList.forEach(t => humanTasks.push(t));
+
+    let aList = d.loop.filter(e => e.actor === "algorithm" && e.type);
+    aList.forEach(t => algoTasks.push(t));
+  }
+});
+
+humanTasks.sort((a, b) => d3.ascending(a.type, b.type))
+algoTasks.sort((a, b) => d3.ascending(a.title, b.title))
 
 export default function Home() { 
-  
-  data.forEach(d => {
-    let hList = d.loop.filter(e => e.actor === "human" && e.type);
-    hList.sort((a, b) => d3.descending(a.type, b.type));
-    hList.forEach(t => humanTasks.push(t));
-    
-    let aList = d.loop.filter(e => e.actor === "algorithm" && e.type);
-    aList.sort((a, b) => d3.descending(a.type, b.type));
-    aList.forEach(t => algoTasks.push(t));
-  });
-  
-  console.log(humanTasks)
   
   return (
     <>
@@ -42,18 +53,44 @@ export default function Home() {
     <Container fluid className="mt-3 pb-5 mb-5">
     <Row>
     <Col md={{ span: 2 }}>
+      <ListGroup>
+        {
+          promises.map(p => (<ListGroup.Item href={`#${p}`} key={p}>{p}</ListGroup.Item>))
+        }
+      </ListGroup>
     </Col>
     <Col md={{ span: 5 }}>
     <h4>Tasks performed by humans</h4>
-    {
-      humanTasks.map(task => (<><p><b>{task.type}, {task.title}</b><br />{task.label}</p></>))
-    }    
+    <Table striped>
+      <thead>
+        <tr>
+          <th>Human</th>
+          <th>Task</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          humanTasks.map(task => (<tr><td>{task.type}</td><td>{task.title}</td><td>{task.label}</td></tr>))
+        }
+      </tbody>
+    </Table>  
     </Col>
     <Col md={{ span: 5 }}>
     <h4>Tasks performed by algorithms</h4>
-    {
-      algoTasks.map(task => (<><p><b>{task.title}</b><br />{task.label}</p></>))
-    }
+    <Table striped>
+    <thead>
+        <tr>
+          <th>Task</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          algoTasks.map(task => (<tr><td>{task.title}</td><td>{task.label}</td></tr>))
+        }
+      </tbody>
+    </Table>
     </Col>
     </Row>
     </Container> 
