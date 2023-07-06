@@ -94,7 +94,7 @@ export default function Home() {
       <Col>
       <Figure>
         <Figure.Image 
-        src={"/alluvial.png"} />
+        src={"/shAI-vp-wip.png"} />
         <Figure.Caption className={styles.caption}>
           Artificial intelligence, Machine learning and Humans-in-the-loop are positioned as varied value propositions composed of problems, promises and complex engineered systems that use data to achieve them.
         </Figure.Caption>
