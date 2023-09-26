@@ -1904,6 +1904,255 @@ const data = [
 			"label": "The labeled data is evaluated for quality and accuracy. If necessary, the task design, guidelines, or criteria may be refined based on the insights gained from the labeling process."
 		}
 	]
+}, {
+	"title": "Design, Benchmarking and Explainability Analysis of a Game-Theoretic Framework towards Energy Efficiency in Smart Infrastructure",
+	value: {
+		humans: ["Domain experts", "Non-expert user"],
+		problems: ["Rigor"],
+		technologies: ["Deep recurring newtorks", "Neural networks"],
+		promises: ["Accuracy"],
+		data: ["Written text"],
+	},
+	"loop": [
+		{
+			"actor":"human",
+			"type":"building manager",
+			"index": 1,
+			"radius": 1,
+			"title":"Interface Creation",
+			"label":"Building managers interact with occupants to incentivize energy-efficient behavior"
+		},
+	]
+}, {
+	title: "Visualizations for an Explainable Planning Agent",
+	value: {
+		problems: ["Opaqueness"],
+		technologies: [""],
+		promises: ["Transparency"],
+		humans: ["Not mentioned"],
+		data: ["Logs"]
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 6,
+			"radius": 1,
+			"title": "Monitoring inputs",
+			"label": "Mr.Jones monitors various inputs from the world in order to situate itself in the context of the group interaction."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 5,
+			"radius": 1,
+			"title": "Identifying task",
+			"label": "Mr.Jones identifies the task in progress using plan recognition techniques."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 4,
+			"radius": 1,
+			"title": "Requisitioning resources",
+			"label": "Mr.Jones requisitions resources and services that may be required to support the most likely tasks based on its recognition."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 3, 
+			"radius": 1,
+			"title": "Visualizing decision process",
+			"label": "Mr.Jones visualizes the decision process, which can depict both the agent's own internal recognition algorithm and an external, task-dependent process."
+		},
+		{
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 2,
+			"radius": 1,
+			"title": "Summarizing decision-making process",
+			"label": "Mr.Jones summarizes the group decision-making process."
+		}, 
+		{
+			"actor": "human",
+			"type": "Employee",
+			"radius": 1,
+			"title": "Discussing CEL environment",
+			"label": "Two humans discuss the CEL environment."
+		}, {
+			"actor": "algorithm",
+			"type": "Planning agent",
+			"index": 1,
+			"radius": 1,
+			"title": "Describing projection",
+			"label": "Mr.Jones projects its mind on the screen."
+		}, {
+			"actor": "human",
+			"type": "Employee",
+			"index": 2,
+			"radius": 1,
+			"title": "Discussing M&A task",
+			"label": "The other agent discusses how a Mergers and Acquisitions (M&A) task is carried out."
+		}
+	]
+}, {
+	title: "Understanding Questions that Arise When Working with Business Documents",
+	value: {
+		problems: ["Lack of data"],
+		technologies: [""],
+		data: ["Written text"],
+		promises: ["Human collaboration"],
+		humans: ["Authors", "Businessmen"]
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "Microsoft Word user",
+			"index": 1,
+			"radius": 1,
+			"title": "Question Submission",
+			"label": "Participants submitted their questions through a Microsoft Word add-in."
+		}, {
+			"actor": "algorithm",
+			"type": "Language model",
+			"index": 3,
+			"radius": 1,
+			"title": "Passage Extraction",
+			"label": "The AI model (BERT Large) extracted relevant passages from the document in response to the user's question."
+		}, {
+			"actor": "algorithm",
+			"type": "Language model",
+			"index": 2,
+			"radius": 1,
+			"title": "Automatic Answering",
+			"label": "If the AI model was able to provide a satisfactory answer, it did so automatically."
+		}, {
+			"actor": "human",
+			"type": "Microsoft Word user",
+			"index": 2,
+			"radius": 1,
+			"title": "Human Assistance",
+			"label": "If the AI model was unable to provide a satisfactory answer, the question was passed on to a human knowledge worker for further assistance."
+		}, {
+			"actor": "human",
+			"type": "Microsoft Word user",
+			"index": 3,
+			"radius": 1,
+			"title": "Document Sharing",
+			"label": "Participants could choose to share a link to the document in question if they consented to the digital assistant or a human knowledge worker accessing it."
+		}, {
+			"actor": "human",
+			"type": "Human knowledge worker",
+			"index": 4,
+			"radius": 1,
+			"title": "Human Answering",
+			"label": "The human knowledge worker provided an answer to the question if the AI model failed to produce a satisfactory answer."
+		}, {
+			"actor": "algorithm",
+			"type": "Languange model",
+			"index": 1,
+			"radius": 1,
+			"title": "Answer Delivery",
+			"label": "Participants received their answers through the Microsoft Word add-in."
+		}
+	]
+}, {
+	title: "Uncertainty-Driven Semantic Segmentation through Human-Machine Collaborative Learning",
+	value: {
+		problems: ["Data analysis", "Manual labor"],
+		technologies: [],
+		data: ["Unlabeled data", "Annotations"],
+		promises: ["Accuracy"],
+		humans: ["Implicit annotators"]
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"index": 5,
+			"radius": 1,
+			"title": "Segmentation Generation",
+			"label": "The generator G produces segmentations for the unlabeled data, while the discriminator D evaluates the quality of the generated segmentations."
+		}, {
+			"actor": "algorithm",
+			"index": 4,
+			"radius": 1,
+			"title": "Unreliable Slice Identification",
+			"label": "The discriminator is used to identify unreliable slices for which expert annotation is required."
+		}, {
+			"actor": "algorithm",
+			"index": 3,
+			"radius": 1,
+			"title": "Segmentation Synthesis",
+			"label": "The generator is used to synthesize segmentations on unlabeled data for which the model is confident."
+		}, {
+			"actor": "algorithm",
+			"index": 2,
+			"radius": 1,
+			"title": "Segmentation Prediction and Ranking",
+			"label": "In each iteration, segmentation predictions are computedand the top k samples from the ranked pool are selected and queried for expert annotation. All other samples from the pool are segmented using generator G, resulting in the labeled set S_pseudo."
+		}, {
+			"actor": "human",
+			"index": 1,
+			"radius": 1,
+			"title": "Expert Annotation",
+			"label": "The top k samples from the ranked pool are selected and queried for expert annotation, where k is the total annotation budget, yielding labeled set S_expert."
+		}, {
+			"actor": "algorithm",
+			"index": 1,
+			"radius": 1,
+			"title": "Model Updating",
+			"label": "The model G, D is updated in each active learning cycle."
+		}, {
+			"actor": "human",
+			"index": 2,
+			"radius": 1,
+			"title": "Evaluation Data Selection",
+			"label": "The proposed approach is evaluated based on 3D cardiovascular MR images from the HVSMR 2016 challenge."
+		}
+	]
+}, {
+	title: "IPLAN: Interactive and Procedural Layout Planning",
+	value: {
+		problems: ["Manual labor"],
+		technologies: [],
+		data: ["Images"],
+		promises: ["Creativity", "Freedom", "Automation"],
+		humans: ["Designers"]
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"index": 4,
+			"radius": 1,
+			"title": "Reverse-engineering",
+			"label": "iPLAN reverse-engineers the final design to obtain the stage-to-stage process, based on principles that are widely adopted by professional designers . This process is performed by the algorithm."
+		}, {
+			"actor": "algorithm",
+			"index": 3,
+			"radius": 1,
+			"title": "Markov chain model",
+			"label": "iPLAN uses a Markov chain model to capture the full design procedure. The algorithm designs and uses the Markov chain model to capture the full design procedure."
+		}, {
+			"actor": "human",
+			"type": "Designer",
+			"index": 1,
+			"radius": 1,
+			"title": "Human input",
+			"label": "iPLAN accepts user guidance at every stage of the design process. This means that the user can provide input at different stages across a wide range of levels of detail."
+		}, {
+			"actor": "algorithm",
+			"index": 2,
+			"radius": 1,
+			"title": "Automatic suggestion",
+			"label": "iPLAN automatically suggests possible designs based on the user's input. The algorithm is designed to offer the capability of fully automated generation ."
+		}, {
+			"actor": "algorithm",
+			"index": 1,
+			"radius": 1,
+			"title": "Learning",
+			"label": "Learning from human inputs on designs augmented by reverse-engineered processes."
+		}
+	]
 }
 ]
 
