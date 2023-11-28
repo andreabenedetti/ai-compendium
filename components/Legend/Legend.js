@@ -15,7 +15,7 @@ import loopStyles from "../Loops/Loops.module.scss";
 const popover = (
     <Popover id="popover-basic" className={legendStyles.legendPopup}>
     <Popover.Body>
-        <p>Each card represents the process described in a scientific article mentioning machine learning or human-in-the-loop. In each article, <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillHuman)}>humans</Badge> have a <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillProblem)}>problem</Badge> that an <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillTechnology)}>algorithm</Badge> <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillPromise)}>promises</Badge> to solve using <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillData)}>data</Badge>.</p>
+        <p>Each card represents the process described in a scientific article mentioning machine learning or human-in-the-loop. In each article, <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillHuman)}>humans</Badge> are invoked to solve a <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillProblem)}>problem</Badge> that an <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillTechnology)}>AI</Badge> <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillPromise)}>promises</Badge> to solve using <Badge pill text={"dark"} className={classNames(loopStyles.pill, loopStyles.pillData)}>data</Badge>.</p>
     <Image 
     src={legendSvg}
     width={250}

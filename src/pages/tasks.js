@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import data from '../../data/data';
+import data from '../../data/automation';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
@@ -41,6 +41,12 @@ export default function Home() {
     </Head>
     <Nav count = { count }/>
     <Container fluid className="mt-3 pb-5 mb-5">
+      <Row>
+      <Col md={{ span: 8, offset: 2 }}>
+      <h1>Tasks overview</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </Col>
+      </Row>
     <Row>
     <Col md={{ span: 2 }}>
     <ValuesList data={data} />

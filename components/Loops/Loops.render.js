@@ -82,18 +82,6 @@ const construct = (element, data, width, height, radius, labels) => {
         .attr("font-family", "Roboto Mono")
         .attr("fill", "#B6D846")
         .text("ALGORITHMS");
-        
-        // for (let i = 1; i < 5; i+=0.7) {
-        //     svg
-        //     .append("circle")
-        //     .attr("cx", w / 2)
-        //     .attr("cy", h / 2)
-        //     .attr("r", i * r)
-        //     .attr("opacity", 1 / (i * 5))
-        //     .attr("fill", "none")
-        //     .attr("stroke-width", 1)
-        //     .attr("stroke", "url(#hit)");
-        // }
     }
     
     const tasks = svg

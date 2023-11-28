@@ -42,11 +42,14 @@ export default function Loops ({ data }) {
         <b>{data.title}</b>
         </Card.Text>
         <Card.Text>
-        {data.value.humans.map(h => <Badge pill text="dark" key={h} className={classNames(styles.pill, styles.pillHuman)}>{h}</Badge>)}
         {data.value.problems.map(p => <Badge pill text="dark" key={p} className={classNames(styles.pill, styles.pillProblem)}>{p}</Badge>)}
-        {data.value.technologies.map(t => <Badge pill text="dark" key={t} className={classNames(styles.pill, styles.pillTechnology)}>{t}</Badge>)}
-        {data.value.promises.map(p => <Badge pill text="dark" key={p} className={classNames(styles.pill, styles.pillPromise)}>{p}</Badge>)}
+
         {data.value.data.map(d => <Badge pill text="dark" key={d} className={classNames(styles.pill, styles.pillData)}>{d}</Badge>)}
+
+        {data.value.promises.map(p => <Badge pill text="dark" key={p} className={classNames(styles.pill, styles.pillPromise)}>{p}</Badge>)}
+
+
+        {data.value.humans.map(h => <Badge pill text="dark" key={h} className={classNames(styles.pill, styles.pillHuman)}>{h}</Badge>)}
         </Card.Text>
         <svg ref={svgEl} width="100%" height={height}></svg>
         <Accordion>
