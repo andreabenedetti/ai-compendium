@@ -312,30 +312,35 @@ const data = [
       loop: [
         {
           "actor": "human",
+          "index": 1,
           "type": "player",
           "title": "Form team",
           "label": "The human player forms a team with a computer teammate."
         },
         {
           "actor": "human",
+          "index": 2,
           "type": "player",
           "title": "In charge",
           "label": "The human player is in charge of the team."
         },
         {
           "actor": "algorithm",
+          "index": 2,
           "type": "computer",
           "title": "Update guesses",
           "label": "The computer periodically updates its guesses and interpretations (every 4 words in the experiments described in the PDF)."
         },
         {
           "actor": "human",
+          "index": 3,
           "type": "player",
           "title": "Buzz and answer",
           "label": "At any point before the question is fully read, the human can decide to buzz, interrupt the readout, and provide an answer."
         },
         {
           "actor": "algorithm",
+          "index": 1,
           "type": "computer",
           "title": "Provide interpretations",
           "label": "The interpretations provided by the computer should help the human better decide whether to trust the computer's prediction or not."

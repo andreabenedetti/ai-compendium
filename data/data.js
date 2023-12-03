@@ -27,7 +27,7 @@ const data = [
 			},
 			{
 				"actor":"human",
-				"type":null,
+				"type": null,
 				"index": 3,
 				"radius": 1,
 				"title":"Human Decision-Making Model",
@@ -1905,25 +1905,6 @@ const data = [
 		}
 	]
 }, {
-	"title": "Design, Benchmarking and Explainability Analysis of a Game-Theoretic Framework towards Energy Efficiency in Smart Infrastructure",
-	value: {
-		humans: ["Domain experts", "Non-expert user"],
-		problems: ["Rigor"],
-		technologies: ["Deep recurring newtorks", "Neural networks"],
-		promises: ["Accuracy"],
-		data: ["Written text"],
-	},
-	"loop": [
-		{
-			"actor":"human",
-			"type":"building manager",
-			"index": 1,
-			"radius": 1,
-			"title":"Interface Creation",
-			"label":"Building managers interact with occupants to incentivize energy-efficient behavior"
-		},
-	]
-}, {
 	title: "Visualizations for an Explainable Planning Agent",
 	value: {
 		problems: ["Opaqueness"],
@@ -2151,6 +2132,129 @@ const data = [
 			"radius": 1,
 			"title": "Learning",
 			"label": "Learning from human inputs on designs augmented by reverse-engineered processes."
+		}
+	]
+}, {
+	title: "I am Robot: Neuromuscular Reinforcement Learning to Actuate Human Limbs through Functional Electrical Stimulation",
+	value: {
+		problems: ["Impairments"],
+		technologies: [],
+		data: ["Tasks", "Bodily traces"],
+		promises: ["Health recovery"],
+		humans: ["Patients"]
+	},
+	loop: [
+		{
+			"actor": "human",
+			"type": "patient",
+			"index": 1,
+			"radius": 1,
+			"title": "Muscle activity",
+			"label": "Time-series data of the muscle activity is fed into the GRU."
+		}, {
+			"actor": "algorithm",
+			"type": "GRU",
+			"index": 3,
+			"radius": 1,
+			"title": "State update",
+			"label": "The GRU has a gating mechanism that allows it to selectively update its hidden state based on the input and the previous hidden state."
+		}, {
+			"actor": "algorithm",
+			"type": "GRU",
+			"index": 2,
+			"radius": 1,
+			"title": "Predict the state",
+			"label": "The GRU is trained to predict the observable state of the next time-step from the observable state and action of the previous time-step."
+		}, {
+			"actor": "algorithm",
+			"type": "RL agent",
+			"index": 1,
+			"radius": 1,
+			"title": "Reinforcement learning",
+			"label": "The RL agent uses the hidden state of the GRU to formulate a fully-observable reinforcement learning problem."
+		}
+	]
+}, {
+	title: "IPLAN: Interactive and Procedural Layout Planning",
+	value: {
+		problems: ["Manual labor"],
+		technologies: [],
+		data: ["Images"],
+		promises: ["Creativity", "Freedom", "Automation"],
+		humans: ["Designers"]
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"index": 4,
+			"radius": 1,
+			"title": "Reverse-engineering",
+			"label": "iPLAN reverse-engineers the final design to obtain the stage-to-stage process, based on principles that are widely adopted by professional designers . This process is performed by the algorithm."
+		}, {
+			"actor": "algorithm",
+			"index": 3,
+			"radius": 1,
+			"title": "Markov chain model",
+			"label": "iPLAN uses a Markov chain model to capture the full design procedure. The algorithm designs and uses the Markov chain model to capture the full design procedure."
+		}, {
+			"actor": "human",
+			"type": "Designer",
+			"index": 1,
+			"radius": 1,
+			"title": "Human input",
+			"label": "iPLAN accepts user guidance at every stage of the design process. This means that the user can provide input at different stages across a wide range of levels of detail."
+		}, {
+			"actor": "algorithm",
+			"index": 2,
+			"radius": 1,
+			"title": "Automatic suggestion",
+			"label": "iPLAN automatically suggests possible designs based on the user's input. The algorithm is designed to offer the capability of fully automated generation ."
+		}, {
+			"actor": "algorithm",
+			"index": 1,
+			"radius": 1,
+			"title": "Learning",
+			"label": "Learning from human inputs on designs augmented by reverse-engineered processes."
+		}
+	]
+}, {
+	title: "Understanding Aesthetic Evaluation using Deep Learning",
+	value: {
+		problems: ["Manual labor", "Lack of data"],
+		technologies: [],
+		data: ["Logs"],
+		promises: ["Automation", "Human support"],
+		humans: ["End-user"]
+	},
+	loop: [
+		{
+			"actor": "algorithm",
+			"type": "Interactive Genetic Algorithm (IGA)",
+			"index": 3,
+			"radius": 1,
+			"title": "Generation of candidate solutions",
+			"label": "An algorithm generates a set of candidate solutions based on some predefined criteria or parameters."
+		}, {
+			"actor": "algorithm",
+			"type": "Interactive Genetic Algorithm (IGA)",
+			"index": 2,
+			"radius": 1,
+			"title": "Presentation of candidate solutions to the user",
+			"label": "The candidate solutions are presented to the user in a way that allows them to evaluate each solution based on their personal aesthetic preferences."
+		}, {
+			"actor": "human",
+			"type": "Digital artist",
+			"index": 1,
+			"radius": 1,
+			"title": "Evaluation of candidate solutions by the user",
+			"label": "The user evaluates each candidate solution based on their personal aesthetic preferences, using a rating system or some other form of feedback."
+		}, {
+			"actor": "algorithm",
+			"type": "Interactive Genetic Algorithm (IGA)",
+			"index": 1,
+			"radius": 1,
+			"title": "Generation of new candidate solutions based on user feedback",
+			"label": "An algorithm uses the user's feedback to generate a new set of candidate solutions that better match the user's personal aesthetic preferences."
 		}
 	]
 }
