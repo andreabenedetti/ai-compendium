@@ -824,6 +824,679 @@ const data = [
         "label": "The algorithm learns to assist the user without access to private information, implicitly inferring it from the user's input."
       }
     ]
+  }, {
+    title: "Society-in-the-Loop: Programming the Algorithmic Social Contract",
+    value: {
+      problems: ["Opaqueness"],
+      data: ["Not mentioned"],
+      promises: ["Acceptance", "Human collaboration"],
+      humans: ["Stakeholders"]
+    },
+    loop: [
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "stakeholders",
+        "title": "Negotiating Values and Goals",
+        "label": "Humans and stakeholders negotiate the values and goals that AI systems should strive towards, considering trade-offs between different societal interests and ethical considerations."
+      },
+      {
+        "actor": "human",
+        "type": "institutions",
+        "index": 2,
+        "title": "Programming the Algorithmic Social Contract",
+        "label": "Institutions and tools are developed to program the algorithmic social contract between humans and governance algorithms, ensuring that AI systems align with societal values and norms."
+      },
+      {
+        "actor": "human",
+        "type": "Experts",
+        "index": 3,
+        "title": "Debugging and Monitoring",
+        "label": "Mechanisms are established to debug and monitor the behavior of AI systems, allowing for transparency, fairness, and accountability in the governance of autonomous machines."
+      },
+      {
+        "actor": "human",
+        "type": "policymakers/ethicists",
+        "index": 4,
+        "title": "Involving Policymakers and Ethicists",
+        "label": "Policymakers and ethicists play a crucial role in overseeing the implementation of the algorithmic social contract, ensuring that AI systems operate in accordance with societal expectations."
+      },
+      {
+        "actor": "human",
+        "index": 5,
+        "type": "policymakers/public",
+        "title": "Adapting to Human Values",
+        "label": "New metrics and methods are developed to evaluate AI behavior against quantifiable human values, enabling policymakers and the public to articulate their expectations to machines."
+      },
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "AI systems",
+        "title": "Incorporate Societal Values",
+        "label": "Algorithms must incorporate the values and goals negotiated by humans and stakeholders, considering trade-offs between different societal interests and ethical considerations."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "AI systems",
+        "title": "Operate Transparently",
+        "label": "Algorithms must operate transparently, allowing for debugging and monitoring of their behavior to ensure that they align with the algorithmic social contract."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "AI systems",
+        "title": "Comply with the Algorithmic Social Contract",
+        "label": "Algorithms must comply with the algorithmic social contract that is programmed and monitored by institutions and tools, ensuring that they operate in accordance with societal expectations."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "AI systems",
+        "title": "Adapt to Human Values",
+        "label": "Algorithms must adapt to human values, as new metrics and methods are developed to evaluate their behavior against quantifiable human values."
+      }
+    ]
+  }, {
+    title: "AstronomicAL: An interactive dashboard for visualisation, integration and classification of data using Active Learning",
+    value: {
+      problems: ["Inaccuracies", "Integrations"],
+      data: ["Images", "Astronomical data"],
+      promises: ["Human support", "Accuracy", "Optimization"],
+      humans: ["End-user"]
+    },
+    loop: [
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Researcher",
+        "title": "Data Import and Visualization",
+        "label": "Import dataset into AstronomicAL and visualize and integrate data from different sources using customizable domain-specific plots."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "AstronomicAL",
+        "title": "Active Learning and Labeling",
+        "label": "Utilize active learning techniques to prioritize data that offer high information gain and explore each data point chosen, injecting domain expertise directly into the training process to ensure accurate and reliable labels."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "Researcher",
+        "title": "Custom Model and Query Strategy",
+        "label": "Adapt AstronomicAL for research to allow for domain-specific plots, novel query strategies, and improved models. Customize models and query strategies to improve performance."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "AstronomicAL",
+        "title": "Test Set Creation and Validation",
+        "label": "Curate a labeled test set to demonstrate the validity and generalizability of the model. Mark any example as unsure, ensuring that all training data are of high quality."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "AstronomicAL",
+        "title": "Private Experimentation and Collaboration",
+        "label": "Run AstronomicAL entirely locally on the user’s system, providing a private space to experiment. Export a simple configuration file to share entire layouts, models, and assigned labels with the community, allowing for complete transparency and effortless reproduction of results."
+      }
+    ]
+  }, {
+    title: "Esports Agents with a Theory of Mind: Towards Better Engagement, Education, and Engineering",
+    value: {
+      problems: ["Data analysis"],
+      data: ["Behavioral data"],
+      promises: ["Optimization", "Human support"],
+      humans: ["Sport players"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "Computational model",
+        "title": "Processing Observed Behaviors",
+        "label": "The algorithm processes observed behaviors and generates data representations of player actions within the game environment."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Player",
+        "title": "Providing Behavior Labels",
+        "label": "Players interact with the system by providing labels for behaviors, indicating the time and spatial contexts of their actions within the game environment."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "Computational model",
+        "title": "Integrating Labeled Behaviors",
+        "label": "The algorithm integrates the labeled behaviors provided by players into the computational models of esports players, incorporating qualitative and quantitative inputs."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "Player",
+        "title": "Interactive Correction",
+        "label": "Players engage with the system to interactively correct the computational model's probabilities as well as nodes that make up the graphical model, contributing to a more accurate representation of player cognition."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "Computational model",
+        "title": "Utilizing Corrected Model",
+        "label": "The algorithm utilizes the corrected computational model to refine the understanding of player intents, strategies, and tactics within the gaming environment."
+      },
+      {
+        "actor": "human",
+        "index": 3,
+        "type": "Player",
+        "title": "Providing Insights and Feedback",
+        "label": "Players provide insights and feedback that contribute to the development of AI agents acting as intelligent tutoring systems for esports, enabling personalized coaching and gameplay experiences."
+      }
+    ]
+  }, {
+    title: "IGLU 2022: Interactive Grounded Language Understanding in a Collaborative Environment at NeurIPS 2022",
+    value: {
+      problems: ["Human interpretation"],
+      data: ["Not mentioned"],
+      promises: ["Human support"],
+      humans: ["End-user"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "data collection algorithm",
+        "title": "Simplify Data Collection",
+        "label": "Using a single-turn data collection strategy to increase the speed of data collection."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "researcher",
+        "title": "Provide Instructions",
+        "label": "Providing natural language instructions to the algorithm for task completion."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "training algorithm",
+        "title": "Speed Up Training Environment",
+        "label": "Using a new gridworld environment for fast and scalable experiments."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "researcher",
+        "title": "Collaborate and Provide Feedback",
+        "label": "Collaborating with the algorithm to provide feedback and guidance during the training process."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "NLP algorithm",
+        "title": "Reformulate NLP Task",
+        "label": "Tackling the generation of clarifying questions for truly interactive agents."
+      },
+      {
+        "actor": "human",
+        "index": 3,
+        "type": "evaluator",
+        "title": "Provide Feedback on Generated Questions",
+        "label": "Interacting with the algorithm to provide feedback on the effectiveness of the generated clarifying questions."
+      }
+    ]
+  }, {
+    title: "Integrative Imaging Informatics for Cancer Research: Workflow Automation for Neuro-oncology (I3CR-WANO)",
+    value: {
+      problems: ["Health", "Manual labor"],
+      data: ["Bodily traces"],
+      promises: ["Automation"],
+      humans: ["Medical experts"]
+    },
+    loop: [
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Clinician",
+        "title": "Input Data Acquisition",
+        "label": "Obtain DICOM format MRI data from patients with high- and low-grade gliomas."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "AI system",
+        "title": "Data Classification and Preprocessing",
+        "label": "Classify MRI sequences using an ensemble of NLP and CNN models. Preprocess the MRI data, including image registration, skull stripping, and bias field correction."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "Radiologist",
+        "title": "Data Classification Review",
+        "label": "Review the classification results and ensure the accuracy of sequence identification."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "AI system",
+        "title": "Tumor Segmentation and Feature Extraction",
+        "label": "Segment tumor tissue subtypes using CNNs to generate quantitative tumor measurements. Optionally allow expert-in-the-loop manual refinement of segmentation results."
+      },
+      {
+        "actor": "human",
+        "index": 3,
+        "type": "Oncologist",
+        "title": "Clinical Decision Support and Research Analysis",
+        "label": "Utilize the quantitative tumor measurements for personalized treatment planning and response assessment. Leverage the system to streamline data curation, model prototyping, and standardized dataset creation for research collaborations."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "AI system",
+        "title": "Outcome Assessment and Reporting",
+        "label": "Provide segmentation masks for longitudinal tumor tracking and quantitative growth assessment. Generate standardized reports and visualizations based on the processed MRI data."
+      }
+    ]
+  }, {
+    title: "Interactive Evolutionary Multi-Objective Optimization via Learning-to-Rank",
+    value: {
+      problems: ["Complexity", "Decision making"],
+      data: ["Feedback"],
+      promises: ["Speed", "Human support"],
+      humans: ["Decision makers"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 6,
+        "type": "EMO algorithm",
+        "title": "Generate candidate solutions",
+        "label": "The EMO algorithm generates a set of candidate solutions."
+      },
+      {
+        "actor": "algorithm",
+        "index": 5,
+        "type": "consultation module",
+        "title": "Present candidate solutions",
+        "label": "The consultation module presents a set of selected candidate solutions to the Decision Maker."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Decision Maker",
+        "title": "Provide feedback",
+        "label": "The Decision Maker provides feedback on the candidate solutions based on her preference."
+      },
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "LTR neural network",
+        "title": "Learn preference",
+        "label": "The LTR neural network learns the Decision Maker's preference based on the feedback."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "LTR neural network",
+        "title": "Guide EMO algorithm",
+        "label": "The LTR model is applied to guide the EMO algorithm towards the SOI."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "EMO algorithm",
+        "title": "Generate new solutions",
+        "label": "The EMO algorithm generates a new set of candidate solutions based on the guidance from the LTR model."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "consultation module",
+        "title": "Present new candidate solutions",
+        "label": "The consultation module presents the new set of candidate solutions to the Decision Maker."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "Decision Maker",
+        "title": "Provide feedback",
+        "label": "The Decision Maker provides feedback on the new candidate solutions based on her preference."
+      }
+    ]
+  }, {
+    title: "Iterative annotation to ease neural network training: Specialized machine learning in medical image analysis",
+    value: {
+      problems: ["Adoption"],
+      data: ["Images"],
+      promises: ["Automation"],
+      humans: ["Medical experts"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "semantic segmentation network",
+        "title": "Process Whole Slide Images",
+        "label": "The algorithm processes whole slide images using a semantic segmentation network."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "expert",
+        "title": "Interact with Network Predictions",
+        "label": "Human experts interact with the network's predictions and correct any inaccuracies in the annotations."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "semantic segmentation network",
+        "title": "Retrain with Corrected Annotations",
+        "label": "The corrected annotations provided by human experts are used to retrain the semantic segmentation network."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "semantic segmentation network",
+        "title": "Convert Predictions for Display",
+        "label": "The network's predictions are converted back to a format for display in WSI viewing software, such as Aperio ImageScope."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "expert",
+        "title": "Review and Provide Feedback",
+        "label": "Human experts review the updated network predictions and provide further feedback, initiating additional training iterations if necessary."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "semantic segmentation network",
+        "title": "Fine-tune Based on Human Feedback",
+        "label": "The network is fine-tuned based on human feedback, leading to improved accuracy and reduced burden of manual WSI annotation."
+      }
+    ]
+  }, {
+    title: "Learning from Thresholds: Fully Automated Classification of Tumor Infiltrating Lymphocytes for Multiple Cancer Types",
+    value: {
+      problems: ["High costs", "Time consuming"],
+      data: ["Bodily traces"],
+      promises: ["Automation"],
+      humans: ["Not mentioned"]
+    },
+    loop: [
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "annotator",
+        "title": "Manual Annotations",
+        "label": "Manually annotate image patches with TIL positive or TIL negative labels for a subset of cancer types."
+      },
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "TIL classification network",
+        "title": "Semi-Automatic Annotations",
+        "label": "Apply a classification algorithm to Whole Slide Images (WSIs) and adjust the predicted TIL probability maps by applying thresholds to generate semi-automatic annotations."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "AI model",
+        "title": "Training Data Generation",
+        "label": "Combine manually annotated patches and semi-automatically annotated patches to form the training set for the AI model."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "AI model",
+        "title": "AI Model Training",
+        "label": "Train deep neural network models, such as VGG 16-layer network and Inception-V4, using the combined dataset to generalize across multiple cancer types."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "AI model",
+        "title": "Automatic Application",
+        "label": "Automatically apply the trained AI model to each cancer type without human adjustment, providing TIL prediction results."
+      }
+    ]
+  }, {
+    title: "Learning to Learn in Simulation",
+    value: {
+      problems: ["Mimickry"],
+      data: ["Logs"],
+      promises: ["Speed", "Automation"],
+      humans: ["Not mentioned"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 5,
+        "type": "Curiosity agent",
+        "title": "Select Actions",
+        "label": "The curiosity agent selects actions to navigate the robot within the exploration space."
+      },
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "Curiosity agent",
+        "title": "Request Ground Truth",
+        "label": "The curiosity agent may request ground truth annotations from the human operator when additional information is needed."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Operator",
+        "title": "Provide Feedback",
+        "label": "The human operator provides feedback by providing ground truth annotations based on the robot's requests."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "Robot",
+        "title": "Utilize Feedback",
+        "label": "The robot uses the feedback to improve its performance and adjust its exploration strategy."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "Curiosity agent",
+        "title": "Iterative Improvement",
+        "label": "The curiosity agent continues to select actions and seek out new information, iteratively improving the robot's learning process."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "Robot",
+        "title": "Autonomous Learning",
+        "label": "The collaboration aims to reduce the burden on the human operator and enhance the robot's autonomous learning capabilities."
+      }
+    ]
+  }, {
+    title: "Learning to Segment Anatomical Structures Accurately from One Exemplar",
+    value: {
+      problems: ["Lack of data", "Quality of data"],
+      data: ["Images", "Annotations"],
+      promises: ["Automation"],
+      humans: ["Medical experts"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "CTN",
+        "title": "Initialization",
+        "label": "CTN takes the exemplar contour as an initialization and gradually evolves it to minimize the weighted loss for each unlabeled image."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "User",
+        "title": "Correction",
+        "label": "If any part in the predicted contour is inaccurate, users can correct them by drawing line segments."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "CTN",
+        "title": "Incorporation",
+        "label": "CTN formats these corrections as partial contours and incorporates them back into the training via an additional Chamfer loss."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "CTN",
+        "title": "Improvement",
+        "label": "CTN consistently improves with more human corrections, potentially achieving better performance than fully supervised methods with considerably less annotation efforts."
+      }
+    ]
+  }, {
+    title: "Lizard: A Large-Scale Dataset for Colonic Nuclear Instance Segmentation and Classification",
+    value: {
+      problems: ["Manual labor"],
+      data: ["Bodily traces"],
+      promises: ["Abundance of data", "Automation"],
+      humans: ["Medical experts"]
+    },
+    loop: [
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "Domain experts",
+        "title": "Data Collection",
+        "label": "Provide input for accurate delineation of object boundaries"
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "Multi-stage annotation pipeline",
+        "title": "Data Collection",
+        "label": "Utilize input from domain experts to collect accurate annotations at scale"
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "Pathologists",
+        "title": "Validation of Annotations",
+        "label": "Assess representative samples provided by the dataset"
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "Quantitative concordance statistics computation",
+        "title": "Validation of Annotations",
+        "label": "Compute quantitative concordance statistics between pathologists and the dataset to ensure the accuracy of the annotations"
+      },
+      {
+        "actor": "human",
+        "index": 3,
+        "type": "Researchers",
+        "title": "Performance Benchmarking",
+        "label": "Test their developed models on the dataset"
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "Performance benchmarking",
+        "title": "Performance Benchmarking",
+        "label": "Provide performance benchmarks to encourage the development of accurate and interpretable downstream models for the computational analysis of H&E stained colon tissue"
+      }
+    ]
+  }, {
+    title: "Making Table Understanding Work in Practice",
+    value: {
+      problems: ["Data analysis"],
+      data: ["Digital traces"],
+      promises: ["Human collaboration", "Automation"],
+      humans: ["Not mentioned"]
+    },
+    loop: [
+      {
+        "actor": "algorithm",
+        "index": 6,
+        "type": "SIGMATYPER",
+        "title": "Match column names to type ontology",
+        "label": "Matches each column name to the labels in the type ontology using syntactic and semantic matching."
+      },
+      {
+        "actor": "human",
+        "index": 1,
+        "type": "user",
+        "title": "Review matches and provide feedback",
+        "label": "Reviews the matches and provides feedback on any incorrect matches."
+      },
+      {
+        "actor": "algorithm",
+        "index": 5,
+        "type": "SIGMATYPER",
+        "title": "Calculate cosine similarity",
+        "label": "Uses an embedding of the entire table to calculate the cosine similarity between the column names and semantic types."
+      },
+      {
+        "actor": "human",
+        "index": 2,
+        "type": "user",
+        "title": "Review predicted types and provide feedback",
+        "label": "Reviews the predicted semantic types and provides feedback on any incorrect predictions."
+      },
+      {
+        "actor": "algorithm",
+        "index": 4,
+        "type": "SIGMATYPER",
+        "title": "Infer labeling functions",
+        "label": "Infers labeling functions from data used to generate new training data and prediction functions."
+      },
+      {
+        "actor": "human",
+        "index": 3,
+        "type": "user",
+        "title": "Review inferred functions and provide feedback",
+        "label": "Reviews the inferred labeling functions and provides feedback on any incorrect inferences."
+      },
+      {
+        "actor": "algorithm",
+        "index": 3,
+        "type": "SIGMATYPER",
+        "title": "Generate new training data",
+        "label": "Generates new training data using data programming and the inferred labeling functions."
+      },
+      {
+        "actor": "human",
+        "index": 4,
+        "type": "user",
+        "title": "Review new training data and provide feedback",
+        "label": "Reviews the new training data and provides feedback on any incorrect data."
+      },
+      {
+        "actor": "algorithm",
+        "index": 2,
+        "type": "SIGMATYPER",
+        "title": "Train local model",
+        "label": "Trains a local model on the new training data."
+      },
+      {
+        "actor": "human",
+        "index": 5,
+        "type": "user",
+        "title": "Review local model performance and provide feedback",
+        "label": "Reviews the performance of the local model and provides feedback on any incorrect predictions."
+      },
+      {
+        "actor": "algorithm",
+        "index": 1,
+        "type": "SIGMATYPER",
+        "title": "Make predictions on new data",
+        "label": "Uses the local model to make predictions on new data."
+      },
+      {
+        "actor": "human",
+        "index": 6,
+        "type": "user",
+        "title": "Review predictions and provide feedback",
+        "label": "Reviews the predictions and provides feedback on any incorrect predictions."
+      }
+    ]
   }
 ];
 

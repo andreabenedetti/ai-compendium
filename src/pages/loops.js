@@ -41,14 +41,7 @@ export default function Home() {
     </Row>
     </Row>
     <Row>
-    <Col md={{ span: 2 }}>
-    <ListGroup variant="flush" as="ul" className={ styles.indexBox }>
-    {
-      alphabet.map((a) => (<ListGroup.Item className={ styles.index } key={a} ><Link href={"#" + a}>{a}</Link></ListGroup.Item>))
-    }
-    </ListGroup>
-    </Col>
-    <Col md={{ span: 10 }}>
+    <Col md={{ span: 12 }}>
     <PlaceLoops cards={ data }/>
     </Col>
     </Row>
