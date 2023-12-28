@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 
 import * as d3 from "d3";
 
-import styles from '@/styles/Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from '@/styles/Tasks.module.css';
 
 import { Container, Row, Col, Table, ListGroup, Accordion } from 'react-bootstrap';
 import Nav from '../../components/Sub';
@@ -70,7 +70,7 @@ export default function Home() {
     </Col>
     <Col md={{ span: 5 }}>
     <h4>Tasks performed by algorithms</h4>
-    <Table striped>
+    <Table striped className={styles.taskList}>
     <thead>
         <tr>
           <th>Task</th>

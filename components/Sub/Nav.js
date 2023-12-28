@@ -7,7 +7,7 @@ export default function Sub( count ) {
         <Navbar fixed="bottom" className={styles.nav} expand="lg">
             <Container fluid>
             <Nav className="me-auto">
-                <Nav.Link className={styles.navBrand} href="/">shAI Compendium</Nav.Link>
+                <Nav.Link className={styles.navBrand} href="/">AI Compendium</Nav.Link>
                 <Nav.Link href="/loops">Loops</Nav.Link>
                 <Nav.Link href="/tasks">Tasks</Nav.Link>
                 </Nav>
