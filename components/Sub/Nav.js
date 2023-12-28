@@ -4,14 +4,14 @@ import styles from "./Nav.module.scss";
 
 export default function Sub( count ) {
     return (
-        <Navbar fixed="bottom" className={styles.nav} expand="lg">
+        <Navbar fixed="bottom" className={styles.nav}>
             <Container fluid>
             <Nav className="me-auto">
                 <Nav.Link className={styles.navBrand} href="/">AI Compendium</Nav.Link>
                 <Nav.Link href="/loops">Loops</Nav.Link>
                 <Nav.Link href="/tasks">Tasks</Nav.Link>
-                </Nav>
                 <Navbar.Text>{count.count} papers analyzed</Navbar.Text>
+            </Nav>
             </Container>
         </Navbar>
     );

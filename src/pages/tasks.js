@@ -44,15 +44,12 @@ export default function Home() {
       <Row>
       <Col md={{ span: 8, offset: 2 }}>
       <h1>Tasks overview</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>The loops identified previously provide an article-by-article overview of how automation is achieved through the collaboration of humans and algorithms. However, tasks can also be looked at beyond their division by article: here are collected all tasks grouped only by the actor that is performing them, either a human or an algorithm.</p>
       </Col>
       </Row>
     <Row>
-    <Col md={{ span: 2 }}>
-    <ValuesList data={data} />
-    </Col>
-    <Col md={{ span: 5 }}>
-    <h4>Tasks performed by humans</h4>
+    <Col md={{ span: 6 }}>
+    <h4 className={styles.title}>Tasks performed by humans</h4>
     <Table striped>
       <thead>
         <tr>
@@ -63,13 +60,13 @@ export default function Home() {
       </thead>
       <tbody>
         {
-          humanTasks.map(task => (<tr key={task}><td>{task.type}</td><td>{task.title}</td><td>{task.label}</td></tr>))
+          humanTasks.map(task => (<tr key={task.title+task.label}><td>{task.type}</td><td>{task.title}</td><td>{task.label}</td></tr>))
         }
       </tbody>
     </Table>  
     </Col>
-    <Col md={{ span: 5 }}>
-    <h4>Tasks performed by algorithms</h4>
+    <Col md={{ span: 6 }}>
+    <h4 className={styles.title}>Tasks performed by algorithms</h4>
     <Table striped className={styles.taskList}>
     <thead>
         <tr>
@@ -79,7 +76,7 @@ export default function Home() {
       </thead>
       <tbody>
         {
-          algoTasks.map(task => (<tr key={task}><td>{task.title}</td><td>{task.label}</td></tr>))
+          algoTasks.map(task => (<tr key={task.title+task.label}><td>{task.title}</td><td>{task.label}</td></tr>))
         }
       </tbody>
     </Table>
