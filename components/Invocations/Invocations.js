@@ -10,7 +10,7 @@ export default function Invocations() {
         <Carousel fade className={styles.carousel}>
         {invocations.map(invocation => {
             console.log(invocation)
-            return <Carousel.Item>
+            return <Carousel.Item key={invocation}>
             <Figure.Image 
             src={`/invocations/${invocation}`} />
             </Carousel.Item>
