@@ -32,11 +32,10 @@ export default function Home() {
     <Legend />
     <Row>
     <Row>
-    <Col md={{ span: 2 }}>
-    <h5>Loops overview</h5>
-    </Col>
-    <Col md={{ span: 8 }}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <Col md={{ span: 8, offset: 2 }}>
+      <h1>Loops</h1>
+      <p>In this section are displayed the loops pertaining the articles that present applications of AI promising automation or enhancements in human labor through AI collaboration or AI support.</p>
+      <p>A total of 35 articles are analyzed in detail to map the continuous loops of interaction between humans and AI that are described by the researchers. These loops are then represented consistently to provide a comparable view through schemas.</p>
     </Col>
     </Row>
     </Row>

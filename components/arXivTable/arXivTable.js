@@ -23,7 +23,9 @@ export default function ArxivTable() {
     
     const columns = [
         { dataField: "title", text: "Title" },
-        { dataField: "authors", text: "Authors" }
+        { dataField: "authors", text: "Authors" },
+        { dataField: "links", text: "Links" },
+        { dataField: "published", text: "Date" }
     ]
     
     return (
