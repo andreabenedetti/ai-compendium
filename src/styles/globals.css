@@ -97,6 +97,10 @@ body {
   line-height: 1.5 !important;
 }
 
+h1 {
+  margin: 4rem 0 2rem 0 !important;
+}
+
 h5 {
   font-weight: 600;
   text-transform: uppercase;
@@ -109,6 +113,10 @@ a {
 
 p {
   font-size: .9rem;
+}
+
+p:last-of-type {
+  margin-bottom: 3rem !important;
 }
 
 table {

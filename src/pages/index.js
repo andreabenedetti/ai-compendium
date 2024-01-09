@@ -88,7 +88,7 @@ export default function Home() {
     </Row>
     </Container>
     
-    <Container className={classNames("mt-4 pb-5 mb-5", styles.homeContainer)} >
+    <Container className={classNames("mt-4 pb-5 mb-5 pr-1", styles.homeContainer)} >
     <Row>
     <Col><blockquote className={classNames("mb-5", styles.intro)}>Artificial Intelligence is the latest frontier of technological development. Through concerted efforts, many actors have joined the field of AI development: from text-to-image generation to generative AI (both text based and image based), machine learning and deep learning algorithms are used extensively to provide predictive capabilities to a plethora of people. However, sometimes to achieve the promises that these new technologies paint, humans are still needed in the process. &quot;Humans-in-the-loop&quot; are figures that oversee what artificial system produce to assess and evaluate their correctness, their reliability, and their overall quality. Humans-in-the-loop take many shapes and form, from faceless annotators to experts, and finally to users. The <i>AI Compendium</i> maps this landscape of required human workers, and focuses on how they are still required to achieve automation, a big promise of artificial intelligence.</blockquote></Col>
     </Row>
