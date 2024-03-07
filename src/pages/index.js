@@ -76,7 +76,7 @@ export default function Home() {
     <title>AI Compendium</title>
     <meta name="description" content="The AI Compendium is a cartography of the reliance on human labor of Artificial Intelligence through humans-in-the-loop." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon-lg.png" />
     </Head>
     <Nav count={ count }/>
     <Container fluid className={styles.heroContainer}>
