@@ -11,6 +11,7 @@ import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import PlaceLoops from '../../components/PlaceLoops';
 import Nav from '../../components/Sub';
 import Legend from '../../components/Legend';
+import Footer from '../../components/Footer';
 
 const count = data.length;
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
@@ -44,6 +45,7 @@ export default function Home() {
     <PlaceLoops cards={ data }/>
     </Col>
     </Row>
+    <Footer />
     </Container> 
     </>
     )

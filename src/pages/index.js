@@ -11,6 +11,7 @@ import classNames from 'classnames';
 import Invocations from '../../components/Invocations';
 
 import { construct } from '../../components/Loops/Loops.render';
+import Footer from '../../components/Footer';
 import ArxivTable from '../../components/arXivTable';
 import * as d3 from "d3";
 
@@ -148,7 +149,8 @@ export default function Home() {
     <ArxivTable className={"mt-2"}/>
     </Col>
     </Row>
-    </Container> 
+    <Footer />
+    </Container>
     <style>{css}</style>
     </>
     )

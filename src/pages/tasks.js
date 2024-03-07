@@ -11,6 +11,7 @@ import styles from '@/styles/Tasks.module.css';
 import { Container, Row, Col, Table, ListGroup, Accordion } from 'react-bootstrap';
 import Nav from '../../components/Sub';
 import ValuesList from '../../components/ListOfValues/Values';
+import Footer from '../../components/Footer';
 
 const count = data.length;
 let humanTasks = [];
@@ -82,6 +83,7 @@ export default function Home() {
     </Table>
     </Col>
     </Row>
+    <Footer />
     </Container> 
     </>
     )
